@@ -9,6 +9,7 @@ def shared_pods
     pod 'ReSwift'
     pod 'ReSwiftRouter'
     pod 'ReRxSwift', '~> 1.0'
+    pod 'SnapKit', '~> 4.0'
     
     # Reactive
     pod 'RxSwift', '~> 4.0'

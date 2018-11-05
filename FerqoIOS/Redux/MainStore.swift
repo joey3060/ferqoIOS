@@ -7,4 +7,9 @@
 //
 
 import ReSwift
+import ReSwiftRouter
 
+let mainStore = Store<AppState>(
+    reducer: baseReducer,
+    state: nil
+)

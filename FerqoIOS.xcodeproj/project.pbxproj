@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
-		01C8DE1421906E0600F0A63C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1321906E0600F0A63C /* ViewController.swift */; };
-		01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1521906E0600F0A63C /* Main.storyboard */; };
 		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
 		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
 		01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */; };
@@ -20,7 +18,11 @@
 		01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE50219079CF00F0A63C /* Login.storyboard */; };
 		01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE52219079E000F0A63C /* LoginViewController.swift */; };
 		01C8DE5521907A0900F0A63C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5421907A0900F0A63C /* Config.swift */; };
-		01C8DE5B21907A6B00F0A63C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5A21907A6B00F0A63C /* App.swift */; };
+		01C8DE5B21907A6B00F0A63C /* MainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5A21907A6B00F0A63C /* MainStore.swift */; };
+		587937622190BB1700219BAD /* BaseReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587937612190BB1700219BAD /* BaseReducer.swift */; };
+		587937662190BE2800219BAD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587937652190BE2800219BAD /* AppState.swift */; };
+		5879376A2190BF0500219BAD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587937692190BF0500219BAD /* Router.swift */; };
+		5879376C2190D45200219BAD /* RouterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5879376B2190D45200219BAD /* RouterModel.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -46,8 +48,6 @@
 /* Begin PBXFileReference section */
 		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01C8DE1321906E0600F0A63C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01C8DE1621906E0600F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
 		01C8DE1B21906E0700F0A63C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C8DE1E21906E0700F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,9 +63,13 @@
 		01C8DE50219079CF00F0A63C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		01C8DE52219079E000F0A63C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01C8DE5421907A0900F0A63C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		01C8DE5A21907A6B00F0A63C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		01C8DE5A21907A6B00F0A63C /* MainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStore.swift; sourceTree = "<group>"; };
 		181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.release.xcconfig"; sourceTree = "<group>"; };
+		587937612190BB1700219BAD /* BaseReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReducer.swift; sourceTree = "<group>"; };
+		587937652190BE2800219BAD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		587937692190BF0500219BAD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5879376B2190D45200219BAD /* RouterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterModel.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,16 +132,15 @@
 		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
 			isa = PBXGroup;
 			children = (
-				01C8DE5C21907ADA00F0A63C /* Resources */,
-				01C8DE47219078CF00F0A63C /* Models */,
+				5879375D2190BA2200219BAD /* Resources */,
+				5879375E2190BA2D00219BAD /* Models */,
+				5879375C2190BA1100219BAD /* Components */,
 				01C8DE46219078B500F0A63C /* Scenes */,
 				01C8DE452190788F00F0A63C /* Globals */,
 				01C8DE442190787A00F0A63C /* Redux */,
-				01C8DE432190786E00F0A63C /* Services */,
-				01C8DE422190783A00F0A63C /* Routes */,
+				587937682190BEEA00219BAD /* Services */,
+				587937672190BEDE00219BAD /* Routes */,
 				01C8DE1121906E0600F0A63C /* AppDelegate.swift */,
-				01C8DE1321906E0600F0A63C /* ViewController.swift */,
-				01C8DE1521906E0600F0A63C /* Main.storyboard */,
 				01C8DE1B21906E0700F0A63C /* Assets.xcassets */,
 				01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */,
 				01C8DE2021906E0700F0A63C /* Info.plist */,
@@ -164,28 +167,13 @@
 			path = FerqoIOSUITests;
 			sourceTree = "<group>";
 		};
-		01C8DE422190783A00F0A63C /* Routes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Routes;
-			sourceTree = "<group>";
-		};
-		01C8DE432190786E00F0A63C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		01C8DE442190787A00F0A63C /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				01C8DE5921907A4A00F0A63C /* Actions */,
-				01C8DE5821907A4000F0A63C /* Reducers */,
-				01C8DE5721907A2B00F0A63C /* States */,
-				01C8DE5621907A2100F0A63C /* Components */,
-				01C8DE5A21907A6B00F0A63C /* App.swift */,
+				5879375B2190B9F800219BAD /* Reducers */,
+				5879375A2190B9EF00219BAD /* Actions */,
+				587937592190B9CD00219BAD /* State */,
+				01C8DE5A21907A6B00F0A63C /* MainStore.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -207,13 +195,6 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		01C8DE47219078CF00F0A63C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		01C8DE482190792C00F0A63C /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,41 +213,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		01C8DE5621907A2100F0A63C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		01C8DE5721907A2B00F0A63C /* States */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = States;
-			sourceTree = "<group>";
-		};
-		01C8DE5821907A4000F0A63C /* Reducers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reducers;
-			sourceTree = "<group>";
-		};
-		01C8DE5921907A4A00F0A63C /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
-		01C8DE5C21907ADA00F0A63C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		2BD8F6DB1EF3E91143BB9E73 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +224,66 @@
 				A688F5140BE307762E131F6A /* Pods-FerqoIOSUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		587937592190B9CD00219BAD /* State */ = {
+			isa = PBXGroup;
+			children = (
+				587937652190BE2800219BAD /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		5879375A2190B9EF00219BAD /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		5879375B2190B9F800219BAD /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				587937612190BB1700219BAD /* BaseReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		5879375C2190BA1100219BAD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5879375D2190BA2200219BAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5879375E2190BA2D00219BAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5879376B2190D45200219BAD /* RouterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		587937672190BEDE00219BAD /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				587937692190BF0500219BAD /* Router.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		587937682190BEEA00219BAD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -403,7 +409,6 @@
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
-				01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +460,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -464,6 +470,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -535,12 +542,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01C8DE1421906E0600F0A63C /* ViewController.swift in Sources */,
+				5879376C2190D45200219BAD /* RouterModel.swift in Sources */,
+				587937622190BB1700219BAD /* BaseReducer.swift in Sources */,
+				5879376A2190BF0500219BAD /* Router.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
+				587937662190BE2800219BAD /* AppState.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
-				01C8DE5B21907A6B00F0A63C /* App.swift in Sources */,
+				01C8DE5B21907A6B00F0A63C /* MainStore.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,14 +587,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01C8DE1521906E0600F0A63C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01C8DE1621906E0600F0A63C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

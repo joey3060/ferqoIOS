@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ReSwiftRouter
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func goToLoginAction(_ sender: Any) {
+        mainStore.dispatch(SetRouteAction(["Login"]))
+    }
+    
     /*
     // MARK: - Navigation
 

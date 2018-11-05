@@ -8,14 +8,28 @@
 
 import UIKit
 import CoreData
+import ReSwiftRouter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var router: Router<AppState>!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIViewController() // important
+        window?.makeKeyAndVisible()
+        router = Router(store: mainStore, rootRoutable: RootRoute(window: window!)) { state in
+            state.select {
+                $0.navigationState
+            }
+        }
+        mainStore.dispatch(
+            ReSwiftRouter.SetRouteAction([""])
+        )
         // Override point for customization after application launch.
         return true
     }

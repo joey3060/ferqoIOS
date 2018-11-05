@@ -1,7 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="NLk-3t-fig">
+            <objects>
+                <viewController storyboardIdentifier="splashView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="opR-9n-aXa" customClass="SplashViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="toV-Li-Aq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splash View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-bA-zyy">
+                                <rect key="frame" x="141" y="323" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JM-hV-Nep">
+                                <rect key="frame" x="146.5" y="379" width="82" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gJM-K9-t0L"/>
+                                </constraints>
+                                <state key="normal" title="Go To Login"/>
+                                <connections>
+                                    <action selector="goToLoginAction:" destination="opR-9n-aXa" eventType="touchUpInside" id="n69-KX-aaL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yIC-bA-zyy" firstAttribute="centerY" secondItem="toV-Li-Aq2" secondAttribute="centerY" id="3hd-GD-mBh"/>
+                            <constraint firstItem="6JM-hV-Nep" firstAttribute="top" secondItem="yIC-bA-zyy" secondAttribute="bottom" constant="35" id="BcX-nS-1gk"/>
+                            <constraint firstItem="yIC-bA-zyy" firstAttribute="centerX" secondItem="toV-Li-Aq2" secondAttribute="centerX" id="Vkm-dR-bvh"/>
+                            <constraint firstItem="6JM-hV-Nep" firstAttribute="centerX" secondItem="toV-Li-Aq2" secondAttribute="centerX" id="lHn-SL-N0H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tgp-5O-hEo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jD4-pZ-mGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="91"/>
+        </scene>
+    </scenes>
 </document>
