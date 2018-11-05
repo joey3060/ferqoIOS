@@ -1,0 +1,6 @@
+framework module Pods_FerqoIOSTests {
+  umbrella header "Pods-FerqoIOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

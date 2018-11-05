@@ -15,6 +15,15 @@
 		01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */; };
 		01C8DE2A21906E0700F0A63C /* FerqoIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE2921906E0700F0A63C /* FerqoIOSTests.swift */; };
 		01C8DE3521906E0700F0A63C /* FerqoIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */; };
+		01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE4A2190795E00F0A63C /* Splash.storyboard */; };
+		01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE4E219079AF00F0A63C /* SplashViewController.swift */; };
+		01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE50219079CF00F0A63C /* Login.storyboard */; };
+		01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE52219079E000F0A63C /* LoginViewController.swift */; };
+		01C8DE5521907A0900F0A63C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5421907A0900F0A63C /* Config.swift */; };
+		01C8DE5B21907A6B00F0A63C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5A21907A6B00F0A63C /* App.swift */; };
+		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
+		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
+		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,21 @@
 		01C8DE3021906E0700F0A63C /* FerqoIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerqoIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerqoIOSUITests.swift; sourceTree = "<group>"; };
 		01C8DE3621906E0700F0A63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C8DE4A2190795E00F0A63C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		01C8DE4E219079AF00F0A63C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		01C8DE50219079CF00F0A63C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		01C8DE52219079E000F0A63C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01C8DE5421907A0900F0A63C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		01C8DE5A21907A6B00F0A63C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.release.xcconfig"; sourceTree = "<group>"; };
+		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A688F5140BE307762E131F6A /* Pods-FerqoIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSUITests/Pods-FerqoIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B3C332986B62B53AE9AD92 /* Pods-FerqoIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSUITests/Pods-FerqoIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2A24088EE9A635F57E4C348 /* Pods-FerqoIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 				01C8DE2821906E0700F0A63C /* FerqoIOSTests */,
 				01C8DE3321906E0700F0A63C /* FerqoIOSUITests */,
 				01C8DE0F21906E0600F0A63C /* Products */,
+				2BD8F6DB1EF3E91143BB9E73 /* Pods */,
+				D7406D021430173C65E3378F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +128,13 @@
 		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				01C8DE5C21907ADA00F0A63C /* Resources */,
+				01C8DE47219078CF00F0A63C /* Models */,
+				01C8DE46219078B500F0A63C /* Scenes */,
+				01C8DE452190788F00F0A63C /* Globals */,
+				01C8DE442190787A00F0A63C /* Redux */,
+				01C8DE432190786E00F0A63C /* Services */,
+				01C8DE422190783A00F0A63C /* Routes */,
 				01C8DE1121906E0600F0A63C /* AppDelegate.swift */,
 				01C8DE1321906E0600F0A63C /* ViewController.swift */,
 				01C8DE1521906E0600F0A63C /* Main.storyboard */,
@@ -128,6 +164,132 @@
 			path = FerqoIOSUITests;
 			sourceTree = "<group>";
 		};
+		01C8DE422190783A00F0A63C /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		01C8DE432190786E00F0A63C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01C8DE442190787A00F0A63C /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE5921907A4A00F0A63C /* Actions */,
+				01C8DE5821907A4000F0A63C /* Reducers */,
+				01C8DE5721907A2B00F0A63C /* States */,
+				01C8DE5621907A2100F0A63C /* Components */,
+				01C8DE5A21907A6B00F0A63C /* App.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		01C8DE452190788F00F0A63C /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE5421907A0900F0A63C /* Config.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		01C8DE46219078B500F0A63C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE492190793D00F0A63C /* Login */,
+				01C8DE482190792C00F0A63C /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		01C8DE47219078CF00F0A63C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01C8DE482190792C00F0A63C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE4A2190795E00F0A63C /* Splash.storyboard */,
+				01C8DE4E219079AF00F0A63C /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		01C8DE492190793D00F0A63C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE50219079CF00F0A63C /* Login.storyboard */,
+				01C8DE52219079E000F0A63C /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		01C8DE5621907A2100F0A63C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		01C8DE5721907A2B00F0A63C /* States */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		01C8DE5821907A4000F0A63C /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		01C8DE5921907A4A00F0A63C /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		01C8DE5C21907ADA00F0A63C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BD8F6DB1EF3E91143BB9E73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */,
+				35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */,
+				65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */,
+				E2A24088EE9A635F57E4C348 /* Pods-FerqoIOSTests.release.xcconfig */,
+				D5B3C332986B62B53AE9AD92 /* Pods-FerqoIOSUITests.debug.xcconfig */,
+				A688F5140BE307762E131F6A /* Pods-FerqoIOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7406D021430173C65E3378F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */,
+				9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */,
+				C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01C8DE3921906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOS" */;
 			buildPhases = (
+				2E07DA18FF15660407369B9F /* [CP] Check Pods Manifest.lock */,
 				01C8DE0A21906E0600F0A63C /* Sources */,
 				01C8DE0B21906E0600F0A63C /* Frameworks */,
 				01C8DE0C21906E0600F0A63C /* Resources */,
+				49DB8B563D20C9CEEA64CBD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,9 +316,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01C8DE3C21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSTests" */;
 			buildPhases = (
+				CE97440B642FBB244491F1F8 /* [CP] Check Pods Manifest.lock */,
 				01C8DE2121906E0700F0A63C /* Sources */,
 				01C8DE2221906E0700F0A63C /* Frameworks */,
 				01C8DE2321906E0700F0A63C /* Resources */,
+				C1EC1E0D3CAA10406B780050 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01C8DE3F21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSUITests" */;
 			buildPhases = (
+				A37C2BEE35A42A88E877F20C /* [CP] Check Pods Manifest.lock */,
 				01C8DE2C21906E0700F0A63C /* Sources */,
 				01C8DE2D21906E0700F0A63C /* Frameworks */,
 				01C8DE2E21906E0700F0A63C /* Resources */,
@@ -233,7 +400,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
+				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
+				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
 				01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +423,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E07DA18FF15660407369B9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FerqoIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49DB8B563D20C9CEEA64CBD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReRxSwift/ReRxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReRxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A37C2BEE35A42A88E877F20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FerqoIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1EC1E0D3CAA10406B780050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE97440B642FBB244491F1F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FerqoIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01C8DE0A21906E0600F0A63C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +537,11 @@
 			files = (
 				01C8DE1421906E0600F0A63C /* ViewController.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
+				01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */,
+				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				01C8DE5B21907A6B00F0A63C /* App.swift in Sources */,
+				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +712,7 @@
 		};
 		01C8DE3A21906E0700F0A63C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +730,7 @@
 		};
 		01C8DE3B21906E0700F0A63C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +748,7 @@
 		};
 		01C8DE3D21906E0700F0A63C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +769,7 @@
 		};
 		01C8DE3E21906E0700F0A63C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2A24088EE9A635F57E4C348 /* Pods-FerqoIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +790,7 @@
 		};
 		01C8DE4021906E0700F0A63C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B3C332986B62B53AE9AD92 /* Pods-FerqoIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +810,7 @@
 		};
 		01C8DE4121906E0700F0A63C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A688F5140BE307762E131F6A /* Pods-FerqoIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
