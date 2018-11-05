@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
+		01C8DE1421906E0600F0A63C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1321906E0600F0A63C /* ViewController.swift */; };
+		01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1521906E0600F0A63C /* Main.storyboard */; };
+		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
+		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
+		01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */; };
+		01C8DE2A21906E0700F0A63C /* FerqoIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE2921906E0700F0A63C /* FerqoIOSTests.swift */; };
+		01C8DE3521906E0700F0A63C /* FerqoIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01C8DE2621906E0700F0A63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C8DE0621906E0600F0A63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01C8DE0D21906E0600F0A63C;
+			remoteInfo = FerqoIOS;
+		};
+		01C8DE3121906E0700F0A63C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01C8DE0621906E0600F0A63C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01C8DE0D21906E0600F0A63C;
+			remoteInfo = FerqoIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01C8DE1321906E0600F0A63C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01C8DE1621906E0600F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
+		01C8DE1B21906E0700F0A63C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01C8DE1E21906E0700F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01C8DE2021906E0700F0A63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C8DE2521906E0700F0A63C /* FerqoIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerqoIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C8DE2921906E0700F0A63C /* FerqoIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerqoIOSTests.swift; sourceTree = "<group>"; };
+		01C8DE2B21906E0700F0A63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01C8DE3021906E0700F0A63C /* FerqoIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerqoIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerqoIOSUITests.swift; sourceTree = "<group>"; };
+		01C8DE3621906E0700F0A63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01C8DE0B21906E0600F0A63C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2221906E0700F0A63C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2D21906E0700F0A63C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01C8DE0521906E0600F0A63C = {
+			isa = PBXGroup;
+			children = (
+				01C8DE1021906E0600F0A63C /* FerqoIOS */,
+				01C8DE2821906E0700F0A63C /* FerqoIOSTests */,
+				01C8DE3321906E0700F0A63C /* FerqoIOSUITests */,
+				01C8DE0F21906E0600F0A63C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01C8DE0F21906E0600F0A63C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE0E21906E0600F0A63C /* FerqoIOS.app */,
+				01C8DE2521906E0700F0A63C /* FerqoIOSTests.xctest */,
+				01C8DE3021906E0700F0A63C /* FerqoIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE1121906E0600F0A63C /* AppDelegate.swift */,
+				01C8DE1321906E0600F0A63C /* ViewController.swift */,
+				01C8DE1521906E0600F0A63C /* Main.storyboard */,
+				01C8DE1B21906E0700F0A63C /* Assets.xcassets */,
+				01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */,
+				01C8DE2021906E0700F0A63C /* Info.plist */,
+				01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */,
+			);
+			path = FerqoIOS;
+			sourceTree = "<group>";
+		};
+		01C8DE2821906E0700F0A63C /* FerqoIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE2921906E0700F0A63C /* FerqoIOSTests.swift */,
+				01C8DE2B21906E0700F0A63C /* Info.plist */,
+			);
+			path = FerqoIOSTests;
+			sourceTree = "<group>";
+		};
+		01C8DE3321906E0700F0A63C /* FerqoIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */,
+				01C8DE3621906E0700F0A63C /* Info.plist */,
+			);
+			path = FerqoIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01C8DE0D21906E0600F0A63C /* FerqoIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C8DE3921906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOS" */;
+			buildPhases = (
+				01C8DE0A21906E0600F0A63C /* Sources */,
+				01C8DE0B21906E0600F0A63C /* Frameworks */,
+				01C8DE0C21906E0600F0A63C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FerqoIOS;
+			productName = FerqoIOS;
+			productReference = 01C8DE0E21906E0600F0A63C /* FerqoIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01C8DE2421906E0700F0A63C /* FerqoIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C8DE3C21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSTests" */;
+			buildPhases = (
+				01C8DE2121906E0700F0A63C /* Sources */,
+				01C8DE2221906E0700F0A63C /* Frameworks */,
+				01C8DE2321906E0700F0A63C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01C8DE2721906E0700F0A63C /* PBXTargetDependency */,
+			);
+			name = FerqoIOSTests;
+			productName = FerqoIOSTests;
+			productReference = 01C8DE2521906E0700F0A63C /* FerqoIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		01C8DE2F21906E0700F0A63C /* FerqoIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C8DE3F21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSUITests" */;
+			buildPhases = (
+				01C8DE2C21906E0700F0A63C /* Sources */,
+				01C8DE2D21906E0700F0A63C /* Frameworks */,
+				01C8DE2E21906E0700F0A63C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01C8DE3221906E0700F0A63C /* PBXTargetDependency */,
+			);
+			name = FerqoIOSUITests;
+			productName = FerqoIOSUITests;
+			productReference = 01C8DE3021906E0700F0A63C /* FerqoIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01C8DE0621906E0600F0A63C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = rae;
+				TargetAttributes = {
+					01C8DE0D21906E0600F0A63C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					01C8DE2421906E0700F0A63C = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 01C8DE0D21906E0600F0A63C;
+					};
+					01C8DE2F21906E0700F0A63C = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 01C8DE0D21906E0600F0A63C;
+					};
+				};
+			};
+			buildConfigurationList = 01C8DE0921906E0600F0A63C /* Build configuration list for PBXProject "FerqoIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01C8DE0521906E0600F0A63C;
+			productRefGroup = 01C8DE0F21906E0600F0A63C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01C8DE0D21906E0600F0A63C /* FerqoIOS */,
+				01C8DE2421906E0700F0A63C /* FerqoIOSTests */,
+				01C8DE2F21906E0700F0A63C /* FerqoIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01C8DE0C21906E0600F0A63C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
+				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
+				01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2321906E0700F0A63C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2E21906E0700F0A63C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01C8DE0A21906E0600F0A63C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C8DE1421906E0600F0A63C /* ViewController.swift in Sources */,
+				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
+				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2121906E0700F0A63C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C8DE2A21906E0700F0A63C /* FerqoIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01C8DE2C21906E0700F0A63C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C8DE3521906E0700F0A63C /* FerqoIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01C8DE2721906E0700F0A63C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01C8DE0D21906E0600F0A63C /* FerqoIOS */;
+			targetProxy = 01C8DE2621906E0700F0A63C /* PBXContainerItemProxy */;
+		};
+		01C8DE3221906E0700F0A63C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01C8DE0D21906E0600F0A63C /* FerqoIOS */;
+			targetProxy = 01C8DE3121906E0700F0A63C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01C8DE1521906E0600F0A63C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C8DE1621906E0600F0A63C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C8DE1E21906E0700F0A63C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01C8DE3721906E0700F0A63C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01C8DE3821906E0700F0A63C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01C8DE3A21906E0700F0A63C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01C8DE3B21906E0700F0A63C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01C8DE3D21906E0700F0A63C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FerqoIOS.app/FerqoIOS";
+			};
+			name = Debug;
+		};
+		01C8DE3E21906E0700F0A63C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FerqoIOS.app/FerqoIOS";
+			};
+			name = Release;
+		};
+		01C8DE4021906E0700F0A63C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FerqoIOS;
+			};
+			name = Debug;
+		};
+		01C8DE4121906E0700F0A63C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FerqoIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FerqoIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01C8DE0921906E0600F0A63C /* Build configuration list for PBXProject "FerqoIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C8DE3721906E0700F0A63C /* Debug */,
+				01C8DE3821906E0700F0A63C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C8DE3921906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C8DE3A21906E0700F0A63C /* Debug */,
+				01C8DE3B21906E0700F0A63C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C8DE3C21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C8DE3D21906E0700F0A63C /* Debug */,
+				01C8DE3E21906E0700F0A63C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C8DE3F21906E0700F0A63C /* Build configuration list for PBXNativeTarget "FerqoIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C8DE4021906E0700F0A63C /* Debug */,
+				01C8DE4121906E0700F0A63C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */,
+			);
+			currentVersion = 01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */;
+			path = FerqoIOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 01C8DE0621906E0600F0A63C /* Project object */;
+}
