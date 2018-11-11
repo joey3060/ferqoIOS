@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         mainStore.dispatch(
-            ReSwiftRouter.SetRouteAction([""])
+            ReSwiftRouter.SetRouteAction(["menu"])
         )
         // Override point for customization after application launch.
         return true

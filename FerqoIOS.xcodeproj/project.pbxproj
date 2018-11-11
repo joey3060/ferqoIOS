@@ -23,6 +23,12 @@
 		587937662190BE2800219BAD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587937652190BE2800219BAD /* AppState.swift */; };
 		5879376A2190BF0500219BAD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587937692190BF0500219BAD /* Router.swift */; };
 		5879376C2190D45200219BAD /* RouterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5879376B2190D45200219BAD /* RouterModel.swift */; };
+		589705D321958026005609E2 /* MenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589705D221958026005609E2 /* MenuItem.xib */; };
+		589705D72197D04D005609E2 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705D62197D04D005609E2 /* MenuItem.swift */; };
+		589705D92197D2D2005609E2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705D82197D2D2005609E2 /* Menu.swift */; };
+		589705DC21985246005609E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589705DB21985246005609E2 /* Main.storyboard */; };
+		589705DE21985282005609E2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705DD21985282005609E2 /* MainViewController.swift */; };
+		589705E121985D92005609E2 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589705E021985D92005609E2 /* Menu.storyboard */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -70,6 +76,12 @@
 		587937652190BE2800219BAD /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		587937692190BF0500219BAD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5879376B2190D45200219BAD /* RouterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterModel.swift; sourceTree = "<group>"; };
+		589705D221958026005609E2 /* MenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItem.xib; sourceTree = "<group>"; };
+		589705D62197D04D005609E2 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		589705D82197D2D2005609E2 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		589705DB21985246005609E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		589705DD21985282005609E2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		589705E021985D92005609E2 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +144,7 @@
 		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				589705E221985E76005609E2 /* Helper */,
 				5879375D2190BA2200219BAD /* Resources */,
 				5879375E2190BA2D00219BAD /* Models */,
 				5879375C2190BA1100219BAD /* Components */,
@@ -141,7 +154,6 @@
 				587937682190BEEA00219BAD /* Services */,
 				587937672190BEDE00219BAD /* Routes */,
 				01C8DE1121906E0600F0A63C /* AppDelegate.swift */,
-				01C8DE1B21906E0700F0A63C /* Assets.xcassets */,
 				01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */,
 				01C8DE2021906E0700F0A63C /* Info.plist */,
 				01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */,
@@ -189,6 +201,8 @@
 		01C8DE46219078B500F0A63C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				589705DF21985D87005609E2 /* Menu */,
+				589705DA2198522D005609E2 /* MainScreen */,
 				01C8DE492190793D00F0A63C /* Login */,
 				01C8DE482190792C00F0A63C /* Splash */,
 			);
@@ -252,6 +266,7 @@
 		5879375C2190BA1100219BAD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				589705CF219579B8005609E2 /* Menu */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -259,6 +274,7 @@
 		5879375D2190BA2200219BAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				01C8DE1B21906E0700F0A63C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -266,7 +282,6 @@
 		5879375E2190BA2D00219BAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5879376B2190D45200219BAD /* RouterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +299,41 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		589705CF219579B8005609E2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				589705D221958026005609E2 /* MenuItem.xib */,
+				589705D62197D04D005609E2 /* MenuItem.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		589705DA2198522D005609E2 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				589705DB21985246005609E2 /* Main.storyboard */,
+				589705DD21985282005609E2 /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		589705DF21985D87005609E2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				589705D82197D2D2005609E2 /* Menu.swift */,
+				589705E021985D92005609E2 /* Menu.storyboard */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		589705E221985E76005609E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5879376B2190D45200219BAD /* RouterModel.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -405,10 +455,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589705D321958026005609E2 /* MenuItem.xib in Resources */,
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
+				589705E121985D92005609E2 /* Menu.storyboard in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
+				589705DC21985246005609E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,13 +596,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5879376C2190D45200219BAD /* RouterModel.swift in Sources */,
+				589705DE21985282005609E2 /* MainViewController.swift in Sources */,
 				587937622190BB1700219BAD /* BaseReducer.swift in Sources */,
 				5879376A2190BF0500219BAD /* Router.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
+				589705D92197D2D2005609E2 /* Menu.swift in Sources */,
 				587937662190BE2800219BAD /* AppState.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				589705D72197D04D005609E2 /* MenuItem.swift in Sources */,
 				01C8DE5B21907A6B00F0A63C /* MainStore.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 			);

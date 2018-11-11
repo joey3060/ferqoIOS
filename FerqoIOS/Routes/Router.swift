@@ -26,7 +26,11 @@ class RootRoute: Routable {
         animated: Bool,
         completionHandler: @escaping RoutingCompletionHandler) -> Routable
     {
-        router.loadToRoute("splashView", board: "Splash").preset()
+        if routeElementIdentifier == "menu" {
+            router.loadToRoute("menuList", board: "Menu").preset()
+        } else {
+            router.loadToRoute("splashView", board: "Splash").preset()
+        }
         
         return MainRouteable()
     }
