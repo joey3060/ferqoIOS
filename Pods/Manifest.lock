@@ -1,51 +1,25 @@
 PODS:
   - CryptoSwift (0.12.0)
-  - ReRxSwift (1.2.2):
-    - ReSwift (~> 4.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - ReSwift (4.0.1)
-  - ReSwiftRouter (0.6.0):
-    - ReSwift (~> 4.0.0)
-  - RxBlocking (4.3.1):
-    - RxSwift (~> 4.0)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
-  - RxTest (4.3.1):
-    - RxSwift (~> 4.0)
 
 DEPENDENCIES:
   - CryptoSwift
-  - ReRxSwift (~> 1.0)
-  - ReSwift
-  - ReSwiftRouter
-  - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
-  - RxTest (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - CryptoSwift
-    - ReRxSwift
-    - ReSwift
-    - ReSwiftRouter
-    - RxBlocking
     - RxCocoa
     - RxSwift
-    - RxTest
 
 SPEC CHECKSUMS:
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  ReRxSwift: f442fb438094237a2918f9345709a31b2a64a9cd
-  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
-  ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
-  RxBlocking: 64c051285261ca2339481e91b5f70eb06b03660a
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
-  RxTest: ea97a208826906f3904c0debdd09575ebcbfe216
 
-PODFILE CHECKSUM: d54ad4d663478665a8b14f929a194bc8e825d317
+PODFILE CHECKSUM: cf5674edcfaa54e53eb285f9c4b562383331b03e
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

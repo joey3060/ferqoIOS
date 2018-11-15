@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
-		01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1521906E0600F0A63C /* Main.storyboard */; };
 		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
 		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
 		01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */; };
 		01C8DE2A21906E0700F0A63C /* FerqoIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE2921906E0700F0A63C /* FerqoIOSTests.swift */; };
 		01C8DE3521906E0700F0A63C /* FerqoIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */; };
 		01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE4A2190795E00F0A63C /* Splash.storyboard */; };
-		01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE4E219079AF00F0A63C /* SplashViewController.swift */; };
 		01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE50219079CF00F0A63C /* Login.storyboard */; };
 		01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE52219079E000F0A63C /* LoginViewController.swift */; };
 		01C8DE5521907A0900F0A63C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5421907A0900F0A63C /* Config.swift */; };
+		589705E4219DB41A005609E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E3219DB41A005609E2 /* Coordinator.swift */; };
+		589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E5219DB4A4005609E2 /* AppCoordinator.swift */; };
+		589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E8219DB718005609E2 /* SplashCoordinator.swift */; };
+		589705EC219DB886005609E2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705EB219DB886005609E2 /* SplashViewController.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -44,7 +46,6 @@
 /* Begin PBXFileReference section */
 		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01C8DE1621906E0600F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
 		01C8DE1B21906E0700F0A63C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C8DE1E21906E0700F0A63C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,12 +57,15 @@
 		01C8DE3421906E0700F0A63C /* FerqoIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerqoIOSUITests.swift; sourceTree = "<group>"; };
 		01C8DE3621906E0700F0A63C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C8DE4A2190795E00F0A63C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		01C8DE4E219079AF00F0A63C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		01C8DE50219079CF00F0A63C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		01C8DE52219079E000F0A63C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01C8DE5421907A0900F0A63C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.release.xcconfig"; sourceTree = "<group>"; };
+		589705E3219DB41A005609E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		589705E5219DB4A4005609E2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		589705E8219DB718005609E2 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		589705EB219DB886005609E2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,9 +176,11 @@
 		01C8DE46219078B500F0A63C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				01C8DE1521906E0600F0A63C /* Main.storyboard */,
+				589705E5219DB4A4005609E2 /* AppCoordinator.swift */,
+				589705E3219DB41A005609E2 /* Coordinator.swift */,
 				01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */,
 				01C8DE492190793D00F0A63C /* Login */,
+				589705F4219DD53F005609E2 /* Main */,
 				01C8DE482190792C00F0A63C /* Splash */,
 			);
 			path = Scenes;
@@ -191,7 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				01C8DE4A2190795E00F0A63C /* Splash.storyboard */,
-				01C8DE4E219079AF00F0A63C /* SplashViewController.swift */,
+				589705E8219DB718005609E2 /* SplashCoordinator.swift */,
+				589705EF219DCAB5005609E2 /* ViewModel */,
+				589705EA219DB868005609E2 /* ViewControllers */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -224,6 +232,28 @@
 				A688F5140BE307762E131F6A /* Pods-FerqoIOSUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		589705EA219DB868005609E2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				589705EB219DB886005609E2 /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		589705EF219DCAB5005609E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		589705F4219DD53F005609E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -266,7 +296,6 @@
 				01C8DE2121906E0700F0A63C /* Sources */,
 				01C8DE2221906E0700F0A63C /* Frameworks */,
 				01C8DE2321906E0700F0A63C /* Resources */,
-				C1EC1E0D3CAA10406B780050 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,13 +338,16 @@
 				TargetAttributes = {
 					01C8DE0D21906E0600F0A63C = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 					01C8DE2421906E0700F0A63C = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = 01C8DE0D21906E0600F0A63C;
 					};
 					01C8DE2F21906E0700F0A63C = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = 01C8DE0D21906E0600F0A63C;
 					};
 				};
@@ -349,7 +381,6 @@
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
-				01C8DE1721906E0600F0A63C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,18 +427,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReRxSwift/ReRxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ReSwiftRouter/ReSwiftRouter.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReRxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwiftRouter.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -432,28 +457,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1EC1E0D3CAA10406B780050 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE97440B642FBB244491F1F8 /* [CP] Check Pods Manifest.lock */ = {
@@ -481,11 +484,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589705E4219DB41A005609E2 /* Coordinator.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
-				01C8DE4F219079AF00F0A63C /* SplashViewController.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
+				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
+				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,14 +527,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01C8DE1521906E0600F0A63C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01C8DE1621906E0600F0A63C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -661,13 +659,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FerqoIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -679,13 +678,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FerqoIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -705,7 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FerqoIOS.app/FerqoIOS";
 			};
@@ -726,7 +726,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FerqoIOS.app/FerqoIOS";
 			};
@@ -746,7 +746,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FerqoIOS;
 			};
@@ -766,7 +766,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.FerqoIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FerqoIOS;
 			};
