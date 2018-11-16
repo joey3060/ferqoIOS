@@ -25,9 +25,11 @@ class MainCoordinator: Coordinator {
     }
     
     override func start() {
-        let mainVC: MainViewController = storyboard.instantiateInitialViewController() as! MainViewController
+//        let mainVC: MainViewController = storyboard.instantiateInitialViewController() as! MainViewController
         
-        mainVC.viewModel = mainViewModel
+//        mainVC.viewModel = mainViewModel
+        let mainVC: MenuTableViewController = MenuTableViewController()
+        
         rootViewController.setViewControllers([mainVC], animated: false)
         mainViewController = mainVC
     }

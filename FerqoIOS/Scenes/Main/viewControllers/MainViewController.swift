@@ -22,6 +22,10 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func loadView() {
+        super.loadView()
+    }
+    
 
     /*
     // MARK: - Navigation
