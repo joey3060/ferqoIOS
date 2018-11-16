@@ -30,6 +30,7 @@
 		58970608219F382E005609E2 /* MenuItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58970607219F382E005609E2 /* MenuItem.xib */; };
 		5897060B219F48C1005609E2 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060A219F48C1005609E2 /* Nib.swift */; };
 		5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060C219F5646005609E2 /* MenuTableViewModel.swift */; };
+		58970610219F6491005609E2 /* MenuDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060F219F6491005609E2 /* MenuDataType.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -84,6 +85,7 @@
 		58970607219F382E005609E2 /* MenuItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItem.xib; sourceTree = "<group>"; };
 		5897060A219F48C1005609E2 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
 		5897060C219F5646005609E2 /* MenuTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewModel.swift; sourceTree = "<group>"; };
+		5897060F219F6491005609E2 /* MenuDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataType.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +276,7 @@
 			children = (
 				589705F5219DDCE3005609E2 /* Main.storyboard */,
 				589705F7219DDD4E005609E2 /* MainCoordinator.swift */,
+				5897060E219F646E005609E2 /* viewDatas */,
 				589705FC219F2578005609E2 /* viewModel */,
 				589705FB219F256C005609E2 /* viewControllers */,
 				58970601219F2D63005609E2 /* view */,
@@ -302,17 +305,17 @@
 		58970601219F2D63005609E2 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				58970609219F38DD005609E2 /* MenuTableView */,
+				58970607219F382E005609E2 /* MenuItem.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		58970609219F38DD005609E2 /* MenuTableView */ = {
+		5897060E219F646E005609E2 /* viewDatas */ = {
 			isa = PBXGroup;
 			children = (
-				58970607219F382E005609E2 /* MenuItem.xib */,
+				5897060F219F6491005609E2 /* MenuDataType.swift */,
 			);
-			path = MenuTableView;
+			path = viewDatas;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -490,12 +493,14 @@
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,6 +564,7 @@
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

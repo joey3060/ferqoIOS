@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
+    
+    var menu: MenuTableViewController = MenuTableViewController()
 
     var viewModel: MainViewModel! {
         didSet {
@@ -18,7 +21,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addMenu()
         // Do any additional setup after loading the view.
     }
     
@@ -26,7 +29,16 @@ class MainViewController: UIViewController {
         super.loadView()
     }
     
-
+    func addMenu() {
+        menu.viewModel = viewModel.coordinationDelegate?.menuTableViewModel
+        addChild(menu)
+        view.addSubview(menu.view)
+        menu.didMove(toParent: self)
+        menu.view.snp.makeConstraints{ (make) -> Void in
+            make.top.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+        }
+    }
     /*
     // MARK: - Navigation
 
