@@ -7,10 +7,6 @@
 //
 import UIKit
 
-protocol CoordinationDelegate {
-    func coordinateTransitionFrom(source: Coordinator, toDestination destination: UIViewController)
-}
-
 class AppCoordinator: Coordinator {
     
     // MARK: - Properties
@@ -24,7 +20,7 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Coordinator
     init(window: UIWindow?) {
-        self.window = window
+        self.window = window!
     }
     
     override func start() {
@@ -40,4 +36,22 @@ class AppCoordinator: Coordinator {
         
     }
     
+    func coordinateToSplash() {
+        let coordinator = SplashCoordinator(window: self.window!)
+        coordinator.delegate = self
+        coordinator.start()
+    }
+    
+    func coordinateToMain() {
+        
+    }
+}
+
+extension AppCoordinator: SplashViewControllerDelegate {
+    func skipSplash() {
+        let coordinator = MainCoordinator(self.rootViewController)
+        coordinator.delegate = self
+        coordinator.start()
+        window?.rootViewController = rootViewController
+    }
 }

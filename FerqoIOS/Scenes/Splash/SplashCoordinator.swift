@@ -9,29 +9,36 @@
 import UIKit
 
 class SplashCoordinator: Coordinator {
-    let rootViewController: UINavigationController
-    private var splashViewController: UIViewController!
+    var delegate: SplashViewControllerDelegate?
+    var window: UIWindow
+    lazy var rootViewController: UINavigationController = {
+        let navigation = UINavigationController(rootViewController: UIViewController())
+        navigation.isNavigationBarHidden = true
+        return navigation
+    }()
     
     let storyboard = UIStoryboard(name: "Splash", bundle: nil)
     
-    init(rootViewController: UINavigationController) {
-        self.rootViewController = rootViewController
+    lazy var splashViewModel: SplashViewModel! = {
+        let viewModel = SplashViewModel()
+        viewModel.coordinationDelegate = self
+        return viewModel
+    }()
+    
+    init(window: UIWindow) {
+        self.window = window
     }
     
     override func start() {
         let splashVC: SplashViewController = storyboard.instantiateInitialViewController() as! SplashViewController
-        
+        splashVC.viewModel = splashViewModel
         rootViewController.setViewControllers([splashVC], animated: false)
-        splashViewController = splashVC
-        splashVC.coordinationDelegate = MainSplashCoordinator()
+        window.rootViewController = self.rootViewController
     }
 }
 
-class MainSplashCoordinator: CoordinationDelegate {
-    func coordinateTransitionFrom(source: Coordinator, toDestination destination: UIViewController) {
-    }
-    
-    func SplashViewControllerDidSelectNextView() {
-        print("next test")
+extension SplashCoordinator: SplashViewControllerDelegate {
+    func skipSplash() {
+        delegate?.skipSplash()
     }
 }

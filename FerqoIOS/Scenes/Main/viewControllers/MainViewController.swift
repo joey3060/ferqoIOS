@@ -1,16 +1,16 @@
 //
-//  SplashViewController.swift
+//  MainViewController.swift
 //  FerqoIOS
 //
-//  Created by 蔡銘祐 on 2018/11/15.
+//  Created by 蔡銘祐 on 2018/11/17.
 //  Copyright © 2018 rae. All rights reserved.
 //
 
 import UIKit
 
-class SplashViewController: UIViewController {
-    
-    var viewModel: SplashViewModel! {
+class MainViewController: UIViewController {
+
+    var viewModel: MainViewModel! {
         didSet {
             viewModel.viewDelegate = self
         }
@@ -18,8 +18,10 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.skipSplash()
+
+        // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation

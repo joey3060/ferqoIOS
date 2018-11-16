@@ -6,6 +6,10 @@
 //  Copyright © 2018 rae. All rights reserved.
 //
 
+protocol CoordinatorDelegate {
+    func start()
+}
+
 class Coordinator {
     
     private(set) var childCoordinators: [Coordinator] = []

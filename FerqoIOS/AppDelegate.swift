@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window)
         appCoordinator.start()
-        let splash = SplashCoordinator(rootViewController: appCoordinator.rootViewController)
-        splash.start()
+        appCoordinator.coordinateToSplash()
         return true
     }
 

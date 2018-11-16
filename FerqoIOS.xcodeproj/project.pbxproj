@@ -21,6 +21,11 @@
 		589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E5219DB4A4005609E2 /* AppCoordinator.swift */; };
 		589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E8219DB718005609E2 /* SplashCoordinator.swift */; };
 		589705EC219DB886005609E2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705EB219DB886005609E2 /* SplashViewController.swift */; };
+		589705F6219DDCE3005609E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589705F5219DDCE3005609E2 /* Main.storyboard */; };
+		589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705F7219DDD4E005609E2 /* MainCoordinator.swift */; };
+		589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705F9219DEB51005609E2 /* SplashViewModel.swift */; };
+		589705FE219F25C0005609E2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705FD219F25C0005609E2 /* MainViewController.swift */; };
+		58970600219F2667005609E2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705FF219F2667005609E2 /* MainViewModel.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -66,6 +71,11 @@
 		589705E5219DB4A4005609E2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		589705E8219DB718005609E2 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		589705EB219DB886005609E2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		589705F5219DDCE3005609E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		589705F7219DDD4E005609E2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		589705F9219DEB51005609E2 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		589705FD219F25C0005609E2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		589705FF219F2667005609E2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +255,7 @@
 		589705EF219DCAB5005609E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				589705F9219DEB51005609E2 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -252,8 +263,28 @@
 		589705F4219DD53F005609E2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				589705F5219DDCE3005609E2 /* Main.storyboard */,
+				589705F7219DDD4E005609E2 /* MainCoordinator.swift */,
+				589705FC219F2578005609E2 /* viewModel */,
+				589705FB219F256C005609E2 /* viewControllers */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		589705FB219F256C005609E2 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				589705FD219F25C0005609E2 /* MainViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		589705FC219F2578005609E2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				589705FF219F2667005609E2 /* MainViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -378,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
+				589705F6219DDCE3005609E2 /* Main.storyboard in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
@@ -485,13 +517,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				589705E4219DB41A005609E2 /* Coordinator.swift in Sources */,
+				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
+				589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */,
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
+				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
