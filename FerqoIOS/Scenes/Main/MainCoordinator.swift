@@ -35,7 +35,8 @@ class MainCoordinator: Coordinator {
         
         mainVC.viewModel = mainViewModel
 //        let mainVC: MenuTableViewController = MenuTableViewController()
-        
+//        rootViewController.isNavigationBarHidden = false
+//        rootViewController.navigationBar.prefersLargeTitles = true
         rootViewController.setViewControllers([mainVC], animated: false)
         mainViewController = mainVC
     }

@@ -31,6 +31,7 @@
 		5897060B219F48C1005609E2 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060A219F48C1005609E2 /* Nib.swift */; };
 		5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060C219F5646005609E2 /* MenuTableViewModel.swift */; };
 		58970610219F6491005609E2 /* MenuDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060F219F6491005609E2 /* MenuDataType.swift */; };
+		5897061221A0A23C005609E2 /* MainDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897061121A0A23C005609E2 /* MainDataType.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -86,6 +87,7 @@
 		5897060A219F48C1005609E2 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
 		5897060C219F5646005609E2 /* MenuTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewModel.swift; sourceTree = "<group>"; };
 		5897060F219F6491005609E2 /* MenuDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataType.swift; sourceTree = "<group>"; };
+		5897061121A0A23C005609E2 /* MainDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataType.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				5897060F219F6491005609E2 /* MenuDataType.swift */,
+				5897061121A0A23C005609E2 /* MainDataType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				589705E4219DB41A005609E2 /* Coordinator.swift in Sources */,
 				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
+				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,

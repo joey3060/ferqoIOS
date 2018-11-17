@@ -27,6 +27,52 @@ class MainViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        setActionBar()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch! = touches.first
+        //location is relative to the current view
+        // do something with the touched point
+        if touch.view != menu.view && viewModel.menuOpen {
+            hideMenu()
+        }
+    }
+    
+    @IBAction func clickMenu(_ sender: Any) {
+        showMenu()
+    }
+    
+    func setActionBar() {
+        let pageSetting = viewModel.pageSetting
+        navigationItem.title = pageSetting.name
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickMenu))
+    }
+    
+    func showMenu() {
+        viewModel.menuOpen = true
+        menu.view.snp.updateConstraints{ (make) -> Void in
+            make.left.equalToSuperview()
+        }
+        updateMenu()
+    }
+    
+    func hideMenu() {
+        viewModel.menuOpen = false
+        menu.view.snp.updateConstraints{ (make) -> Void in
+            make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
+        }
+        updateMenu()
+    }
+    
+    func updateMenu() {
+        self.menu.view.isHidden = false
+        view.setNeedsUpdateConstraints()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.layoutIfNeeded()
+        }) { (Bool) in
+            self.menu.view.isHidden = !self.viewModel.menuOpen
+        }
     }
     
     func addMenu() {
@@ -36,7 +82,7 @@ class MainViewController: UIViewController {
         menu.didMove(toParent: self)
         menu.view.snp.makeConstraints{ (make) -> Void in
             make.top.bottom.equalToSuperview()
-            make.left.equalToSuperview()
+            make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
         }
     }
     /*

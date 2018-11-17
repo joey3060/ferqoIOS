@@ -13,29 +13,40 @@
         <!--First View-->
         <scene sceneID="67L-dp-esQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ki7-aJ-Dcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="First View" id="EGf-OT-CIm" customClass="MainViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lWs-Bt-a3n">
+                    <view key="view" contentMode="scaleToFill" id="gWD-qi-9yp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yw8-wS-2Gf">
-                                <rect key="frame" x="148" y="323" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrF-ea-T1S">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="pQ7-Fi-M6t">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="kLT-Ff-5XQ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FRa-fD-MMW">
+                                                <rect key="frame" x="16" y="10" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="berger"/>
+                                                <connections>
+                                                    <action selector="clickMenu:" destination="EGf-OT-CIm" eventType="touchUpInside" id="gRe-br-KsE"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Yw8-wS-2Gf" firstAttribute="centerX" secondItem="lWs-Bt-a3n" secondAttribute="centerX" id="Ram-dl-9iB"/>
-                            <constraint firstItem="Yw8-wS-2Gf" firstAttribute="centerY" secondItem="lWs-Bt-a3n" secondAttribute="centerY" id="zWq-0I-Gju"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="8UF-uy-W2d"/>
+                        <viewLayoutGuide key="safeArea" id="wTG-X3-TEZ"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ki7-aJ-Dcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10" y="135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="berger" width="24" height="24"/>
+    </resources>
 </document>

@@ -8,7 +8,15 @@
 
 import UIKit
 
+struct pageSettings: pageStruct {
+    var name: String = "Hello，今日好嗎？"
+}
+
 class MainViewModel {
     var coordinationDelegate: MainCoordinator?
     weak var viewDelegate: UIViewController?
+    
+    var pageSetting: pageStruct = pageSettings()
+    
+    var menuOpen = false
 }
