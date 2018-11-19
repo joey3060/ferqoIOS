@@ -13,6 +13,9 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var topBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var mainSection: UIView!
+
     var menu: MenuTableViewController = MenuTableViewController()
 
     var viewModel: MainViewModel! {
@@ -24,6 +27,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenu()
+        setMainViewStyle()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
@@ -54,7 +58,25 @@ class MainViewController: UIViewController {
     }
     
     func setActionBar() {
-        //let pageSetting = viewModel.pageSetting
+        let pageSetting = viewModel.pageSetting
+        headerTitle.text = pageSetting.name
+    }
+    
+    func setMainViewStyle() {
+        let guide = view.safeAreaLayoutGuide
+        print(guide.layoutFrame.size.height)
+        
+        headerTitle.snp.makeConstraints{ (make) -> Void in
+            make.top.equalToSuperview().offset(64)
+        }
+        mainSection.snp.makeConstraints{ (make) -> Void in
+            make.top.equalTo(headerTitle.snp.bottom).offset(23)
+            if let window = UIApplication.shared.keyWindow {
+                let safeAreaBottom = window.safeAreaInsets.bottom
+                let safeAreaTop = window.safeAreaInsets.top
+                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-44)
+            }
+        }
     }
     
     func showMenu() {
