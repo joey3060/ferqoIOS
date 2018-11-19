@@ -11,6 +11,8 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var topBar: UINavigationBar!
+    @IBOutlet weak var scrollView: UIScrollView!
     var menu: MenuTableViewController = MenuTableViewController()
 
     var viewModel: MainViewModel! {
@@ -22,6 +24,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addMenu()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
+        scrollView.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
@@ -43,10 +47,14 @@ class MainViewController: UIViewController {
         showMenu()
     }
     
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil) {
+        if viewModel.menuOpen {
+            hideMenu()
+        }
+    }
+    
     func setActionBar() {
-        let pageSetting = viewModel.pageSetting
-        navigationItem.title = pageSetting.name
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickMenu))
+        //let pageSetting = viewModel.pageSetting
     }
     
     func showMenu() {
