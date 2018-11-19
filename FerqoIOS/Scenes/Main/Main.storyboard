@@ -104,6 +104,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FRa-fD-MMW">
                                                 <rect key="frame" x="16" y="10" width="24" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.98813253639999998" green="0.9961838126" blue="0.99990326169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="berger"/>
                                                 <connections>
                                                     <action selector="clickMenu:" destination="EGf-OT-CIm" eventType="touchUpInside" id="gRe-br-KsE"/>

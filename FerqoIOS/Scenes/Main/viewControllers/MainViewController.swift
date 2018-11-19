@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         setMainViewStyle()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
+        scrollView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -64,11 +65,13 @@ class MainViewController: UIViewController {
     
     func setMainViewStyle() {
         let guide = view.safeAreaLayoutGuide
-        print(guide.layoutFrame.size.height)
-        
+        topBar.backgroundColor = .clear
+        topBar.setBackgroundImage(UIImage(), for: .default)
+        topBar.shadowImage = UIImage()
         headerTitle.snp.makeConstraints{ (make) -> Void in
             make.top.equalToSuperview().offset(64)
         }
+        
         mainSection.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(headerTitle.snp.bottom).offset(23)
             if let window = UIApplication.shared.keyWindow {
@@ -115,14 +118,12 @@ class MainViewController: UIViewController {
             make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
         }
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MainViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
+        let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
+        headerTitle.textColor = UIColor(white: 1, alpha: opacity)
     }
-    */
-
 }
