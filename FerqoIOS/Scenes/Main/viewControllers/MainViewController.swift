@@ -15,7 +15,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainSection: UIView!
-
+    @IBOutlet weak var collectionTab: UICollectionView!
+    
+    let tabDataSource = TabViewDataSource()
+    let tabViewDelegate = TabViewDelegate()
+    
     var menu: MenuTableViewController = MenuTableViewController()
 
     var viewModel: MainViewModel! {
@@ -31,7 +35,9 @@ class MainViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
         scrollView.delegate = self
-        // Do any additional setup after loading the view.
+        tabDataSource.tabItems = viewModel.tabViewList
+        collectionTab.dataSource = tabDataSource
+        collectionTab.delegate = tabViewDelegate
     }
     
     override func loadView() {
@@ -124,6 +130,13 @@ extension MainViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
         let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
+        print(opacity)
         headerTitle.textColor = UIColor(white: 1, alpha: opacity)
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item + 1)
     }
 }

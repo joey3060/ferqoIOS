@@ -9,3 +9,7 @@
 protocol pageStruct {
     var name: String { get set }
 }
+
+struct TabRoomType {
+    var roomName: String = ""
+}
