@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016E84E021A3F844001E69A3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84DF21A3F843001E69A3 /* File.swift */; };
 		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
 		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
 		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016E84DF21A3F843001E69A3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016E84DE21A3F821001E69A3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				016E84DF21A3F843001E69A3 /* File.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		01C8DE0521906E0600F0A63C = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				016E84DE21A3F821001E69A3 /* Extension */,
 				01C8DE5C21907ADA00F0A63C /* Resources */,
 				01C8DE47219078CF00F0A63C /* Models */,
 				01C8DE46219078B500F0A63C /* Scenes */,
@@ -560,6 +571,7 @@
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				016E84E021A3F844001E69A3 /* File.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
