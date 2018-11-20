@@ -26,6 +26,12 @@ class MainCoordinator: Coordinator {
         return viewModel
     }()
     
+    lazy var mainSlideViewModel: MainSlideViewController! = {
+        let viewModel = MainSlideViewController()
+        viewModel.coordinationDelegate = self
+        return viewModel
+    }()
+    
     init(_ rootViewController: UINavigationController) {
         self.rootViewController = rootViewController
     }

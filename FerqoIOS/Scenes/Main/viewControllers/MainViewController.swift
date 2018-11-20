@@ -16,11 +16,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainSection: UIView!
     @IBOutlet weak var collectionTab: UICollectionView!
+    @IBOutlet weak var slideView: UIScrollView!
     
     let tabDataSource = TabViewDataSource()
     let tabViewDelegate = TabViewDelegate()
     
     var menu: MenuTableViewController = MenuTableViewController()
+    var slides: [MainSlideViewController]!
 
     var viewModel: MainViewModel! {
         didSet {
@@ -38,6 +40,9 @@ class MainViewController: UIViewController {
         tabDataSource.tabItems = viewModel.tabViewList
         collectionTab.dataSource = tabDataSource
         collectionTab.delegate = tabViewDelegate
+        
+        slides = setupSlides()
+        setupSlideScrollView(slides: slides)
     }
     
     override func loadView() {
@@ -88,6 +93,26 @@ class MainViewController: UIViewController {
         }
     }
     
+    func setupSlides() -> [MainSlideViewController] {
+        let test1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
+        let test2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
+        
+        return [test1, test2]
+    }
+    
+    func setupSlideScrollView(slides : [MainSlideViewController]) {
+        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: slideView.frame.height)
+        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: slideView.frame.height)
+        slideView.isPagingEnabled = true
+        
+        for i in 0 ..< slides.count {
+            slides[i].view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
+            addChild(slides[i])
+            slideView.addSubview(slides[i].view)
+            slides[i].didMove(toParent: self)
+        }
+    }
+    
     func showMenu() {
         viewModel.menuOpen = true
         menu.view.snp.updateConstraints{ (make) -> Void in
@@ -130,7 +155,6 @@ extension MainViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
         let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
-        print(opacity)
         headerTitle.textColor = UIColor(white: 1, alpha: opacity)
     }
 }
