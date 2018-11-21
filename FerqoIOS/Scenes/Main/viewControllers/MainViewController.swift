@@ -90,8 +90,7 @@ class MainViewController: UIViewController {
                 make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height)
             }
         }
-        
-//        slideWrapper.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+        slideWrapper.roundCorners(corners: [.topLeft, .topRight], radius: 8)
     }
     
     func setupSlides() {
@@ -104,9 +103,9 @@ class MainViewController: UIViewController {
     }
     
     func setupSlideScrollView(slides : [TabRoomType]) {
-        print(view.frame.height - slideView.frame.height)
-        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: mainSection.frame.height - collectionTab.frame.height)
-        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: mainSection.frame.height - collectionTab.frame.height)
+        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: mainSection.frame.height - collectionTab.frame.height
+        )
+        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: slideView.contentSize.height)
         slideView.isPagingEnabled = true
         
         for i in 0 ..< slides.count {

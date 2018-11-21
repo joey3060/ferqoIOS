@@ -15,7 +15,6 @@ class MainSlideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel.roomName)
         typeName?.text = viewModel.roomName
         // Do any additional setup after loading the view.
     }
