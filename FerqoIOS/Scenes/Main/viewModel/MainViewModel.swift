@@ -21,10 +21,10 @@ class MainViewModel {
     var menuOpen = false
     
     var tabViewList: Array<TabRoomType> = [
-        TabRoomType(roomName: "總控制"),
-        TabRoomType(roomName: "客廳"),
-        TabRoomType(roomName: "房間1"),
-        TabRoomType(roomName: "房間2"),
-        TabRoomType(roomName: "其他"),
+        TabRoomType(roomName: "總控制", viewController: nil),
+        TabRoomType(roomName: "客廳", viewController: nil),
+        TabRoomType(roomName: "房間1", viewController: nil),
+        TabRoomType(roomName: "房間2", viewController: nil),
+        TabRoomType(roomName: "其他", viewController: nil),
     ]
 }

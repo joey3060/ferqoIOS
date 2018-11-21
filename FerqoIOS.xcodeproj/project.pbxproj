@@ -19,6 +19,8 @@
 		01C8DE5521907A0900F0A63C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5421907A0900F0A63C /* Config.swift */; };
 		5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C621A457E900883BE5 /* TabViewCollection.swift */; };
 		5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */; };
+		5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */; };
+		5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CC21A5A58600883BE5 /* UIView.swift */; };
 		589705E4219DB41A005609E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E3219DB41A005609E2 /* Coordinator.swift */; };
 		589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E5219DB4A4005609E2 /* AppCoordinator.swift */; };
 		589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E8219DB718005609E2 /* SplashCoordinator.swift */; };
@@ -77,6 +79,8 @@
 		35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5808A2C621A457E900883BE5 /* TabViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewCollection.swift; sourceTree = "<group>"; };
 		5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewController.swift; sourceTree = "<group>"; };
+		5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewModel.swift; sourceTree = "<group>"; };
+		5808A2CC21A5A58600883BE5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		589705E3219DB41A005609E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		589705E5219DB4A4005609E2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		589705E8219DB718005609E2 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			children = (
 				01C8DE5421907A0900F0A63C /* Config.swift */,
 				5897060A219F48C1005609E2 /* Nib.swift */,
+				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			children = (
 				589705FF219F2667005609E2 /* MainViewModel.swift */,
 				5897060C219F5646005609E2 /* MenuTableViewModel.swift */,
+				5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -564,10 +570,12 @@
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
+				5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
+				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
 				5897060B219F48C1005609E2 /* Nib.swift in Sources */,
@@ -744,7 +752,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CKW9QRWSRZ;
 				INFOPLIST_FILE = FerqoIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -764,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = CKW9QRWSRZ;
 				INFOPLIST_FILE = FerqoIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

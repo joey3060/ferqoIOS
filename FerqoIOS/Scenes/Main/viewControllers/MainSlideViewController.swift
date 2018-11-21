@@ -9,11 +9,14 @@
 import UIKit
 
 class MainSlideViewController: UIViewController {
-    var coordinationDelegate: Coordinator!
-
+    var viewModel: MainSlideViewModel!
+    
+    @IBOutlet var typeName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(viewModel.roomName)
+        typeName?.text = viewModel.roomName
         // Do any additional setup after loading the view.
     }
     

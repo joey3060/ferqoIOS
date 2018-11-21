@@ -26,11 +26,20 @@ class MainCoordinator: Coordinator {
         return viewModel
     }()
     
-    lazy var mainSlideViewModel: MainSlideViewController! = {
-        let viewModel = MainSlideViewController()
+    var mainSlideViewModel: MainSlideViewModel! {
+        let viewModel = MainSlideViewModel()
         viewModel.coordinationDelegate = self
         return viewModel
-    }()
+    }
+    
+    // auto give a new class object
+    var mainSlideViewController: MainSlideViewController! {
+        get {
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
+            viewController.viewModel = mainSlideViewModel
+            return viewController
+        }
+    }
     
     init(_ rootViewController: UINavigationController) {
         self.rootViewController = rootViewController

@@ -16,13 +16,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainSection: UIView!
     @IBOutlet weak var collectionTab: UICollectionView!
+    @IBOutlet weak var slideWrapper: UIView!
     @IBOutlet weak var slideView: UIScrollView!
     
     let tabDataSource = TabViewDataSource()
     let tabViewDelegate = TabViewDelegate()
     
     var menu: MenuTableViewController = MenuTableViewController()
-    var slides: [MainSlideViewController]!
 
     var viewModel: MainViewModel! {
         didSet {
@@ -40,9 +40,8 @@ class MainViewController: UIViewController {
         tabDataSource.tabItems = viewModel.tabViewList
         collectionTab.dataSource = tabDataSource
         collectionTab.delegate = tabViewDelegate
-        
-        slides = setupSlides()
-        setupSlideScrollView(slides: slides)
+        setupSlides()
+        setupSlideScrollView(slides: viewModel.tabViewList)
     }
     
     override func loadView() {
@@ -88,28 +87,33 @@ class MainViewController: UIViewController {
             if let window = UIApplication.shared.keyWindow {
                 let safeAreaBottom = window.safeAreaInsets.bottom
                 let safeAreaTop = window.safeAreaInsets.top
-                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-44)
+                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height)
             }
+        }
+        
+//        slideWrapper.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+    }
+    
+    func setupSlides() {
+        for i in 0 ..< viewModel.tabViewList.count {
+            let newSlideView = viewModel.coordinationDelegate?.mainSlideViewController
+            print(viewModel.tabViewList[i].roomName)
+            newSlideView?.viewModel.setRoomType(name: viewModel.tabViewList[i].roomName)
+            viewModel.tabViewList[i].viewController = newSlideView
         }
     }
     
-    func setupSlides() -> [MainSlideViewController] {
-        let test1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
-        let test2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
-        
-        return [test1, test2]
-    }
-    
-    func setupSlideScrollView(slides : [MainSlideViewController]) {
-        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: slideView.frame.height)
-        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: slideView.frame.height)
+    func setupSlideScrollView(slides : [TabRoomType]) {
+        print(view.frame.height - slideView.frame.height)
+        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: mainSection.frame.height - collectionTab.frame.height)
+        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: mainSection.frame.height - collectionTab.frame.height)
         slideView.isPagingEnabled = true
         
         for i in 0 ..< slides.count {
-            slides[i].view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
-            addChild(slides[i])
-            slideView.addSubview(slides[i].view)
-            slides[i].didMove(toParent: self)
+            slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
+            addChild(slides[i].viewController!)
+            slideView.addSubview(slides[i].viewController!.view)
+            slides[i].viewController!.didMove(toParent: self)
         }
     }
     
