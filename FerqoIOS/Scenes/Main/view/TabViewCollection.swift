@@ -9,7 +9,8 @@
 import UIKit
 
 class TabCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var textLabel: UIButton!
+    @IBOutlet weak var underLine: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,6 +23,7 @@ class TabCollectionCell: UICollectionViewCell {
 
 class TabViewDataSource: NSObject, UICollectionViewDataSource {
     var tabItems: Array<TabRoomType>!
+    var mainController: MainViewController!
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -33,14 +35,16 @@ class TabViewDataSource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TabCollectionCell
-        cell.textLabel.text = String(tabItems[indexPath.row].roomName)
+        if (indexPath.row == 0) {
+            cell.underLine.isHidden = false
+        }
+        cell.textLabel.tag = indexPath.row
+        cell.textLabel.addTarget(self, action: #selector(btnEvent), for: .touchUpInside)
+        cell.textLabel.setTitle(String(tabItems[indexPath.row].roomName), for: .normal)
         return cell
     }
-}
-
-class TabViewDelegate: NSObject, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        Todo: interaction for selected
-        print(indexPath.row)
+    
+    @objc func btnEvent(_ sender: UIButton!) {
+        mainController.scrollSwipeView(sender.tag as Int)
     }
 }

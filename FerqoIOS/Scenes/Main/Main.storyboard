@@ -73,20 +73,34 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sL-ch-TyB">
-                                                                                            <rect key="frame" x="11" y="8" width="42" height="21"/>
-                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                            <color key="textColor" red="0.97807776492647269" green="0.99029391172259684" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
+                                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqv-AC-Kv3">
+                                                                                            <rect key="frame" x="9" y="8" width="46" height="16"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="16" id="p18-e1-eSv"/>
+                                                                                            </constraints>
+                                                                                            <state key="normal" title="Button">
+                                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            </state>
+                                                                                        </button>
+                                                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-eL-4P5">
+                                                                                            <rect key="frame" x="0.0" y="26" width="64" height="2"/>
+                                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="height" constant="2" id="uCq-9B-2Yc"/>
+                                                                                            </constraints>
+                                                                                        </view>
                                                                                     </subviews>
                                                                                 </view>
                                                                                 <constraints>
-                                                                                    <constraint firstItem="8sL-ch-TyB" firstAttribute="centerX" secondItem="PTb-oC-6Ze" secondAttribute="centerX" id="06e-3j-2r2"/>
-                                                                                    <constraint firstItem="8sL-ch-TyB" firstAttribute="top" secondItem="PTb-oC-6Ze" secondAttribute="top" constant="8" id="Ifg-wb-hK0"/>
+                                                                                    <constraint firstItem="IDT-eL-4P5" firstAttribute="top" secondItem="Aqv-AC-Kv3" secondAttribute="bottom" constant="2" id="Esv-b4-5A4"/>
+                                                                                    <constraint firstItem="Aqv-AC-Kv3" firstAttribute="centerX" secondItem="PTb-oC-6Ze" secondAttribute="centerX" id="ZO7-fL-9vz"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="IDT-eL-4P5" secondAttribute="trailing" id="blL-IV-Fkw"/>
+                                                                                    <constraint firstItem="IDT-eL-4P5" firstAttribute="leading" secondItem="PTb-oC-6Ze" secondAttribute="leading" id="jq8-Cn-2Rd"/>
+                                                                                    <constraint firstItem="Aqv-AC-Kv3" firstAttribute="top" secondItem="PTb-oC-6Ze" secondAttribute="top" constant="8" id="qHe-Ex-LqF"/>
                                                                                 </constraints>
                                                                                 <connections>
-                                                                                    <outlet property="textLabel" destination="8sL-ch-TyB" id="C8h-1s-Jbs"/>
+                                                                                    <outlet property="textLabel" destination="Aqv-AC-Kv3" id="9bF-gG-UBV"/>
+                                                                                    <outlet property="underLine" destination="IDT-eL-4P5" id="aMZ-zx-Ts7"/>
                                                                                 </connections>
                                                                             </collectionViewCell>
                                                                         </cells>

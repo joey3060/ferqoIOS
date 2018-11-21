@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var topBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -20,9 +20,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var slideView: UIScrollView!
     
     let tabDataSource = TabViewDataSource()
-    let tabViewDelegate = TabViewDelegate()
     
     var menu: MenuTableViewController = MenuTableViewController()
+    var beforeIndex: Int = 0
 
     var viewModel: MainViewModel! {
         didSet {
@@ -37,9 +37,12 @@ class MainViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
         scrollView.delegate = self
+        slideView.delegate = self
         tabDataSource.tabItems = viewModel.tabViewList
         collectionTab.dataSource = tabDataSource
-        collectionTab.delegate = tabViewDelegate
+        collectionTab.delegate = self
+        collectionTab.isUserInteractionEnabled = true
+        tabDataSource.mainController = self
         setupSlides()
         setupSlideScrollView(slides: viewModel.tabViewList)
     }
@@ -96,7 +99,6 @@ class MainViewController: UIViewController {
     func setupSlides() {
         for i in 0 ..< viewModel.tabViewList.count {
             let newSlideView = viewModel.coordinationDelegate?.mainSlideViewController
-            print(viewModel.tabViewList[i].roomName)
             newSlideView?.viewModel.setRoomType(name: viewModel.tabViewList[i].roomName)
             viewModel.tabViewList[i].viewController = newSlideView
         }
@@ -114,6 +116,13 @@ class MainViewController: UIViewController {
             slideView.addSubview(slides[i].viewController!.view)
             slides[i].viewController!.didMove(toParent: self)
         }
+    }
+    
+    func scrollSwipeView(_ index: Int) {
+        let width = CGFloat(slideView.frame.width)
+        UIView.animate(withDuration: 0.4, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            self.slideView.contentOffset.x = width * CGFloat(index)
+        }, completion: nil)
     }
     
     func showMenu() {
@@ -156,9 +165,19 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
-        let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
-        headerTitle.textColor = UIColor(white: 1, alpha: opacity)
+        if (self.scrollView == scrollView) {
+            let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
+            let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
+            headerTitle.textColor = UIColor(white: 1, alpha: opacity)
+        } else if(slideView == scrollView) {
+            let beforeCell = collectionTab.cellForItem(at: IndexPath(item: beforeIndex, section: 0)) as! TabCollectionCell
+            beforeCell.underLine.isHidden = true
+            let index = lround(Double(scrollView.contentOffset.x / slideView.frame.width))
+            collectionTab.scrollToItem(at: IndexPath(item: index, section: 0), at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+            let cell = collectionTab.cellForItem(at: IndexPath(item: index, section: 0)) as! TabCollectionCell
+            cell.underLine.isHidden = false
+            beforeIndex = index
+        }
     }
 }
 
