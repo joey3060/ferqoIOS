@@ -12,7 +12,7 @@ DEPENDENCIES:
   - SnapKit (~> 4.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CryptoSwift
     - RxCocoa
     - RxSwift
@@ -26,4 +26,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0cf533a0cf8992cc090a20b962220bff00ce62ba
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.0

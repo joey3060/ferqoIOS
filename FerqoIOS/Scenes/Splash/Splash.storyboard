@@ -18,17 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ferqo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bz-6x-Ehl">
-                                <rect key="frame" x="184.5" y="437.5" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6bn-Av-29v">
+                                <rect key="frame" x="148" y="389" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="Bkc-Gu-KjA"/>
+                                    <constraint firstAttribute="width" constant="118" id="uXZ-B0-t8k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fergo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-gr-UXf">
+                                <rect key="frame" x="8" y="497" width="398" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0Bz-6x-Ehl" firstAttribute="centerY" secondItem="Z7k-Xj-pFm" secondAttribute="centerY" id="46z-g4-eaL"/>
-                            <constraint firstItem="0Bz-6x-Ehl" firstAttribute="centerX" secondItem="Z7k-Xj-pFm" secondAttribute="centerX" id="83V-be-Udk"/>
+                            <constraint firstItem="6bn-Av-29v" firstAttribute="centerY" secondItem="Z7k-Xj-pFm" secondAttribute="centerY" id="6QP-VF-RlO"/>
+                            <constraint firstItem="6bn-Av-29v" firstAttribute="centerY" secondItem="Z7k-Xj-pFm" secondAttribute="centerY" id="G0f-uF-6Qj"/>
+                            <constraint firstItem="fdY-gr-UXf" firstAttribute="firstBaseline" secondItem="6bn-Av-29v" secondAttribute="baseline" constant="23.5" id="l9x-Lv-aap"/>
+                            <constraint firstItem="6bn-Av-29v" firstAttribute="centerX" secondItem="Z7k-Xj-pFm" secondAttribute="centerX" id="lm6-RL-Ncp"/>
+                            <constraint firstItem="fdY-gr-UXf" firstAttribute="leading" secondItem="XvW-Fv-rr3" secondAttribute="leading" constant="8" id="rQr-Ri-wix"/>
+                            <constraint firstItem="XvW-Fv-rr3" firstAttribute="trailing" secondItem="fdY-gr-UXf" secondAttribute="trailing" constant="8" id="yTE-3c-kze"/>
+                            <constraint firstItem="6bn-Av-29v" firstAttribute="centerX" secondItem="Z7k-Xj-pFm" secondAttribute="centerX" id="zGw-h8-AAJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XvW-Fv-rr3"/>
                     </view>
@@ -38,4 +50,7 @@
             <point key="canvasLocation" x="200" y="37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="118" height="118"/>
+    </resources>
 </document>

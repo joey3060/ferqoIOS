@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F8AA621A845E500D682F9 /* IntroViewController.swift */; };
+		010F8AAC21A852B800D682F9 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010F8AAB21A852B800D682F9 /* Intro.storyboard */; };
+		010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F8AAE21A8531D00D682F9 /* IntroCoordinator.swift */; };
+		010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F8AB121A8538600D682F9 /* IntroViewModel.swift */; };
+		016E84E021A3F844001E69A3 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84DF21A3F843001E69A3 /* UITextField.swift */; };
+		016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84E221A51104001E69A3 /* LoginCoordinator.swift */; };
+		016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84E521A51277001E69A3 /* LoginViewModel.swift */; };
 		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
 		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
 		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
@@ -59,6 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010F8AA621A845E500D682F9 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		010F8AAB21A852B800D682F9 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		010F8AAE21A8531D00D682F9 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
+		010F8AB121A8538600D682F9 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		016E84DF21A3F843001E69A3 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		016E84E221A51104001E69A3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		016E84E521A51277001E69A3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
@@ -133,6 +147,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010F8AA821A8470C00D682F9 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				010F8AAB21A852B800D682F9 /* Intro.storyboard */,
+				010F8AAE21A8531D00D682F9 /* IntroCoordinator.swift */,
+				010F8AAD21A852E100D682F9 /* viewControllers */,
+				010F8AB021A8536200D682F9 /* viewModel */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		010F8AAD21A852E100D682F9 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				010F8AA621A845E500D682F9 /* IntroViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		010F8AB021A8536200D682F9 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				010F8AB121A8538600D682F9 /* IntroViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		016E84DE21A3F821001E69A3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				016E84DF21A3F843001E69A3 /* UITextField.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		016E84E121A510DB001E69A3 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01C8DE52219079E000F0A63C /* LoginViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		016E84E421A5125A001E69A3 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				016E84E521A51277001E69A3 /* LoginViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		01C8DE0521906E0600F0A63C = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +223,7 @@
 		01C8DE1021906E0600F0A63C /* FerqoIOS */ = {
 			isa = PBXGroup;
 			children = (
+				016E84DE21A3F821001E69A3 /* Extension */,
 				01C8DE5C21907ADA00F0A63C /* Resources */,
 				01C8DE47219078CF00F0A63C /* Models */,
 				01C8DE46219078B500F0A63C /* Scenes */,
@@ -211,6 +277,7 @@
 				589705E5219DB4A4005609E2 /* AppCoordinator.swift */,
 				589705E3219DB41A005609E2 /* Coordinator.swift */,
 				01C8DE1D21906E0700F0A63C /* LaunchScreen.storyboard */,
+				010F8AA821A8470C00D682F9 /* Intro */,
 				01C8DE492190793D00F0A63C /* Login */,
 				589705F4219DD53F005609E2 /* Main */,
 				01C8DE482190792C00F0A63C /* Splash */,
@@ -239,8 +306,10 @@
 		01C8DE492190793D00F0A63C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				016E84E221A51104001E69A3 /* LoginCoordinator.swift */,
 				01C8DE50219079CF00F0A63C /* Login.storyboard */,
-				01C8DE52219079E000F0A63C /* LoginViewController.swift */,
+				016E84E421A5125A001E69A3 /* viewModel */,
+				016E84E121A510DB001E69A3 /* viewControllers */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -459,6 +528,7 @@
 				58970608219F382E005609E2 /* MenuItem.xib in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
+				010F8AAC21A852B800D682F9 /* Intro.storyboard in Resources */,
 				01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,15 +638,20 @@
 				589705E4219DB41A005609E2 /* Coordinator.swift in Sources */,
 				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
+				010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
+				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
+				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
+				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
 				5897060B219F48C1005609E2 /* Nib.swift in Sources */,
 				589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */,
@@ -586,6 +661,7 @@
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
+				016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
