@@ -102,6 +102,9 @@
                                             <constraint firstAttribute="height" constant="64" id="CGP-3u-gEi"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="flotingButton"/>
+                                        <connections>
+                                            <action selector="nextBtnClick:" destination="Rc1-oi-fvd" eventType="touchUpInside" id="c8e-gP-9TZ"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-Ri-9bQ">
                                         <rect key="frame" x="0.0" y="187" width="375" height="90"/>

@@ -14,8 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var AccountTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         IPTextField.setBottomBorder()
@@ -34,6 +32,9 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func nextBtnClick(_ sender: Any) {
+        viewModel.skipLogin()
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {
