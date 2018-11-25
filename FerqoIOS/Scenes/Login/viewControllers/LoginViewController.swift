@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var AccountTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         IPTextField.setBottomBorder()
@@ -21,20 +23,24 @@ class LoginViewController: UIViewController {
         PasswordTextField.setBottomBorder()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    var viewModel: LoginViewModel! {
+        didSet {
+            viewModel.viewDelegate = self
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // 當鍵盤跑出來時，使用者點非鍵盤區域的畫面時
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
-    */
+    
+}
 
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }

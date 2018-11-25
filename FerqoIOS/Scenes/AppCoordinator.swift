@@ -47,8 +47,22 @@ class AppCoordinator: Coordinator {
     }
 }
 
-extension AppCoordinator: SplashViewControllerDelegate {
+extension AppCoordinator: SplashViewControllerDelegate, LoginViewControllerDelegate, IntroViewControllerDelegate {
     func skipSplash() {
+        let coordinator = IntroCoordinator(self.rootViewController)
+        coordinator.delegate = self
+        coordinator.start()
+        window?.rootViewController = rootViewController
+    }
+    
+    func skipIntro() {
+        let coordinator = LoginCoordinator(self.rootViewController)
+        coordinator.delegate = self
+        coordinator.start()
+        window?.rootViewController = rootViewController
+    }
+    
+    func skipLogin() {
         let coordinator = MainCoordinator(self.rootViewController)
         coordinator.delegate = self
         coordinator.start()
