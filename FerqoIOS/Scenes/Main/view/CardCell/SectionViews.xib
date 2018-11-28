@@ -83,9 +83,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="119.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-AI-gjU" userLabel="Expand View">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-AI-gjU" userLabel="Expand View">
                         <rect key="frame" x="16" y="119.5" width="311" height="0.0"/>
-                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-Gd-hfJ">
                         <rect key="frame" x="16" y="44" width="88" height="32"/>
@@ -143,7 +142,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="expandView" destination="5CN-AI-gjU" id="3Mx-PR-WzI"/>
+                <outlet property="expandView" destination="5CN-AI-gjU" id="bip-J1-BfE"/>
                 <outlet property="icon" destination="aqY-5r-EPr" id="ojd-xt-9WW"/>
                 <outlet property="separateLine" destination="rdE-3l-ZDA" id="4qF-EB-5M9"/>
                 <outlet property="title" destination="Bjr-CM-SBI" id="bIb-JB-EaA"/>

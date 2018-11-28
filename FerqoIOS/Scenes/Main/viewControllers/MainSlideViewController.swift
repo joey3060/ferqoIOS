@@ -31,7 +31,7 @@ class MainSlideViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 100
     }
 
     func configure(view: UITableViewCell) {
@@ -69,6 +69,7 @@ extension MainSlideViewController: UITableViewDataSource {
                 cell.indexPath = indexPath
                 cell.viewModel = viewModel.datasource[indexPath.section].items[indexPath.row - 1] as? DeviceCardViewModel
                 cell.parentDelegate = self
+                cell.parentController = self
                 configure(view: cell)
                 return cell
             }
@@ -79,7 +80,7 @@ extension MainSlideViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if cell is CardView {
             cell.backgroundColor = .clear
-            cell.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: 118)
+            cell.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: 100)
             cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         }
     }
@@ -100,6 +101,7 @@ extension MainSlideViewController: CardViewDelegate {
         if selectedIndexPath != nil && selectedIndexPath?.section == 1 {
             let cellViewModel: DeviceCardViewModel = viewModel.datasource[1].items[selectedIndexPath!.row - 1] as! DeviceCardViewModel
             cellViewModel.view.separateLine.isHidden = cellViewModel.isOpen
+            cellViewModel.view.expandView.isHidden = cellViewModel.isOpen
             if (!cellViewModel.isOpen) {
                 cellViewModel.isOpen = false
             } else {
@@ -111,9 +113,11 @@ extension MainSlideViewController: CardViewDelegate {
             cellViewModel.isOpen = false
             selectedIndexPath = nil
             cellViewModel.view.separateLine.isHidden = true
+            cellViewModel.view.expandView.isHidden = true
         } else {
             cellViewModel.isOpen = true
             cellViewModel.view.separateLine.isHidden = false
+            cellViewModel.view.expandView.isHidden = false
             selectedIndexPath = indexPath
         }
     }

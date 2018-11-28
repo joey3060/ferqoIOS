@@ -26,11 +26,11 @@ class SectionSituation: UITableViewCell {
 
 class CardView: UITableViewCell {
     
-    @IBOutlet var view: UIView!
-    @IBOutlet var icon: UIImageView!
-    @IBOutlet var title: UILabel!
-    @IBOutlet var expandView: UIView!
-    @IBOutlet var separateLine: UIView!
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var expandView: UIView!
+    @IBOutlet weak var separateLine: UIView!
     
     var viewModel: DeviceCardViewModel! {
         didSet {
@@ -39,6 +39,7 @@ class CardView: UITableViewCell {
     }
     
     var parentDelegate: CardViewDelegate!
+    weak var parentController: UIViewController!
     var indexPath: IndexPath!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -63,6 +64,15 @@ class CardView: UITableViewCell {
         separateLine.isHidden = true
         title.text = viewModel.title
         icon.image = UIImage(named: viewModel.icon)
+        
+        let controller = ProjectorDeviceController()
+        expandView.addSubview(controller.view)
+        parentController.addChild(controller)
+        controller.didMove(toParent: parentController.self)
+        controller.view.snp.makeConstraints{
+            $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        }
+        
     }
     
     @IBAction func clickExpand(_ sender: Any) {
