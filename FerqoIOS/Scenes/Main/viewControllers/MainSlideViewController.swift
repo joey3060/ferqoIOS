@@ -11,23 +11,48 @@ import UIKit
 class MainSlideViewController: UIViewController {
     var viewModel: MainSlideViewModel!
     
-    @IBOutlet var typeName: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        typeName?.text = viewModel.roomName
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+    }
+
+    func configure(view: UIView) {
+        switch view {
+        case is SectionTitle:
+            (view as! SectionTitle).viewModel = SectionViewModel()
+            break
+        default: break
+        }
+    }
+}
+
+extension MainSlideViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.datasource.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.datasource[section].items.count + 1
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellViewModel: TableViewSectionMap = viewModel.datasource[indexPath.section]//.items[indexPath.row]
+        let cell = UINib(nibName: "SectionViews", bundle: nil).instantiate(withOwner: nil, options: nil)
+        if (indexPath.row == 0) {
+            if let cell = cell[0] as? SectionTitle {
+                cell.title.text = cellViewModel.title
+                configure(view: cell)
+                return cell
+            }
+        }
+        return UITableViewCell()
+    }
+}
 
+extension MainSlideViewController: UITableViewDelegate {
+    
 }

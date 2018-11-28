@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionTitle" customModule="FerqoIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVZ-ED-xXT">
+                    <rect key="frame" x="16" y="13" width="359" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vcr-9N-xDA" userLabel="separate">
+                    <rect key="frame" x="16" y="45" width="359" height="1"/>
+                    <color key="backgroundColor" red="0.18823529411764706" green="0.56470588235294117" blue="0.73725490196078436" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="y2x-nB-jhI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Vcr-9N-xDA" secondAttribute="trailing" id="7Dv-x1-M91"/>
+                <constraint firstItem="Vcr-9N-xDA" firstAttribute="top" secondItem="pVZ-ED-xXT" secondAttribute="bottom" constant="4" id="9Gi-Il-9jN"/>
+                <constraint firstItem="Vcr-9N-xDA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="A1x-Ja-KKE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vcr-9N-xDA" secondAttribute="bottom" constant="8" id="Jem-1N-CEm"/>
+                <constraint firstItem="pVZ-ED-xXT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="13" id="Mi9-MS-jPq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pVZ-ED-xXT" secondAttribute="trailing" id="O22-v6-f0K"/>
+                <constraint firstItem="pVZ-ED-xXT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="l72-J6-cqZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="title" destination="pVZ-ED-xXT" id="qK2-md-xMj"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="-156"/>
+        </view>
+        <view contentMode="scaleToFill" id="F8e-0g-hCS" customClass="SectionSituation" customModule="FerqoIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4SY-fH-zHQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DRz-dV-Hwk">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4SY-fH-zHQ" firstAttribute="top" secondItem="F8e-0g-hCS" secondAttribute="top" id="AeR-CJ-X8b"/>
+                <constraint firstItem="n96-YW-Ix4" firstAttribute="bottom" secondItem="4SY-fH-zHQ" secondAttribute="bottom" id="hYf-At-A1N"/>
+                <constraint firstItem="n96-YW-Ix4" firstAttribute="trailing" secondItem="4SY-fH-zHQ" secondAttribute="trailing" id="huz-ky-xrl"/>
+                <constraint firstItem="4SY-fH-zHQ" firstAttribute="leading" secondItem="n96-YW-Ix4" secondAttribute="leading" id="pp8-31-Ih8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="n96-YW-Ix4"/>
+            <connections>
+                <outlet property="collectionView" destination="4SY-fH-zHQ" id="e4c-8t-n2v"/>
+            </connections>
+        </view>
+    </objects>
+</document>

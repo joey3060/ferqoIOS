@@ -43,6 +43,11 @@
 		5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060C219F5646005609E2 /* MenuTableViewModel.swift */; };
 		58970610219F6491005609E2 /* MenuDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060F219F6491005609E2 /* MenuDataType.swift */; };
 		5897061221A0A23C005609E2 /* MainDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897061121A0A23C005609E2 /* MainDataType.swift */; };
+		58F28A3621AD72790034BA60 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3521AD72790034BA60 /* CardView.swift */; };
+		58F28A3821AD72820034BA60 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3721AD72820034BA60 /* CardView.xib */; };
+		58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3A21AD8C470034BA60 /* SectionViews.xib */; };
+		58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */; };
+		58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A4421AE43F30034BA60 /* SituationBtn.xib */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -110,6 +115,11 @@
 		5897060C219F5646005609E2 /* MenuTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewModel.swift; sourceTree = "<group>"; };
 		5897060F219F6491005609E2 /* MenuDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataType.swift; sourceTree = "<group>"; };
 		5897061121A0A23C005609E2 /* MainDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataType.swift; sourceTree = "<group>"; };
+		58F28A3521AD72790034BA60 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		58F28A3721AD72820034BA60 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		58F28A3A21AD8C470034BA60 /* SectionViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViews.xib; sourceTree = "<group>"; };
+		58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViews.swift; sourceTree = "<group>"; };
+		58F28A4421AE43F30034BA60 /* SituationBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SituationBtn.xib; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +187,8 @@
 		016E84DE21A3F821001E69A3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5897060A219F48C1005609E2 /* Nib.swift */,
+				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 				016E84DF21A3F843001E69A3 /* UITextField.swift */,
 			);
 			path = Extension;
@@ -265,8 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				01C8DE5421907A0900F0A63C /* Config.swift */,
-				5897060A219F48C1005609E2 /* Nib.swift */,
-				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -387,6 +397,9 @@
 		58970601219F2D63005609E2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				58F28A4121AE3B3A0034BA60 /* CardCell */,
+				58F28A3721AD72820034BA60 /* CardView.xib */,
+				58F28A3521AD72790034BA60 /* CardView.swift */,
 				5808A2C621A457E900883BE5 /* TabViewCollection.swift */,
 				58970607219F382E005609E2 /* MenuItem.xib */,
 			);
@@ -400,6 +413,16 @@
 				5897061121A0A23C005609E2 /* MainDataType.swift */,
 			);
 			path = viewDatas;
+			sourceTree = "<group>";
+		};
+		58F28A4121AE3B3A0034BA60 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */,
+				58F28A3A21AD8C470034BA60 /* SectionViews.xib */,
+				58F28A4421AE43F30034BA60 /* SituationBtn.xib */,
+			);
+			path = CardCell;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -525,7 +548,10 @@
 			files = (
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
 				589705F6219DDCE3005609E2 /* Main.storyboard in Resources */,
+				58F28A3821AD72820034BA60 /* CardView.xib in Resources */,
+				58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */,
 				58970608219F382E005609E2 /* MenuItem.xib in Resources */,
+				58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				010F8AAC21A852B800D682F9 /* Intro.storyboard in Resources */,
@@ -649,6 +675,7 @@
 				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
 				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
+				58F28A3621AD72790034BA60 /* CardView.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
@@ -659,6 +686,7 @@
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */,
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 				016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */,
