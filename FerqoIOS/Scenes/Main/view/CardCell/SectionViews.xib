@@ -30,7 +30,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Vcr-9N-xDA" secondAttribute="trailing" id="7Dv-x1-M91"/>
                 <constraint firstItem="Vcr-9N-xDA" firstAttribute="top" secondItem="pVZ-ED-xXT" secondAttribute="bottom" constant="4" id="9Gi-Il-9jN"/>
@@ -74,6 +74,82 @@
             <connections>
                 <outlet property="collectionView" destination="4SY-fH-zHQ" id="e4c-8t-n2v"/>
             </connections>
+            <point key="canvasLocation" x="41" y="36"/>
         </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="KcX-DQ-uwW" customClass="CardView" customModule="FerqoIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KcX-DQ-uwW" id="F0P-XD-07T">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-AI-gjU" userLabel="Expand View">
+                        <rect key="frame" x="16" y="119.5" width="311" height="0.0"/>
+                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-Gd-hfJ">
+                        <rect key="frame" x="16" y="44" width="88" height="32"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-5r-EPr">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="JJ3-TI-TPT"/>
+                                    <constraint firstAttribute="width" constant="32" id="hHT-uH-24A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjr-CM-SBI">
+                                <rect key="frame" x="40" y="0.0" width="48" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="4mN-A7-pCa"/>
+                            <constraint firstAttribute="trailing" secondItem="Bjr-CM-SBI" secondAttribute="trailing" id="807-k1-7LO"/>
+                            <constraint firstItem="Bjr-CM-SBI" firstAttribute="top" secondItem="bTL-Gd-hfJ" secondAttribute="top" id="9Rh-p8-G3s"/>
+                            <constraint firstItem="Bjr-CM-SBI" firstAttribute="leading" secondItem="aqY-5r-EPr" secondAttribute="trailing" constant="8" id="frK-p5-K6c"/>
+                            <constraint firstAttribute="bottom" secondItem="Bjr-CM-SBI" secondAttribute="bottom" id="uZF-dx-YWB"/>
+                        </constraints>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-PS-DZ2">
+                        <rect key="frame" x="159.5" y="82.5" width="24" height="24"/>
+                        <state key="normal" image="down"/>
+                        <connections>
+                            <action selector="clickExpand:" destination="KcX-DQ-uwW" eventType="touchUpInside" id="LF8-tD-wTe"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-3l-ZDA" userLabel="separate line">
+                        <rect key="frame" x="16" y="118.5" width="311" height="1"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="OmQ-W0-jCZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="5CN-AI-gjU" firstAttribute="top" secondItem="rdE-3l-ZDA" secondAttribute="bottom" id="0It-vs-VwG"/>
+                    <constraint firstItem="bTL-Gd-hfJ" firstAttribute="top" secondItem="F0P-XD-07T" secondAttribute="topMargin" constant="33" id="9GN-TQ-9we"/>
+                    <constraint firstAttribute="trailing" secondItem="5CN-AI-gjU" secondAttribute="trailing" constant="16" id="Aob-TG-miA"/>
+                    <constraint firstItem="5CN-AI-gjU" firstAttribute="leading" secondItem="F0P-XD-07T" secondAttribute="leading" constant="16" id="NJC-V1-bEP"/>
+                    <constraint firstItem="9uB-PS-DZ2" firstAttribute="centerX" secondItem="F0P-XD-07T" secondAttribute="centerX" id="Rvk-qZ-VxY"/>
+                    <constraint firstItem="rdE-3l-ZDA" firstAttribute="top" secondItem="9uB-PS-DZ2" secondAttribute="bottom" constant="12" id="WyX-mY-oh5"/>
+                    <constraint firstItem="bTL-Gd-hfJ" firstAttribute="leading" secondItem="F0P-XD-07T" secondAttribute="leading" constant="16" id="hEl-Gx-agu"/>
+                    <constraint firstAttribute="bottom" secondItem="5CN-AI-gjU" secondAttribute="bottom" priority="750" id="rEJ-Xk-f6b"/>
+                    <constraint firstItem="9uB-PS-DZ2" firstAttribute="top" secondItem="F0P-XD-07T" secondAttribute="topMargin" constant="71.5" id="reT-pn-uzr"/>
+                    <constraint firstItem="rdE-3l-ZDA" firstAttribute="leading" secondItem="F0P-XD-07T" secondAttribute="leading" constant="16" id="xJQ-bn-nRi"/>
+                    <constraint firstAttribute="trailing" secondItem="rdE-3l-ZDA" secondAttribute="trailing" constant="16" id="yCn-gh-3Aw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="expandView" destination="5CN-AI-gjU" id="3Mx-PR-WzI"/>
+                <outlet property="separateLine" destination="rdE-3l-ZDA" id="qcF-eQ-SMD"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="291"/>
+        </tableViewCell>
     </objects>
+    <resources>
+        <image name="down" width="24" height="24"/>
+    </resources>
 </document>

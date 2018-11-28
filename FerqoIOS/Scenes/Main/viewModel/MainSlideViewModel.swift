@@ -9,7 +9,7 @@ import UIKit
 
 protocol TableViewItemViewModel {
     var reuseIdentifier: String { get }
-//    var height: Double { get }
+    var height: Double { get }
 }
 
 protocol SlideViewCellType {
@@ -36,6 +36,7 @@ class MainSlideViewModel {
         TableViewSectionMap(section: SectionViewModel(), items: [], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
             DeviceCardViewModel(),
+            DeviceCardViewModel(),
         ], title: "裝置")
     ]
 }
@@ -45,8 +46,12 @@ class MainSlideViewModel {
 
 struct SectionViewModel: TableViewItemViewModel {
     var reuseIdentifier: String = "cell.sectionViewModel"
+    var height: Double = 60
 }
 
-struct DeviceCardViewModel: TableViewItemViewModel {
+class DeviceCardViewModel: TableViewItemViewModel {
     var reuseIdentifier: String = "cell.deviceCardViewModel"
+    var height: Double = 250
+    var isOpen: Bool = false
+    var view: CardView!
 }

@@ -112,7 +112,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         slideView.isPagingEnabled = true
         
         for i in 0 ..< slides.count {
-            slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i) - 7, y: 0, width: view.frame.width + 7, height: slideView.frame.height)
+            slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
             addChild(slides[i].viewController!)
             slideView.addSubview(slides[i].viewController!.view)
             slides[i].viewController!.didMove(toParent: self)

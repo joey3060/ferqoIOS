@@ -43,8 +43,6 @@
 		5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060C219F5646005609E2 /* MenuTableViewModel.swift */; };
 		58970610219F6491005609E2 /* MenuDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060F219F6491005609E2 /* MenuDataType.swift */; };
 		5897061221A0A23C005609E2 /* MainDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897061121A0A23C005609E2 /* MainDataType.swift */; };
-		58F28A3621AD72790034BA60 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3521AD72790034BA60 /* CardView.swift */; };
-		58F28A3821AD72820034BA60 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3721AD72820034BA60 /* CardView.xib */; };
 		58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3A21AD8C470034BA60 /* SectionViews.xib */; };
 		58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */; };
 		58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A4421AE43F30034BA60 /* SituationBtn.xib */; };
@@ -115,8 +113,6 @@
 		5897060C219F5646005609E2 /* MenuTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewModel.swift; sourceTree = "<group>"; };
 		5897060F219F6491005609E2 /* MenuDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataType.swift; sourceTree = "<group>"; };
 		5897061121A0A23C005609E2 /* MainDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataType.swift; sourceTree = "<group>"; };
-		58F28A3521AD72790034BA60 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		58F28A3721AD72820034BA60 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		58F28A3A21AD8C470034BA60 /* SectionViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViews.xib; sourceTree = "<group>"; };
 		58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViews.swift; sourceTree = "<group>"; };
 		58F28A4421AE43F30034BA60 /* SituationBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SituationBtn.xib; sourceTree = "<group>"; };
@@ -398,8 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				58F28A4121AE3B3A0034BA60 /* CardCell */,
-				58F28A3721AD72820034BA60 /* CardView.xib */,
-				58F28A3521AD72790034BA60 /* CardView.swift */,
 				5808A2C621A457E900883BE5 /* TabViewCollection.swift */,
 				58970607219F382E005609E2 /* MenuItem.xib */,
 			);
@@ -548,7 +542,6 @@
 			files = (
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
 				589705F6219DDCE3005609E2 /* Main.storyboard in Resources */,
-				58F28A3821AD72820034BA60 /* CardView.xib in Resources */,
 				58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */,
 				58970608219F382E005609E2 /* MenuItem.xib in Resources */,
 				58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */,
@@ -675,7 +668,6 @@
 				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
 				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
-				58F28A3621AD72790034BA60 /* CardView.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
