@@ -46,6 +46,7 @@
 		58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3A21AD8C470034BA60 /* SectionViews.xib */; };
 		58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */; };
 		58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A4421AE43F30034BA60 /* SituationBtn.xib */; };
+		58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -116,6 +117,7 @@
 		58F28A3A21AD8C470034BA60 /* SectionViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViews.xib; sourceTree = "<group>"; };
 		58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViews.swift; sourceTree = "<group>"; };
 		58F28A4421AE43F30034BA60 /* SituationBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SituationBtn.xib; sourceTree = "<group>"; };
+		58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectorDeviceController.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -373,6 +375,7 @@
 		589705FB219F256C005609E2 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				58F28A4621AEB6B60034BA60 /* Device */,
 				589705FD219F25C0005609E2 /* MainViewController.swift */,
 				58970605219F2EAA005609E2 /* MenuTableViewController.swift */,
 				5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */,
@@ -417,6 +420,14 @@
 				58F28A4421AE43F30034BA60 /* SituationBtn.xib */,
 			);
 			path = CardCell;
+			sourceTree = "<group>";
+		};
+		58F28A4621AEB6B60034BA60 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -665,6 +676,7 @@
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
+				58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */,
 				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
 				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,

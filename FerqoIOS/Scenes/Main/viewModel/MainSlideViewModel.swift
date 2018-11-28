@@ -35,8 +35,8 @@ class MainSlideViewModel {
     var datasource: [TableViewSectionMap] = [
         TableViewSectionMap(section: SectionViewModel(), items: [], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
-            DeviceCardViewModel(),
-            DeviceCardViewModel(),
+            DeviceCardViewModel(icon: "projector", title: "投影機"),
+            DeviceCardViewModel(icon: "tv", title: "電視"),
         ], title: "裝置")
     ]
 }
@@ -54,4 +54,14 @@ class DeviceCardViewModel: TableViewItemViewModel {
     var height: Double = 250
     var isOpen: Bool = false
     var view: CardView!
+    var icon: String = ""
+    var title: String = ""
+    init() {
+        
+    }
+    
+    init(icon: String, title: String) {
+        self.title = title
+        self.icon = icon
+    }
 }

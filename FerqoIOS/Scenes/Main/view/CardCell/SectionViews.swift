@@ -27,10 +27,10 @@ class SectionSituation: UITableViewCell {
 class CardView: UITableViewCell {
     
     @IBOutlet var view: UIView!
-    @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var expandView: UIView!
-    @IBOutlet weak var separateLine: UIView!
+    @IBOutlet var icon: UIImageView!
+    @IBOutlet var title: UILabel!
+    @IBOutlet var expandView: UIView!
+    @IBOutlet var separateLine: UIView!
     
     var viewModel: DeviceCardViewModel! {
         didSet {
@@ -43,7 +43,6 @@ class CardView: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        separateLine.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,6 +52,17 @@ class CardView: UITableViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 8)
+    }
+    
+    override func updateConstraints() {
+        super.updateConstraints()
+        setUp()
+    }
+    
+    func setUp() {
+        separateLine.isHidden = true
+        title.text = viewModel.title
+        icon.image = UIImage(named: viewModel.icon)
     }
     
     @IBAction func clickExpand(_ sender: Any) {

@@ -144,9 +144,11 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="expandView" destination="5CN-AI-gjU" id="3Mx-PR-WzI"/>
-                <outlet property="separateLine" destination="rdE-3l-ZDA" id="qcF-eQ-SMD"/>
+                <outlet property="icon" destination="aqY-5r-EPr" id="ojd-xt-9WW"/>
+                <outlet property="separateLine" destination="rdE-3l-ZDA" id="4qF-EB-5M9"/>
+                <outlet property="title" destination="Bjr-CM-SBI" id="bIb-JB-EaA"/>
             </connections>
-            <point key="canvasLocation" x="41" y="291"/>
+            <point key="canvasLocation" x="40.799999999999997" y="290.55472263868069"/>
         </tableViewCell>
     </objects>
     <resources>
