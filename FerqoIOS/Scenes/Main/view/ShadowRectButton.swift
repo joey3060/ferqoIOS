@@ -18,6 +18,17 @@ class ShadowRectButton: UIButton {
         }
     }
     
+//    override var backgroundColor: UIColor? {
+//        didSet {
+//            if ((self.shadowLayer) != nil) {
+//                shadowLayer.backgroundColor = backgroundColor
+//            }
+//        }
+//    }
+    
+    var shadowLayer: UIView!
+    let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.56).cgColor
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -30,18 +41,19 @@ class ShadowRectButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
+
         if shadowAdded { return }
         shadowAdded = true
-        
+
         let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.56).cgColor
-        
+
         self.clipsToBounds = true
         self.layer.cornerRadius = 4
         self.layer.borderWidth = 1
         self.layer.borderColor = blue
-        let shadowLayer = UIView(frame: self.frame)
-        shadowLayer.backgroundColor = UIColor.clear
+        shadowLayer = UIView(frame: self.frame)
+        shadowLayer.backgroundColor = .clear
+        shadowLayer.layer.backgroundColor = UIColor.clear.cgColor
         shadowLayer.layer.shadowColor = blue
         shadowLayer.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.cornerRadius).cgPath
         shadowLayer.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
@@ -49,7 +61,7 @@ class ShadowRectButton: UIButton {
         shadowLayer.layer.shadowRadius = 4
         shadowLayer.layer.masksToBounds = true
         shadowLayer.clipsToBounds = false
-        
+
         self.superview?.addSubview(shadowLayer)
         self.superview?.bringSubviewToFront(self)
     }
@@ -59,7 +71,7 @@ class ShadowRectButton: UIButton {
         self.setBackgroundColor(.white, for: .normal)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.snp.makeConstraints {
-            $0.height.size.equalTo(42)
+            $0.height.size.equalTo(42).priority(200)
         }
     }
     

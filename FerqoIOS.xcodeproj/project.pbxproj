@@ -48,7 +48,12 @@
 		58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A4421AE43F30034BA60 /* SituationBtn.xib */; };
 		58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */; };
 		58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4921AF0DAF0034BA60 /* UIButton.swift */; };
-		58F28A4C21AF1B180034BA60 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4B21AF1B180034BA60 /* ShadowButton.swift */; };
+		58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */; };
+		58F28A4E21B025090034BA60 /* TVDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4D21B025090034BA60 /* TVDeviceController.swift */; };
+		58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4F21B02CD70034BA60 /* UIImage.swift */; };
+		58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5121B042C40034BA60 /* ControlSlider.swift */; };
+		58F28A5521B054220034BA60 /* ShaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5421B054220034BA60 /* ShaderView.swift */; };
+		58F28A5721B059900034BA60 /* DeviceControllerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5621B059900034BA60 /* DeviceControllerViews.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -121,7 +126,12 @@
 		58F28A4421AE43F30034BA60 /* SituationBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SituationBtn.xib; sourceTree = "<group>"; };
 		58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectorDeviceController.swift; sourceTree = "<group>"; };
 		58F28A4921AF0DAF0034BA60 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		58F28A4B21AF1B180034BA60 /* ShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRectButton.swift; sourceTree = "<group>"; };
+		58F28A4D21B025090034BA60 /* TVDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDeviceController.swift; sourceTree = "<group>"; };
+		58F28A4F21B02CD70034BA60 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		58F28A5121B042C40034BA60 /* ControlSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlSlider.swift; sourceTree = "<group>"; };
+		58F28A5421B054220034BA60 /* ShaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderView.swift; sourceTree = "<group>"; };
+		58F28A5621B059900034BA60 /* DeviceControllerViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControllerViews.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +203,7 @@
 				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 				016E84DF21A3F843001E69A3 /* UITextField.swift */,
 				58F28A4921AF0DAF0034BA60 /* UIButton.swift */,
+				58F28A4F21B02CD70034BA60 /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -404,7 +415,10 @@
 				58F28A4121AE3B3A0034BA60 /* CardCell */,
 				5808A2C621A457E900883BE5 /* TabViewCollection.swift */,
 				58970607219F382E005609E2 /* MenuItem.xib */,
-				58F28A4B21AF1B180034BA60 /* ShadowButton.swift */,
+				58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */,
+				58F28A5121B042C40034BA60 /* ControlSlider.swift */,
+				58F28A5421B054220034BA60 /* ShaderView.swift */,
+				58F28A5621B059900034BA60 /* DeviceControllerViews.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -432,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */,
+				58F28A4D21B025090034BA60 /* TVDeviceController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -675,20 +690,25 @@
 				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
 				010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */,
+				58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
 				58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
+				58F28A5521B054220034BA60 /* ShaderView.swift in Sources */,
 				5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
-				58F28A4C21AF1B180034BA60 /* ShadowButton.swift in Sources */,
+				58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */,
+				58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */,
 				58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */,
 				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
 				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
+				58F28A4E21B025090034BA60 /* TVDeviceController.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
+				58F28A5721B059900034BA60 /* DeviceControllerViews.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,

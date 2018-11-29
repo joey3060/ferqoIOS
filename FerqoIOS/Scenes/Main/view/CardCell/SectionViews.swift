@@ -31,6 +31,7 @@ class CardView: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var expandView: UIView!
     @IBOutlet weak var separateLine: UIView!
+    @IBOutlet weak var expandBtn: UIButton!
     
     var viewModel: DeviceCardViewModel! {
         didSet {
@@ -57,6 +58,7 @@ class CardView: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.clipsToBounds = true
         let margins = UIEdgeInsets(top: 0, left: 16, bottom: 10, right: 16)
         contentView.frame = contentView.frame.inset(by: margins)
         self.contentView.layer.borderColor = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.56).cgColor

@@ -93,7 +93,7 @@ extension MainSlideViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath == selectedIndexPath {
             let cellViewModel: DeviceCardViewModel = viewModel.datasource[indexPath.section].items[indexPath.row-1] as! DeviceCardViewModel
-            return (cellViewModel.isOpen ? CGFloat(cellViewModel.height) : UITableView.automaticDimension)
+            return (cellViewModel.isOpen ? CGFloat(cellViewModel.height + 120) : UITableView.automaticDimension)
         }
         
         if (indexPath.row > 0) {
@@ -109,10 +109,13 @@ extension MainSlideViewController: CardViewDelegate {
             let cellViewModel: DeviceCardViewModel = viewModel.datasource[1].items[selectedIndexPath!.row - 1] as! DeviceCardViewModel
             cellViewModel.view.separateLine.isHidden = cellViewModel.isOpen
             cellViewModel.view.expandView.isHidden = cellViewModel.isOpen
+            
             if (!cellViewModel.isOpen) {
                 cellViewModel.isOpen = false
+                cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi))
             } else {
                 cellViewModel.isOpen = true
+                cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(0))
             }
         }
         let cellViewModel: DeviceCardViewModel = viewModel.datasource[1].items[indexPath!.row - 1] as! DeviceCardViewModel
@@ -121,11 +124,13 @@ extension MainSlideViewController: CardViewDelegate {
             selectedIndexPath = nil
             cellViewModel.view.separateLine.isHidden = true
             cellViewModel.view.expandView.isHidden = true
+            cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(0))
         } else {
             cellViewModel.isOpen = true
             cellViewModel.view.separateLine.isHidden = false
             cellViewModel.view.expandView.isHidden = false
             selectedIndexPath = indexPath
+            cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi))
         }
     }
 }

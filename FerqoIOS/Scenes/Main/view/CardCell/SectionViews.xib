@@ -145,6 +145,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="expandBtn" destination="9uB-PS-DZ2" id="il9-FH-OR9"/>
                 <outlet property="expandView" destination="5CN-AI-gjU" id="bip-J1-BfE"/>
                 <outlet property="icon" destination="aqY-5r-EPr" id="ojd-xt-9WW"/>
                 <outlet property="separateLine" destination="rdE-3l-ZDA" id="4qF-EB-5M9"/>

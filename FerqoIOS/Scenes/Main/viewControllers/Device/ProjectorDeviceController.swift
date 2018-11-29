@@ -9,7 +9,9 @@
 import UIKit
 import SnapKit
 
-class ProjectorDeviceController: UIViewController {
+class ProjectorDeviceController: UIViewController, DeviceController {
+    
+    var viewHeight: Int = 90
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [])
