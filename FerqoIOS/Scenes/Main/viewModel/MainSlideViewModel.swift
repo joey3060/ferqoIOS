@@ -56,6 +56,9 @@ class DeviceCardViewModel: TableViewItemViewModel {
     var view: CardView!
     var icon: String = ""
     var title: String = ""
+    
+    var expandController: UIViewController!
+    
     init() {
         
     }
@@ -63,5 +66,17 @@ class DeviceCardViewModel: TableViewItemViewModel {
     init(icon: String, title: String) {
         self.title = title
         self.icon = icon
+        
+        switch icon {
+        case "projector":
+            expandController = ProjectorDeviceController()
+            break
+        case "tv":
+            expandController = UIViewController()
+            break
+        default:
+            expandController = UIViewController()
+            break
+        }
     }
 }

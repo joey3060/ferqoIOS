@@ -113,6 +113,9 @@
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-PS-DZ2">
                         <rect key="frame" x="159.5" y="82.5" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="Rho-we-gvS"/>
+                        </constraints>
                         <state key="normal" image="down"/>
                         <connections>
                             <action selector="clickExpand:" destination="KcX-DQ-uwW" eventType="touchUpInside" id="LF8-tD-wTe"/>

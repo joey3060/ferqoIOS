@@ -31,7 +31,10 @@ class MainSlideViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
+//        tableView.estimatedRowHeight = 100
+        tableView.separatorInset = UIEdgeInsets.zero
+        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.cellLayoutMarginsFollowReadableWidth = false
     }
 
     func configure(view: UITableViewCell) {
@@ -81,7 +84,7 @@ extension MainSlideViewController: UITableViewDataSource {
         if cell is CardView {
             cell.backgroundColor = .clear
             cell.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: 100)
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+            cell.preservesSuperviewLayoutMargins = false
         }
     }
 }
@@ -91,6 +94,10 @@ extension MainSlideViewController: UITableViewDelegate {
         if indexPath == selectedIndexPath {
             let cellViewModel: DeviceCardViewModel = viewModel.datasource[indexPath.section].items[indexPath.row-1] as! DeviceCardViewModel
             return (cellViewModel.isOpen ? CGFloat(cellViewModel.height) : UITableView.automaticDimension)
+        }
+        
+        if (indexPath.row > 0) {
+            return CGFloat(120)
         }
         return UITableView.automaticDimension
     }

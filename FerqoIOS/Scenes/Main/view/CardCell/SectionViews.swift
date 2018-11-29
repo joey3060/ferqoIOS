@@ -52,7 +52,16 @@ class CardView: UITableViewCell {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        self.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 8)
+        
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let margins = UIEdgeInsets(top: 0, left: 16, bottom: 10, right: 16)
+        contentView.frame = contentView.frame.inset(by: margins)
+        self.contentView.layer.borderColor = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.56).cgColor
+        self.contentView.layer.borderWidth = 1
+        self.contentView.layer.cornerRadius = 8
     }
     
     override func updateConstraints() {
@@ -65,14 +74,12 @@ class CardView: UITableViewCell {
         title.text = viewModel.title
         icon.image = UIImage(named: viewModel.icon)
         
-        let controller = ProjectorDeviceController()
-        expandView.addSubview(controller.view)
-        parentController.addChild(controller)
-        controller.didMove(toParent: parentController.self)
-        controller.view.snp.makeConstraints{
+        expandView.addSubview(viewModel.expandController.view)
+        parentController.addChild(viewModel.expandController)
+        viewModel.expandController.didMove(toParent: parentController.self)
+        viewModel.expandController.view.snp.makeConstraints{
             $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         }
-        
     }
     
     @IBAction func clickExpand(_ sender: Any) {
