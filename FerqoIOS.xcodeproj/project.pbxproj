@@ -29,6 +29,7 @@
 		5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */; };
 		5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CC21A5A58600883BE5 /* UIView.swift */; };
 		58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */; };
+		58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7121B1CE97004596B1 /* LightDeviceController.swift */; };
 		589705E4219DB41A005609E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E3219DB41A005609E2 /* Coordinator.swift */; };
 		589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E5219DB4A4005609E2 /* AppCoordinator.swift */; };
 		589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E8219DB718005609E2 /* SplashCoordinator.swift */; };
@@ -108,6 +109,7 @@
 		5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewModel.swift; sourceTree = "<group>"; };
 		5808A2CC21A5A58600883BE5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDeviceController.swift; sourceTree = "<group>"; };
+		58539D7121B1CE97004596B1 /* LightDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDeviceController.swift; sourceTree = "<group>"; };
 		589705E3219DB41A005609E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		589705E5219DB4A4005609E2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		589705E8219DB718005609E2 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */,
 				58F28A4D21B025090034BA60 /* TVDeviceController.swift */,
 				58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */,
+				58539D7121B1CE97004596B1 /* LightDeviceController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
 				58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */,
 				58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */,
