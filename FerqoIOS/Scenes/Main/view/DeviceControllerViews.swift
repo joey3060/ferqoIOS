@@ -13,6 +13,99 @@ class DeviceControllerViews {
     static private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     static private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
     
+    static func getSlider(name: String = "", icon: [String]) -> UIView {
+        let wrapper = UIView()
+        let textLabel = UILabel()
+        textLabel.text = name
+        let stackView: UIStackView = {
+            let stackView = UIStackView(arrangedSubviews: [])
+            stackView.axis = .horizontal
+            stackView.distribution = .fill
+            stackView.spacing = 8
+            stackView.alignment = .center
+            stackView.translatesAutoresizingMaskIntoConstraints = false
+            
+            return stackView
+        }()
+        let voiceImageLow: UIImageView = {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+            if (icon.count>0) {
+                imageView.image = UIImage(named: icon[0])
+                imageView.image = imageView.image!.withRenderingMode(.alwaysTemplate)
+                imageView.tintColor = lightBlue
+                imageView.backgroundColor = .clear
+                imageView.contentMode = .center
+            }
+            return imageView
+        }()
+        let voiceImageHigh: UIImageView = {
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+            if (icon.count>1) {
+                imageView.image = UIImage(named: icon[1])
+                imageView.image = imageView.image!.withRenderingMode(.alwaysTemplate)
+                imageView.tintColor = blue
+                imageView.backgroundColor = .clear
+                imageView.contentMode = .center
+            }
+            
+            return imageView
+        }()
+        let slideBar: UIView = {
+            let wrapper = UIView()
+            let border = UIView()
+            let slider = ControlSlider()
+            let longPress                  = UILongPressGestureRecognizer(target: slider, action: #selector(slider.tapAndSlide))
+            longPress.minimumPressDuration = 0
+            slider.addGestureRecognizer(longPress)
+            slider.tintColor = blue
+            slider.maximumTrackTintColor = .clear
+            border.layer.borderWidth = 1
+            border.layer.borderColor = lightBlue.cgColor
+            border.layer.cornerRadius = 8
+            wrapper.addSubview(border)
+            wrapper.addSubview(slider)
+            wrapper.bringSubviewToFront(slider)
+            wrapper.snp.makeConstraints {
+                $0.height.equalTo(16)
+            }
+            border.snp.makeConstraints {
+                $0.top.bottom.left.right.equalTo(0)
+            }
+            slider.snp.makeConstraints {
+                $0.top.bottom.left.right.equalTo(0)
+                $0.width.equalTo(border)
+            }
+            voiceImageLow.snp.makeConstraints {
+                $0.width.height.equalTo(48)
+            }
+            voiceImageHigh.snp.makeConstraints {
+                $0.width.height.equalTo(48)
+            }
+            return wrapper
+        }()
+        
+        stackView.addArrangedSubview(voiceImageLow)
+        stackView.addArrangedSubview(slideBar)
+        stackView.addArrangedSubview(voiceImageHigh)
+        wrapper.addSubview(textLabel)
+        wrapper.addSubview(stackView)
+        
+        wrapper.snp.makeConstraints {
+            $0.bottom.equalTo(stackView)
+        }
+        
+        textLabel.snp.makeConstraints {
+            $0.top.width.equalTo(wrapper)
+        }
+
+        stackView.snp.makeConstraints {
+            $0.top.equalTo(textLabel).offset(27)
+            $0.width.equalTo(wrapper)
+        }
+        
+        return wrapper
+    }
+    
     static func getVerticleButton(names: [String] = []) -> UIView {
         let wrapper = UIView()
         let nowStack = UIStackView()

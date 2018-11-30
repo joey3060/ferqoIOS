@@ -91,7 +91,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
             if let window = UIApplication.shared.keyWindow {
                 let safeAreaBottom = window.safeAreaInsets.bottom
                 let safeAreaTop = window.safeAreaInsets.top
-                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height)
+                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height+5)
             }
         }
         slideWrapper.snp.makeConstraints {

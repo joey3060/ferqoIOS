@@ -35,11 +35,9 @@ class MainSlideViewModel {
     var datasource: [TableViewSectionMap] = [
         TableViewSectionMap(section: SectionViewModel(), items: [], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
+            DeviceCardViewModel(icon: "curtain", title: "窗簾"),
             DeviceCardViewModel(icon: "tv", title: "電視"),
             DeviceCardViewModel(icon: "tv", title: "電視"),
-            DeviceCardViewModel(icon: "projector", title: "投影機"),
-            DeviceCardViewModel(icon: "projector", title: "投影機"),
-            DeviceCardViewModel(icon: "projector", title: "投影機"),
             DeviceCardViewModel(icon: "projector", title: "投影機"),
             DeviceCardViewModel(icon: "projector", title: "投影機"),
         ], title: "裝置")
@@ -83,6 +81,10 @@ class DeviceCardViewModel: TableViewItemViewModel {
             break
         case "tv":
             expandController = TVDeviceController()
+            height = Double((expandController as! DeviceController).viewHeight)
+            break
+        case "curtain":
+            expandController = CurtainDeviceController()
             height = Double((expandController as! DeviceController).viewHeight)
             break
         default:
