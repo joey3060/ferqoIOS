@@ -106,8 +106,7 @@ class DeviceControllerViews {
         return wrapper
     }
     
-    static func getVerticleButton(names: [String] = []) -> UIView {
-        let wrapper = UIView()
+    static func getVerticleButton(names: [String] = []) -> UIStackView {
         let nowStack = UIStackView()
         nowStack.distribution = .fillEqually
         nowStack.axis = .vertical
@@ -125,15 +124,7 @@ class DeviceControllerViews {
             }
         }
         
-        
-        wrapper.addSubview(nowStack)
-        
-        
-        nowStack.snp.makeConstraints {
-            $0.width.equalTo(wrapper)
-        }
-        
-        return wrapper
+        return nowStack
     }
     
     static func getGridButton(names: [String] = []) -> UIView {
@@ -169,8 +160,10 @@ class DeviceControllerViews {
         }
         
         let left = names.count % col
-        for _ in 1..<left {
-            nowStack.addArrangedSubview(UIView())
+        if left > 0 {
+            for _ in 1..<left {
+                nowStack.addArrangedSubview(UIView())
+            }
         }
         
         wrapper.snp.makeConstraints {
