@@ -33,6 +33,8 @@ class CardView: UITableViewCell {
     @IBOutlet weak var separateLine: UIView!
     @IBOutlet weak var expandBtn: UIButton!
     
+    var drawed: Bool = false
+    
     var viewModel: DeviceCardViewModel! {
         didSet {
             self.viewModel.view = self
@@ -77,13 +79,18 @@ class CardView: UITableViewCell {
         icon.image = UIImage(named: viewModel.icon)
         
         viewModel.expandController.view.translatesAutoresizingMaskIntoConstraints = false
-        expandView.addSubview(viewModel.expandController.view)
-        parentController.addChild(viewModel.expandController)
-        viewModel.expandController.didMove(toParent: parentController.self)
-        viewModel.expandController.view.layoutIfNeeded()
-        viewModel.expandController.view.snp.makeConstraints{
-            $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        if (!drawed) {
+            expandView.addSubview(viewModel.expandController.view)
+            parentController.addChild(viewModel.expandController)
+            viewModel.expandController.didMove(toParent: parentController.self)
+            
+            viewModel.expandController.view.snp.makeConstraints{
+                $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+            }
         }
+        drawed = true
+        viewModel.expandController.view.layoutIfNeeded()
+        
     }
     
     @IBAction func clickExpand(_ sender: Any) {

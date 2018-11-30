@@ -64,18 +64,22 @@ class ShadowRectButton: UIButton {
         self.layer.borderWidth = 1
         self.layer.borderColor = blue
         shadowLayer = UIView(frame: self.frame)
-        shadowLayer.backgroundColor = .clear
         shadowLayer.layer.backgroundColor = UIColor.clear.cgColor
+        shadowLayer.layer.cornerRadius = cornerRadius
         shadowLayer.layer.shadowColor = blue
         shadowLayer.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: self.cornerRadius).cgPath
         shadowLayer.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         shadowLayer.layer.shadowOpacity = needShadow ? 0.5 : 0
-        shadowLayer.layer.shadowRadius = cornerRadius
+        shadowLayer.layer.shadowRadius = 4
         shadowLayer.layer.masksToBounds = true
         shadowLayer.clipsToBounds = false
 
         self.superview?.addSubview(shadowLayer)
         self.superview?.bringSubviewToFront(self)
+        
+        shadowLayer.snp.makeConstraints {
+            $0.width.height.top.left.equalTo(self)
+        }
     }
     
     func setUp() {

@@ -9,7 +9,8 @@
 import UIKit
 
 class TVDeviceController: UIViewController, DeviceController {
-    var viewHeight: Int = 1000
+    var viewHeight: Int = 1103
+    var expandHeight: Int = 1552
     
     private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
@@ -17,16 +18,45 @@ class TVDeviceController: UIViewController, DeviceController {
     var channelView: UIView!
     var volumeView: UIView!
     var controllerView: UIView!
+    var otherButtonsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         channelView = setUpSelectChannel()
         volumeView = setUpVolumeView()
         controllerView = setUpControllerView()
+        otherButtonsView = setUpOutputAndOtherButtons()
     }
 }
 
 extension TVDeviceController {
+    func setUpOutputAndOtherButtons() -> UIView {
+        let otherButtonsView = UIView()
+        let outputButtons = DeviceControllerViews.getGridButton(names: ["HDMI 1", "HDMI 2", "HDMI 3", "HDMI 4", "HDMI 5"])
+        let funcButtons = DeviceControllerViews.getVerticleButton(names:["Components", "VID", "Mute"])
+        
+        otherButtonsView.addSubview(outputButtons)
+        otherButtonsView.addSubview(funcButtons)
+        
+        view.addSubview(otherButtonsView)
+        
+        otherButtonsView.snp.makeConstraints {
+            $0.top.equalTo(controllerView.snp.bottom)
+            $0.width.equalTo(view)
+            $0.bottom.equalTo(funcButtons)
+        }
+        outputButtons.snp.makeConstraints {
+            $0.top.equalTo(otherButtonsView).offset(25)
+            $0.width.equalTo(otherButtonsView)
+        }
+        funcButtons.snp.makeConstraints {
+            $0.top.equalTo(outputButtons.snp.bottom).offset(24)
+            $0.width.equalTo(otherButtonsView)
+        }
+        
+        return otherButtonsView
+    }
+    
     func setUpControllerView() -> UIView {
         let controllerView = UIView()
         let stackView: UIStackView = {
@@ -58,6 +88,7 @@ extension TVDeviceController {
         controllerView.snp.makeConstraints {
             $0.top.equalTo(volumeView.snp.bottom).offset(16)
             $0.width.equalTo(view)
+            $0.bottom.equalTo(directionView)
         }
         
         stackView.snp.makeConstraints {

@@ -13,6 +13,80 @@ class DeviceControllerViews {
     static private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     static private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
     
+    static func getVerticleButton(names: [String] = []) -> UIView {
+        let wrapper = UIView()
+        let nowStack = UIStackView()
+        nowStack.distribution = .fillEqually
+        nowStack.axis = .vertical
+        nowStack.spacing = 16
+        
+        for (_, element) in names.enumerated() {
+            let newButton = ShadowRectButton()
+            newButton.cornerRadius = 24
+            newButton.needShadow = false
+            newButton.setTitle(element, for: .normal)
+            nowStack.addArrangedSubview(newButton)
+            
+            newButton.snp.makeConstraints {
+                $0.height.greaterThanOrEqualTo(48)
+            }
+        }
+        
+        
+        wrapper.addSubview(nowStack)
+        
+        
+        nowStack.snp.makeConstraints {
+            $0.width.equalTo(wrapper)
+        }
+        
+        return wrapper
+    }
+    
+    static func getGridButton(names: [String] = []) -> UIView {
+        let wrapper = UIView()
+        var nowStack: UIStackView!
+        let col = 3
+        for (index, element) in names.enumerated() {
+            if index % col == 0 {
+                let newStack = UIStackView()
+                newStack.translatesAutoresizingMaskIntoConstraints = false
+                newStack.distribution = .fillEqually
+                newStack.axis = .horizontal
+                newStack.alignment = .leading
+                newStack.spacing = 8
+                
+                wrapper.addSubview(newStack)
+                newStack.snp.makeConstraints {
+                    if (nowStack != nil) {
+                        $0.top.equalTo(nowStack.snp.bottom).offset(9)
+                    } else {
+                        $0.top.equalTo(wrapper)
+                    }
+                    $0.width.equalTo(wrapper)
+                }
+                nowStack = newStack
+            }
+            
+            let newButton = ShadowRectButton()
+            newButton.cornerRadius = 20
+            newButton.setTitle("\(element)", for: .normal)
+            newButton.translatesAutoresizingMaskIntoConstraints = false
+            nowStack.addArrangedSubview(newButton)
+        }
+        
+        let left = names.count % col
+        for _ in 1..<left {
+            nowStack.addArrangedSubview(UIView())
+        }
+        
+        wrapper.snp.makeConstraints {
+            $0.bottom.equalTo(nowStack)
+        }
+        
+        return wrapper
+    }
+    
     static func getDirectionControl() -> UIView {
         let directionWrapper = UIView()
         let directionView = UIView()
