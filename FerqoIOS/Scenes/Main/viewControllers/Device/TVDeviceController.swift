@@ -9,7 +9,7 @@
 import UIKit
 
 class TVDeviceController: UIViewController, DeviceController {
-    var viewHeight: Int = 600
+    var viewHeight: Int = 1000
     
     private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
@@ -36,7 +36,6 @@ extension TVDeviceController {
             stackView.spacing = 55
             stackView.alignment = .center
             stackView.translatesAutoresizingMaskIntoConstraints = false
-            
             return stackView
         }()
         let backToChannelBtn = ShadowRectButton()
@@ -49,6 +48,11 @@ extension TVDeviceController {
         
         controllerView.addSubview(stackView)
         controllerView.addSubview(backToChannelBtn)
+        
+        let directionView = DeviceControllerViews.getDirectionControl()
+        
+        controllerView.addSubview(directionView)
+        
         view.addSubview(controllerView)
         
         controllerView.snp.makeConstraints {
@@ -65,6 +69,12 @@ extension TVDeviceController {
             $0.top.equalTo(stackView.snp.bottom).offset(20)
             $0.width.equalTo(controllerView)
             $0.height.equalTo(50).priority(500)
+        }
+        
+        directionView.snp.makeConstraints {
+            $0.width.equalTo(controllerView)
+            $0.height.equalTo(288)
+            $0.top.equalTo(backToChannelBtn.snp.bottom).offset(16)
         }
         
         return controllerView

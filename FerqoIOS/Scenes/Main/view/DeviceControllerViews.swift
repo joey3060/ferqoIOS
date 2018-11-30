@@ -10,6 +10,101 @@ import UIKit
 import SnapKit
 
 class DeviceControllerViews {
+    static private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
+    static private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
+    
+    static func getDirectionControl() -> UIView {
+        let directionWrapper = UIView()
+        let directionView = UIView()
+        directionWrapper.layer.borderColor = lightBlue.cgColor
+        directionWrapper.layer.borderWidth = 1
+        directionWrapper.addSubview(directionView)
+        let image = UIImage(named: "chevron")
+        let buttonUp = UIButton()
+        let buttonLeft = UIButton()
+        let buttonRight = UIButton()
+        let buttonBottom = UIButton()
+        let okButton = ShadowRectButton()
+        let menuButton = ShadowRectButton()
+        let backButton = ShadowRectButton()
+        buttonUp.setImage(image?.rotate(withRotation: CGFloat(Float.pi/2)).withRenderingMode(.alwaysTemplate), for: .normal)
+        buttonLeft.setImage(image?.rotate(withRotation: CGFloat(-Float.pi)).withRenderingMode(.alwaysTemplate), for: .normal)
+        buttonRight.setImage(image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        buttonBottom.setImage(image?.rotate(withRotation: CGFloat(-Float.pi/2)).withRenderingMode(.alwaysTemplate), for: .normal)
+        okButton.setTitle("OK", for: .normal)
+        menuButton.setTitle("Menu", for: .normal)
+        backButton.setTitle("Back", for: .normal)
+        
+        directionView.addSubview(buttonUp)
+        directionView.addSubview(buttonLeft)
+        directionView.addSubview(buttonRight)
+        directionView.addSubview(buttonBottom)
+        directionView.addSubview(okButton)
+        directionView.addSubview(menuButton)
+        directionView.addSubview(backButton)
+        
+        func setButton(_ button: UIButton) {
+            button.tintColor = blue
+            button.imageView?.snp.makeConstraints {
+                $0.width.height.equalTo(40)
+            }
+            button.snp.makeConstraints {
+                $0.width.height.equalTo(48)
+            }
+        }
+        
+        func setRoundBtn(_ button: ShadowRectButton) {
+            button.cornerRadius = 32
+            button.needShadow = false
+            button.snp.makeConstraints {
+                $0.width.height.equalTo(64)
+            }
+        }
+        
+        setButton(buttonUp)
+        setButton(buttonLeft)
+        setButton(buttonRight)
+        setButton(buttonBottom)
+        setRoundBtn(okButton)
+        setRoundBtn(menuButton)
+        setRoundBtn(backButton)
+        directionView.snp.makeConstraints {
+            $0.width.equalTo(311)
+            $0.height.equalTo(288)
+            $0.center.equalTo(directionWrapper)
+        }
+        buttonUp.snp.makeConstraints {
+            $0.top.equalTo(directionView).offset(8)
+            $0.centerX.equalTo(directionView)
+            $0.width.height.equalTo(48)
+        }
+        buttonLeft.snp.makeConstraints {
+            $0.left.equalTo(directionView).offset(20)
+            $0.centerY.equalTo(directionView).offset(-16)
+        }
+        buttonRight.snp.makeConstraints {
+            $0.right.equalTo(directionView).offset(-20)
+            $0.centerY.equalTo(directionView).offset(-16)
+        }
+        buttonBottom.snp.makeConstraints {
+            $0.bottom.equalTo(directionView).offset(-24)
+            $0.centerX.equalTo(directionView)
+        }
+        okButton.snp.makeConstraints {
+            $0.centerX.equalTo(directionView)
+            $0.centerY.equalTo(directionView).offset(-16)
+        }
+        menuButton.snp.makeConstraints {
+            $0.left.equalTo(directionView).offset(8)
+            $0.bottom.equalTo(directionView).offset(-8)
+        }
+        backButton.snp.makeConstraints {
+            $0.right.equalTo(directionView).offset(-8)
+            $0.bottom.equalTo(directionView).offset(-8)
+        }
+        return directionWrapper
+    }
+    
     static func getUpDownView(centerTitle title: String = "") -> ShaderView {
         let wrapper = ShaderView()
         

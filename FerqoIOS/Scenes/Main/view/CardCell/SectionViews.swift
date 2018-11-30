@@ -53,7 +53,6 @@ class CardView: UITableViewCell {
 
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        
     }
     
     override func layoutSubviews() {
@@ -72,26 +71,27 @@ class CardView: UITableViewCell {
     }
     
     func setUp() {
-        separateLine.isHidden = true
+        contentView.clipsToBounds = true
+//        separateLine.isHidden = true
         title.text = viewModel.title
         icon.image = UIImage(named: viewModel.icon)
         
+        viewModel.expandController.view.translatesAutoresizingMaskIntoConstraints = false
         expandView.addSubview(viewModel.expandController.view)
         parentController.addChild(viewModel.expandController)
         viewModel.expandController.didMove(toParent: parentController.self)
+        viewModel.expandController.view.layoutIfNeeded()
         viewModel.expandController.view.snp.makeConstraints{
             $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         }
     }
     
     @IBAction func clickExpand(_ sender: Any) {
-        UIView.animate(withDuration: 0.3, animations: {
-//            self.expandView.frame.size = CGSize(width: self.expandView.frame.width, height: CGFloat(self.viewModel.isOpen ? 120 + self.viewModel.height : 0))
-//            self.frame.size = CGSize(width: self.frame.width, height: CGFloat(self.totalHeight))
-            
-            self.parentDelegate.clickEvent(indexPath: self.indexPath)
-        }) { (Bool) in
-//            self.parentDelegate.clickEvent(indexPath: nil, isOpen: self.open)
-        }
+        self.parentDelegate.clickEvent(indexPath: self.indexPath, cell: self)
+//        UIView.animate(withDuration: 0.3, animations: {
+////            self.parentDelegate.clickEvent(indexPath: self.indexPath, cell: self)
+//        }) { (Bool) in
+////            self.parentDelegate.clickEvent(indexPath: nil, isOpen: self.open)
+//        }
     }
 }

@@ -36,6 +36,11 @@ class MainSlideViewModel {
         TableViewSectionMap(section: SectionViewModel(), items: [], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
             DeviceCardViewModel(icon: "tv", title: "電視"),
+            DeviceCardViewModel(icon: "tv", title: "電視"),
+            DeviceCardViewModel(icon: "projector", title: "投影機"),
+            DeviceCardViewModel(icon: "projector", title: "投影機"),
+            DeviceCardViewModel(icon: "projector", title: "投影機"),
+            DeviceCardViewModel(icon: "projector", title: "投影機"),
             DeviceCardViewModel(icon: "projector", title: "投影機"),
         ], title: "裝置")
     ]

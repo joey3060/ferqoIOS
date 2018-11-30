@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 protocol CardViewDelegate {
-    func clickEvent(indexPath: IndexPath?)
+    func clickEvent(indexPath: IndexPath?, cell: UITableViewCell)
 }
 
 class MainSlideViewController: UIViewController {
@@ -30,11 +30,8 @@ class MainSlideViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.estimatedRowHeight = 100
-        tableView.separatorInset = UIEdgeInsets.zero
-        tableView.layoutMargins = UIEdgeInsets.zero
-        tableView.cellLayoutMarginsFollowReadableWidth = false
+        tableView.rowHeight = UITableView.automaticDimension // UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 120
     }
 
     func configure(view: UITableViewCell) {
@@ -83,7 +80,6 @@ extension MainSlideViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if cell is CardView {
             cell.backgroundColor = .clear
-            cell.frame = CGRect(x: 0, y: 0, width: cell.frame.width, height: 100)
             cell.preservesSuperviewLayoutMargins = false
         }
     }
@@ -104,11 +100,10 @@ extension MainSlideViewController: UITableViewDelegate {
 }
 
 extension MainSlideViewController: CardViewDelegate {
-    func clickEvent(indexPath: IndexPath?) {
+    func clickEvent(indexPath: IndexPath?, cell: UITableViewCell) {
         if selectedIndexPath != nil && selectedIndexPath?.section == 1 {
             let cellViewModel: DeviceCardViewModel = viewModel.datasource[1].items[selectedIndexPath!.row - 1] as! DeviceCardViewModel
             cellViewModel.view.separateLine.isHidden = cellViewModel.isOpen
-            cellViewModel.view.expandView.isHidden = cellViewModel.isOpen
             
             if (!cellViewModel.isOpen) {
                 cellViewModel.isOpen = false
@@ -122,15 +117,16 @@ extension MainSlideViewController: CardViewDelegate {
         if selectedIndexPath == indexPath {
             cellViewModel.isOpen = false
             selectedIndexPath = nil
-            cellViewModel.view.separateLine.isHidden = true
-            cellViewModel.view.expandView.isHidden = true
+//            cellViewModel.view.separateLine.isHidden = true
+//            cellViewModel.view.expandView.isHidden = true
             cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(0))
         } else {
             cellViewModel.isOpen = true
             cellViewModel.view.separateLine.isHidden = false
-            cellViewModel.view.expandView.isHidden = false
             selectedIndexPath = indexPath
             cellViewModel.view.expandBtn.imageView?.transform = CGAffineTransform(rotationAngle: CGFloat(CGFloat.pi))
         }
+//        cell.setNeedsDisplay()
+//        tableView.reloadRows(at: [indexPath!], with: UITableView.RowAnimation.automatic)
     }
 }
