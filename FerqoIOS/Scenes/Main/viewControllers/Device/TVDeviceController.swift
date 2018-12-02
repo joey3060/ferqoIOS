@@ -206,60 +206,67 @@ extension TVDeviceController {
     
     func setUpSelectChannel() -> UIView {
         let channelView: UIView = UIView()
-        let stackView: UIStackView = {
-            let stackView = UIStackView(arrangedSubviews: [])
-            stackView.axis = .horizontal
-            stackView.distribution = .fill
-            stackView.spacing = 8
-            stackView.alignment = .center
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            
-            return stackView
-        }()
-        
-        let channelSelectBtn: UIButton = {
-            let button = UIButton()
-            button.layer.borderColor = lightBlue.cgColor
-            button.layer.borderWidth = 1
-            button.layer.cornerRadius = 4
-            return button
-        }()
-        
-        let label = UILabel()
-        label.text = "選台"
-        
-        let arrowImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        arrowImgView.image = UIImage(named: "left")?.rotate(withRotation: CGFloat(Float.pi))
-        arrowImgView.backgroundColor = .clear
-        arrowImgView.contentMode = .scaleAspectFit
-        
-        stackView.addArrangedSubview(label)
-        stackView.addArrangedSubview(arrowImgView)
-        
-        channelSelectBtn.addSubview(stackView)
+        let channelSelectBtn: UIView = DeviceControllerViews.getNumberControlButton()
+//        let stackView: UIStackView = {
+//            let stackView = UIStackView(arrangedSubviews: [])
+//            stackView.axis = .horizontal
+//            stackView.distribution = .fill
+//            stackView.spacing = 8
+//            stackView.alignment = .center
+//            stackView.translatesAutoresizingMaskIntoConstraints = false
+//
+//            return stackView
+//        }()
+//
+//        let channelSelectBtn: UIButton = {
+//            let button = UIButton()
+//            button.layer.borderColor = lightBlue.cgColor
+//            button.layer.borderWidth = 1
+//            button.layer.cornerRadius = 4
+//            return button
+//        }()
+//
+//        let label = UILabel()
+//        label.text = "選台"
+//
+//        let arrowImgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+//        arrowImgView.image = UIImage(named: "left")?.rotate(withRotation: CGFloat(Float.pi))
+//        arrowImgView.backgroundColor = .clear
+//        arrowImgView.contentMode = .scaleAspectFit
+//
+//        stackView.addArrangedSubview(label)
+//        stackView.addArrangedSubview(arrowImgView)
+//
+//        channelSelectBtn.addSubview(stackView)
         channelView.addSubview(channelSelectBtn)
         
         view.addSubview(channelView)
         
         channelView.snp.makeConstraints {
             $0.top.equalTo(0)
+            $0.width.equalTo(view).inset(UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 35))
             $0.bottom.equalTo(channelSelectBtn.snp.bottom)
-        }
-        
-        arrowImgView.snp.makeConstraints {
-            $0.width.height.equalTo(24)
+            $0.centerX.equalTo(view)
         }
         
         channelSelectBtn.snp.makeConstraints {
-            $0.top.equalTo(channelView)
-            $0.width.equalTo(view).offset(16)
-            $0.left.right.equalTo(-8)
+            $0.width.top.equalTo(channelView)
         }
         
-        stackView.snp.makeConstraints {
-            $0.top.bottom.left.right.equalTo(channelSelectBtn).inset(UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 20))
-            $0.leading.trailing.equalTo(8)
-        }
+//        arrowImgView.snp.makeConstraints {
+//            $0.width.height.equalTo(24)
+//        }
+//
+//        channelSelectBtn.snp.makeConstraints {
+//            $0.top.equalTo(channelView)
+//            $0.width.equalTo(view).offset(16)
+//            $0.left.right.equalTo(-8)
+//        }
+//
+//        stackView.snp.makeConstraints {
+//            $0.top.bottom.left.right.equalTo(channelSelectBtn).inset(UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 20))
+//            $0.leading.trailing.equalTo(8)
+//        }
         
         return channelView
     }

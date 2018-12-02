@@ -13,6 +13,33 @@ class DeviceControllerViews {
     static private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     static private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
     
+    static func getNumberControlButton() -> UIView {
+        let names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", nil, "0", nil ]
+        var elements: [UIView] = []
+        for (_, element) in names.enumerated() {
+            if (element == nil) {
+                elements.append(UIView())
+            } else {
+                let wrapper = UIView()
+                let newButton = ShadowRectButton()
+                newButton.cornerRadius = 32
+                newButton.setTitle("\(element ?? "")", for: .normal)
+                newButton.translatesAutoresizingMaskIntoConstraints = false
+                wrapper.addSubview(newButton)
+                elements.append(wrapper)
+                wrapper.snp.makeConstraints {
+                    $0.height.equalTo(newButton)
+                }
+                newButton.snp.makeConstraints {
+                    $0.width.height.equalTo(64)
+                    $0.center.equalTo(wrapper)
+                }
+            }
+        }
+        
+        return self.getGridView(elements: elements)
+    }
+    
     static func getSlider(name: String = "", icon: [String]) -> UIView {
         let wrapper = UIView()
         let textLabel = UILabel()
@@ -127,17 +154,17 @@ class DeviceControllerViews {
         return nowStack
     }
     
-    static func getGridButton(names: [String] = []) -> UIView {
+    static func getGridView(elements: [UIView]) -> UIView {
         let wrapper = UIView()
         var nowStack: UIStackView!
         let col = 3
-        for (index, element) in names.enumerated() {
+        for (index, element) in elements.enumerated() {
             if index % col == 0 {
                 let newStack = UIStackView()
                 newStack.translatesAutoresizingMaskIntoConstraints = false
                 newStack.distribution = .fillEqually
                 newStack.axis = .horizontal
-                newStack.alignment = .leading
+                newStack.alignment = .center
                 newStack.spacing = 8
                 
                 wrapper.addSubview(newStack)
@@ -152,14 +179,10 @@ class DeviceControllerViews {
                 nowStack = newStack
             }
             
-            let newButton = ShadowRectButton()
-            newButton.cornerRadius = 20
-            newButton.setTitle("\(element)", for: .normal)
-            newButton.translatesAutoresizingMaskIntoConstraints = false
-            nowStack.addArrangedSubview(newButton)
+            nowStack.addArrangedSubview(element)
         }
         
-        let left = names.count % col
+        let left = elements.count % col
         if left > 0 {
             for _ in 1..<left {
                 nowStack.addArrangedSubview(UIView())
@@ -171,6 +194,19 @@ class DeviceControllerViews {
         }
         
         return wrapper
+    }
+    
+    static func getGridButton(names: [String] = []) -> UIView {
+        var elements: [UIButton] = []
+        for (_, element) in names.enumerated() {
+            let newButton = ShadowRectButton()
+            newButton.cornerRadius = 20
+            newButton.setTitle("\(element)", for: .normal)
+            newButton.translatesAutoresizingMaskIntoConstraints = false
+            elements.append(newButton)
+        }
+        
+        return self.getGridView(elements: elements)
     }
     
     static func getDirectionControl() -> UIView {
