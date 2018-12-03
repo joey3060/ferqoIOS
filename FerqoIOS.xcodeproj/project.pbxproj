@@ -28,6 +28,8 @@
 		5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */; };
 		5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */; };
 		5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CC21A5A58600883BE5 /* UIView.swift */; };
+		581ACBFB21B43E0F000BA23E /* MainSlideDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */; };
+		581ACBFF21B4A48B000BA23E /* SituationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACBFE21B4A48B000BA23E /* SituationButton.swift */; };
 		58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */; };
 		58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7121B1CE97004596B1 /* LightDeviceController.swift */; };
 		58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */; };
@@ -48,7 +50,6 @@
 		5897061221A0A23C005609E2 /* MainDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897061121A0A23C005609E2 /* MainDataType.swift */; };
 		58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3A21AD8C470034BA60 /* SectionViews.xib */; };
 		58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */; };
-		58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A4421AE43F30034BA60 /* SituationBtn.xib */; };
 		58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */; };
 		58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4921AF0DAF0034BA60 /* UIButton.swift */; };
 		58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */; };
@@ -109,6 +110,8 @@
 		5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewController.swift; sourceTree = "<group>"; };
 		5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewModel.swift; sourceTree = "<group>"; };
 		5808A2CC21A5A58600883BE5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideDataType.swift; sourceTree = "<group>"; };
+		581ACBFE21B4A48B000BA23E /* SituationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationButton.swift; sourceTree = "<group>"; };
 		58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDeviceController.swift; sourceTree = "<group>"; };
 		58539D7121B1CE97004596B1 /* LightDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDeviceController.swift; sourceTree = "<group>"; };
 		58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirconditionDeviceController.swift; sourceTree = "<group>"; };
@@ -129,7 +132,6 @@
 		5897061121A0A23C005609E2 /* MainDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataType.swift; sourceTree = "<group>"; };
 		58F28A3A21AD8C470034BA60 /* SectionViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViews.xib; sourceTree = "<group>"; };
 		58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViews.swift; sourceTree = "<group>"; };
-		58F28A4421AE43F30034BA60 /* SituationBtn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SituationBtn.xib; sourceTree = "<group>"; };
 		58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectorDeviceController.swift; sourceTree = "<group>"; };
 		58F28A4921AF0DAF0034BA60 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRectButton.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			children = (
 				5897060F219F6491005609E2 /* MenuDataType.swift */,
 				5897061121A0A23C005609E2 /* MainDataType.swift */,
+				581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -443,7 +446,7 @@
 			children = (
 				58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */,
 				58F28A3A21AD8C470034BA60 /* SectionViews.xib */,
-				58F28A4421AE43F30034BA60 /* SituationBtn.xib */,
+				581ACBFE21B4A48B000BA23E /* SituationButton.swift */,
 			);
 			path = CardCell;
 			sourceTree = "<group>";
@@ -585,7 +588,6 @@
 				589705F6219DDCE3005609E2 /* Main.storyboard in Resources */,
 				58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */,
 				58970608219F382E005609E2 /* MenuItem.xib in Resources */,
-				58F28A4521AE43F30034BA60 /* SituationBtn.xib in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
 				010F8AAC21A852B800D682F9 /* Intro.storyboard in Resources */,
@@ -699,6 +701,7 @@
 				58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */,
 				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
+				581ACBFB21B43E0F000BA23E /* MainSlideDataType.swift in Sources */,
 				010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */,
 				58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
@@ -734,6 +737,7 @@
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 				016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */,
+				581ACBFF21B4A48B000BA23E /* SituationButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

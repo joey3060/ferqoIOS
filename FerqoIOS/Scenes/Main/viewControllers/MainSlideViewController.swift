@@ -17,6 +17,7 @@ class MainSlideViewController: UIViewController {
     var viewModel: MainSlideViewModel!
     
     @IBOutlet weak var tableView: UITableView!
+    var situatonCollectionView: UICollectionView!
     
     internal var selectedIndexPath: IndexPath? {
         didSet {
@@ -44,6 +45,22 @@ class MainSlideViewController: UIViewController {
     }
 }
 
+extension MainSlideViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SituationButton
+        return myCell
+    }
+    
+    private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        print("User tapped on item \(indexPath.row)")
+    }
+}
+
 extension MainSlideViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.datasource.count
@@ -61,6 +78,14 @@ extension MainSlideViewController: UITableViewDataSource {
                 cell.title.text = cellViewModel.title
                 cell.backgroundColor = .clear
                 configure(view: cell)
+                return cell
+            }
+        }
+        if (indexPath.section == 0 && indexPath.row == 1) { // collection view
+            if let cell = cell[1] as? SectionSituation {
+                cell.backgroundColor = .clear
+                cell.collectionView.register(SituationButton.self, forCellWithReuseIdentifier: "cell")
+                cell.collectionView.dataSource = self
                 return cell
             }
         }

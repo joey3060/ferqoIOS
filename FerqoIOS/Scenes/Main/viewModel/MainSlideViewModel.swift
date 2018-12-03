@@ -7,20 +7,10 @@
 //
 import UIKit
 
-protocol TableViewItemViewModel {
-    var reuseIdentifier: String { get }
-    var height: Double { get }
-}
-
 protocol SlideViewCellType {
     var viewModel: TableViewItemViewModel! { get set }
 }
 
-struct TableViewSectionMap {
-    let section: TableViewItemViewModel?
-    let items: [TableViewItemViewModel]
-    var title: String = ""
-}
 
 class MainSlideViewModel {
     var coordinationDelegate: MainCoordinator!
@@ -33,7 +23,10 @@ class MainSlideViewModel {
     }
     
     var datasource: [TableViewSectionMap] = [
-        TableViewSectionMap(section: SectionViewModel(), items: [], title: "情境"),
+        TableViewSectionMap(section: SectionViewModel(), items: [
+            SituationData(background: "", title: "回家模式"),
+//            SituationData(background: "", title: "關閉回家"),
+        ], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
             DeviceCardViewModel(icon: "aircondition", title: "冷氣"),
             DeviceCardViewModel(icon: "light2", title: "客廳變色燈"),
