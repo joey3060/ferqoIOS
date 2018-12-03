@@ -24,8 +24,10 @@ class MainSlideViewModel {
     
     var datasource: [TableViewSectionMap] = [
         TableViewSectionMap(section: SectionViewModel(), items: [
-            SituationData(background: "", title: "回家模式"),
-//            SituationData(background: "", title: "關閉回家"),
+            SituationData(items: [
+                SituationModel(background: "bg", title: "回家模式"),
+                SituationModel(background: "bg", title: "關閉回家"),
+            ]),
         ], title: "情境"),
         TableViewSectionMap(section: SectionViewModel(), items: [
             DeviceCardViewModel(icon: "aircondition", title: "冷氣"),

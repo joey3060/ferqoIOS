@@ -47,11 +47,14 @@ class MainSlideViewController: UIViewController {
 
 extension MainSlideViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return (viewModel.datasource[0].items[0] as! SituationData).items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SituationButton
+        let data = (viewModel.datasource[0].items[0] as! SituationData).items[indexPath.row]
+        myCell.title.text = data.title
+        myCell.imageView.image = UIImage(named: data.background)
         return myCell
     }
     

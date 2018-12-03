@@ -16,14 +16,17 @@ struct TableViewSectionMap {
     var title: String = ""
 }
 
+struct SituationModel {
+    var background: String = ""
+    var title: String = ""
+}
+
 struct SituationData: TableViewItemViewModel {
     var reuseIdentifier: String = "cell"
     var height: Double = 100
-    var background: String = ""
-    var title: String = ""
+    var items: [SituationModel] = []
     
-    init(background: String, title: String) {
-        self.background = background
-        self.title = title
+    init(items: [SituationModel]) {
+        self.items = items
     }
 }
