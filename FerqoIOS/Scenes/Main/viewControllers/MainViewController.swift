@@ -34,6 +34,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         super.viewDidLoad()
         addMenu()
         setMainViewStyle()
+        menu.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
         scrollView.delegate = self
@@ -167,6 +168,14 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         menu.view.snp.makeConstraints{ (make) -> Void in
             make.top.bottom.equalToSuperview()
             make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
+        }
+    }
+}
+
+extension MainViewController: MenuDelegate {
+    func selectOnMenu(data: MenuItemType) {
+        if data.icon == "sensor" {
+            viewModel.coordinationDelegate?.goToSensorView()
         }
     }
 }

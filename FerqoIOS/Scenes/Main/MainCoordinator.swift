@@ -35,8 +35,18 @@ class MainCoordinator: Coordinator {
     // auto give a new class object
     var mainSlideViewController: MainSlideViewController! {
         get {
-            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
+            let viewController = storyboard.instantiateViewController(withIdentifier: "mainSlideView") as! MainSlideViewController
             viewController.viewModel = mainSlideViewModel
+            return viewController
+        }
+    }
+    
+    var sensorViewController: SensorViewController! {
+        get {
+            let viewController = storyboard.instantiateViewController(withIdentifier: "sensorView") as! SensorViewController
+            let viewModel = SensorViewModel()
+            viewModel.coordinationDelegate = self
+            viewController.viewModel = viewModel
             return viewController
         }
     }
@@ -54,5 +64,17 @@ class MainCoordinator: Coordinator {
 //        rootViewController.navigationBar.prefersLargeTitles = true
         rootViewController.setViewControllers([mainVC], animated: false)
         mainViewController = mainVC
+    }
+    
+    func backToMain() {
+        mainViewController.dismiss(animated: true)
+    }
+}
+
+extension MainCoordinator {
+    func goToSensorView() {
+        mainViewController.present(sensorViewController, animated: true) {
+            
+        }
     }
 }

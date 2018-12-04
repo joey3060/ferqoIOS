@@ -9,6 +9,10 @@
 import UIKit
 import SnapKit
 
+protocol MenuDelegate {
+    func selectOnMenu(data: MenuItemType)
+}
+
 class MenuTableViewController: UITableViewController {
 
     var viewModel: MenuTableViewModel! {
@@ -17,6 +21,8 @@ class MenuTableViewController: UITableViewController {
         }
     }
     let cellIdentifier: String = "MyCell"
+    
+    var delegate: MenuDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,13 @@ class MenuTableViewController: UITableViewController {
         cell.icon.image = UIImage(named: viewModel.menuList[indexPath.row].icon)?.withRenderingMode(.alwaysTemplate)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data: MenuItemType = viewModel.menuList[indexPath.row]
+        if delegate != nil {
+            delegate.selectOnMenu(data: data)
+        }
     }
     
     func style() {

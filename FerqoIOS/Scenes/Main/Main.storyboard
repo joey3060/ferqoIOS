@@ -259,9 +259,61 @@
             </objects>
             <point key="canvasLocation" x="793" y="138"/>
         </scene>
+        <!--Sensor View Controller-->
+        <scene sceneID="exd-Ei-mTh">
+            <objects>
+                <viewController storyboardIdentifier="sensorView" id="W9L-5t-EeF" customClass="SensorViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VpO-hD-hb3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-JC-6bf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="環境感測" id="2Zn-PY-het">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="mNU-NU-tJh">
+                                            <connections>
+                                                <action selector="backToRoot:" destination="W9L-5t-EeF" id="O43-Ny-eux"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pj4-bK-Ny0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.56470588235294117" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pj4-bK-Ny0" firstAttribute="leading" secondItem="xhu-SU-Pnf" secondAttribute="leading" id="3Ea-4S-6Tp"/>
+                            <constraint firstItem="QMT-JC-6bf" firstAttribute="trailing" secondItem="xhu-SU-Pnf" secondAttribute="trailing" id="Dcf-LG-HQQ"/>
+                            <constraint firstItem="xhu-SU-Pnf" firstAttribute="bottom" secondItem="pj4-bK-Ny0" secondAttribute="bottom" id="EBK-WH-xAx"/>
+                            <constraint firstItem="pj4-bK-Ny0" firstAttribute="top" secondItem="QMT-JC-6bf" secondAttribute="bottom" id="Tpg-vF-oiz"/>
+                            <constraint firstItem="QMT-JC-6bf" firstAttribute="top" secondItem="xhu-SU-Pnf" secondAttribute="top" id="kwO-tE-rur"/>
+                            <constraint firstItem="xhu-SU-Pnf" firstAttribute="trailing" secondItem="pj4-bK-Ny0" secondAttribute="trailing" id="oc7-AF-Icy"/>
+                            <constraint firstItem="QMT-JC-6bf" firstAttribute="leading" secondItem="xhu-SU-Pnf" secondAttribute="leading" id="xIk-EP-byB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xhu-SU-Pnf"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="pj4-bK-Ny0" id="wn8-Bt-VYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6I-N0-ieR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="834"/>
+        </scene>
     </scenes>
     <resources>
         <image name="berger" width="24" height="24"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="left" width="24" height="24"/>
     </resources>
 </document>

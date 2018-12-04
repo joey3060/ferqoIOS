@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
-      "filename" : "left.pdf"
+      "filename" : "left.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {
