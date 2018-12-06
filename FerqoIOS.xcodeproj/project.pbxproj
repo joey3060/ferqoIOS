@@ -33,6 +33,7 @@
 		581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0521B4B5F5000BA23E /* SensorViewController.swift */; };
 		581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */; };
 		581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */; };
+		5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95321B94E12005EACB9 /* SensorViewDataType.swift */; };
 		58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */; };
 		58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7121B1CE97004596B1 /* LightDeviceController.swift */; };
 		58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */; };
@@ -118,6 +119,7 @@
 		581ACC0521B4B5F5000BA23E /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewCell.swift; sourceTree = "<group>"; };
+		5846E95321B94E12005EACB9 /* SensorViewDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewDataType.swift; sourceTree = "<group>"; };
 		58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDeviceController.swift; sourceTree = "<group>"; };
 		58539D7121B1CE97004596B1 /* LightDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDeviceController.swift; sourceTree = "<group>"; };
 		58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirconditionDeviceController.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				5897060F219F6491005609E2 /* MenuDataType.swift */,
 				5897061121A0A23C005609E2 /* MainDataType.swift */,
 				581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */,
+				5846E95321B94E12005EACB9 /* SensorViewDataType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
 				58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */,
+				5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */,
 				58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */,
 				58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */,
 				581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */,

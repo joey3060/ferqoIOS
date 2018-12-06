@@ -7,21 +7,57 @@
 //
 
 import UIKit
+import SnapKit
 
 class SensorViewCell: UITableViewCell {
     var icon: UIImageView!
     var title: UILabel!
-    var value: UILabel!
+    var valueLabel: UILabel!
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        layOut()
+    }
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        layOut()
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    public static var identifier: String { return String(describing: self) }
+    
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
     }
-    */
-
+    
+    func layOut() {
+        let stackView: UIStackView = {
+            let stackView = UIStackView()
+            stackView.distribution = .equalSpacing
+            stackView.alignment = .center
+            return stackView
+        }()
+        
+        icon = UIImageView()
+        title = UILabel()
+        valueLabel = UILabel()
+        
+        stackView.addArrangedSubview(title)
+        stackView.addArrangedSubview(valueLabel)
+        
+        valueLabel.textColor = UIColor.gray
+        
+        addSubview(icon)
+        addSubview(stackView)
+        
+        icon.snp.makeConstraints {
+            $0.left.equalTo(contentView).offset(20)
+            $0.centerY.equalTo(self)
+            $0.width.height.equalTo(24)
+        }
+        stackView.snp.makeConstraints {
+            $0.left.equalTo(icon.snp.right).offset(20)
+            $0.right.equalTo(contentView).offset(-16)
+            $0.height.centerY.equalTo(self)
+        }
+    }
 }

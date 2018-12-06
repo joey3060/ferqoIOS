@@ -11,4 +11,9 @@ import UIKit
 class SensorViewModel {
     var coordinationDelegate: MainCoordinator!
     weak var viewDelegate: UIViewController?
+    
+    var sensorDatas: [SensorData] = [
+        SensorData( icon: "co2", title: "CO2", value: "256ppm" ),
+        SensorData( icon: "wet", title: "濕度", value: "60%" )
+    ]
 }
