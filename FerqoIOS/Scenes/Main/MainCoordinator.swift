@@ -85,22 +85,27 @@ class MainCoordinator: Coordinator {
     }
     
     func backToMain() {
-        mainViewController.dismiss(animated: true)
+        rootViewController.popViewController(animated: true)
     }
+    
+//    func setHasHeader() {
+//        rootViewController.setNavigationBarHidden(false, animated: false)
+//        rootViewController.navigationBar.isTranslucent = false
+//        rootViewController.navigationBar.tintColor = UIColor.white
+//        rootViewController.navigationBar.barTintColor = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)
+//    }
 }
 
 extension MainCoordinator {
     func goToSensorView() {
-        mainViewController.present(sensorViewController, animated: true) {
-            
-        }
+        rootViewController.pushViewController(sensorViewController, animated: true)
     }
     
     func goToSensorDetectView() {
-        mainViewController.present(sensorDetectViewController, animated: true)
+        rootViewController.pushViewController(sensorDetectViewController, animated: true)
     }
     
     func goToInterPhoneView() {
-        mainViewController.present(interphoneViewController, animated: true)
+        rootViewController.pushViewController(interphoneViewController, animated: true)
     }
 }
