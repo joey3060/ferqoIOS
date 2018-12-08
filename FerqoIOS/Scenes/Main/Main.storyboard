@@ -379,8 +379,12 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="對講機" id="IfY-BL-Qso">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="XLB-T5-qGy"/>
+                                    <navigationItem id="IfY-BL-Qso">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="XLB-T5-qGy">
+                                            <connections>
+                                                <action selector="back:" destination="jVz-8j-uCa" id="yeG-vh-qKt"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -403,6 +407,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="jEx-Ug-ZmB" id="LEe-RU-eWc"/>
+                        <outlet property="navigationBar" destination="tbz-DS-1lq" id="3oo-hu-fTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC5-ID-rEv" userLabel="First Responder" sceneMemberID="firstResponder"/>

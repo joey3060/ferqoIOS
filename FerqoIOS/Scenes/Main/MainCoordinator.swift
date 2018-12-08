@@ -71,9 +71,9 @@ class MainCoordinator: Coordinator {
     
     var interphoneControlViewController: CameraControlViewController! {
         let viewController = storyboard.instantiateViewController(withIdentifier: "cameraControl") as! CameraControlViewController
-//        let viewModel = InterPhoneModel()
-//        viewModel.coordinationDelegate = self
-//        viewController.viewModel = viewModel
+        let viewModel = CameraControlWithInterPhoneViewModel()
+        viewModel.coordinationDelegate = self
+        viewController.viewModel = viewModel
         return viewController
     }
     
@@ -93,6 +93,10 @@ class MainCoordinator: Coordinator {
     }
     
     func backToMain() {
+        back()
+    }
+    
+    func back() {
         rootViewController.popViewController(animated: true)
     }
     

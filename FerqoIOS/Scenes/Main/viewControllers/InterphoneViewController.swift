@@ -17,6 +17,7 @@ class InterphoneViewController: UIViewController {
         super.viewDidLoad()
         tableView.register(InterPhoneCell.self, forCellReuseIdentifier: InterPhoneCell.identifier)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorInset = UIEdgeInsets(top: 17,left: 0,bottom: 0,right: 0)
         tableView.separatorStyle = .none
     }
@@ -25,15 +26,6 @@ class InterphoneViewController: UIViewController {
     @IBAction func backToMain(_ sender: Any) {
         viewModel.coordinationDelegate.backToMain()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
 extension InterphoneViewController: UITableViewDataSource {
@@ -47,5 +39,13 @@ extension InterphoneViewController: UITableViewDataSource {
         cell.title.text = data.name
         cell.bgImage.image = UIImage(named: data.background)
         return cell
+    }
+}
+
+extension InterphoneViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let _ = viewModel.interPhoneInPlace[indexPath.row] // TODO: send the data to control view
+        viewModel.coordinationDelegate.goToInterPhoneControlView()
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

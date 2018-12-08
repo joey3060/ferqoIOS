@@ -11,14 +11,22 @@ import SnapKit
 
 class CameraControlViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     let wrapperStackView: UIStackView = UIStackView()
     var cameraView: UIView!
     var toolBox: UIView!
     
+    var viewModel: CameraControlWithInterPhoneViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationBar.topItem?.title = viewModel.headerTitle
         setUp()
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        viewModel.coordinationDelegate.back()
     }
     
     func setUp() {
