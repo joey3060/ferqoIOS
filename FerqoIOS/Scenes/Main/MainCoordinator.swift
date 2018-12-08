@@ -69,6 +69,14 @@ class MainCoordinator: Coordinator {
         return viewController
     }
     
+    var interphoneControlViewController: CameraControlViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "cameraControl") as! CameraControlViewController
+//        let viewModel = InterPhoneModel()
+//        viewModel.coordinationDelegate = self
+//        viewController.viewModel = viewModel
+        return viewController
+    }
+    
     init(_ rootViewController: UINavigationController) {
         self.rootViewController = rootViewController
     }
@@ -107,5 +115,9 @@ extension MainCoordinator {
     
     func goToInterPhoneView() {
         rootViewController.pushViewController(interphoneViewController, animated: true)
+    }
+    
+    func goToInterPhoneControlView() {
+        rootViewController.pushViewController(interphoneControlViewController, animated: true)
     }
 }

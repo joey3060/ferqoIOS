@@ -360,7 +360,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOD-u2-00P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="842"/>
+            <point key="canvasLocation" x="-12" y="1581"/>
+        </scene>
+        <!--Camera Control View Controller-->
+        <scene sceneID="PjW-ZM-5T6">
+            <objects>
+                <viewController storyboardIdentifier="cameraControl" id="jVz-8j-uCa" customClass="CameraControlViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3w-Kd-t1b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbz-DS-1lq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="對講機" id="IfY-BL-Qso">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="XLB-T5-qGy"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEx-Ug-ZmB" userLabel="Container">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y2I-dI-hkO" firstAttribute="trailing" secondItem="jEx-Ug-ZmB" secondAttribute="trailing" id="2Mn-Yx-Wc8"/>
+                            <constraint firstItem="jEx-Ug-ZmB" firstAttribute="top" secondItem="tbz-DS-1lq" secondAttribute="bottom" id="Aa5-MQ-t5D"/>
+                            <constraint firstItem="Y2I-dI-hkO" firstAttribute="bottom" secondItem="jEx-Ug-ZmB" secondAttribute="bottom" id="IQg-Dp-UGN"/>
+                            <constraint firstItem="tbz-DS-1lq" firstAttribute="trailing" secondItem="Y2I-dI-hkO" secondAttribute="trailing" id="Ool-8n-8UJ"/>
+                            <constraint firstItem="jEx-Ug-ZmB" firstAttribute="leading" secondItem="Y2I-dI-hkO" secondAttribute="leading" id="lss-OO-SPj"/>
+                            <constraint firstItem="tbz-DS-1lq" firstAttribute="top" secondItem="Y2I-dI-hkO" secondAttribute="top" id="m7U-5Q-2gB"/>
+                            <constraint firstItem="tbz-DS-1lq" firstAttribute="leading" secondItem="Y2I-dI-hkO" secondAttribute="leading" id="q3D-Mh-ymd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y2I-dI-hkO"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="jEx-Ug-ZmB" id="LEe-RU-eWc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RC5-ID-rEv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="1581"/>
         </scene>
     </scenes>
     <resources>
