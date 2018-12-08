@@ -303,6 +303,7 @@
                         <viewLayoutGuide key="safeArea" id="xhu-SU-Pnf"/>
                     </view>
                     <connections>
+                        <outlet property="header" destination="QMT-JC-6bf" id="Rqz-HU-zxx"/>
                         <outlet property="tableView" destination="pj4-bK-Ny0" id="wn8-Bt-VYN"/>
                     </connections>
                 </viewController>

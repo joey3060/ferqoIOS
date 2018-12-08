@@ -51,6 +51,15 @@ class MainCoordinator: Coordinator {
         }
     }
     
+    var sensorDetectViewController: SensorViewController! {
+       let viewController = storyboard.instantiateViewController(withIdentifier: "sensorView") as! SensorViewController
+        let viewModel = SensorViewModel()
+        viewModel.coordinationDelegate = self
+        viewModel.sensorType = 1
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
     init(_ rootViewController: UINavigationController) {
         self.rootViewController = rootViewController
     }
@@ -76,5 +85,9 @@ extension MainCoordinator {
         mainViewController.present(sensorViewController, animated: true) {
             
         }
+    }
+    
+    func goToSensorDetectView() {
+        mainViewController.present(sensorDetectViewController, animated: true)
     }
 }

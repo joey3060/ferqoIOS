@@ -10,4 +10,10 @@ struct SensorData {
     var icon: String
     var title: String
     var value: String
+    var offline: Bool = false
+}
+
+struct RoomData {
+    var roomName: String = ""
+    var sensorData: [SensorData] = []
 }

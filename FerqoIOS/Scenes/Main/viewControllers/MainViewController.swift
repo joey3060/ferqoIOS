@@ -177,6 +177,10 @@ extension MainViewController: MenuDelegate {
         if data.icon == "sensor" {
             viewModel.coordinationDelegate?.goToSensorView()
         }
+        
+        if data.icon == "filled" {
+            viewModel.coordinationDelegate?.goToSensorDetectView()
+        }
     }
 }
 
