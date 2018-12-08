@@ -311,6 +311,57 @@
             </objects>
             <point key="canvasLocation" x="-12" y="834"/>
         </scene>
+        <!--Interphone View Controller-->
+        <scene sceneID="Oqf-zS-FXj">
+            <objects>
+                <viewController storyboardIdentifier="interphoneView" id="gwj-Zm-JLL" customClass="InterphoneViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBu-eM-nwz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyP-gD-CXh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="對講機" id="ass-Yl-diK">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="vmB-wP-2mb">
+                                            <connections>
+                                                <action selector="backToMain:" destination="gwj-Zm-JLL" id="LH6-Az-7cT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E6b-n1-TUI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E6b-n1-TUI" firstAttribute="top" secondItem="kyP-gD-CXh" secondAttribute="bottom" id="Mha-hY-Pg2"/>
+                            <constraint firstItem="ZH0-Yw-XxU" firstAttribute="bottom" secondItem="E6b-n1-TUI" secondAttribute="bottom" id="P4Q-UZ-c7E"/>
+                            <constraint firstItem="E6b-n1-TUI" firstAttribute="leading" secondItem="ZH0-Yw-XxU" secondAttribute="leading" id="VQm-z6-vWK"/>
+                            <constraint firstItem="ZH0-Yw-XxU" firstAttribute="trailing" secondItem="E6b-n1-TUI" secondAttribute="trailing" id="Xk6-ba-Ehb"/>
+                            <constraint firstItem="kyP-gD-CXh" firstAttribute="trailing" secondItem="ZH0-Yw-XxU" secondAttribute="trailing" id="cQi-L5-tpk"/>
+                            <constraint firstItem="kyP-gD-CXh" firstAttribute="leading" secondItem="ZH0-Yw-XxU" secondAttribute="leading" id="hxd-zq-Tkc"/>
+                            <constraint firstItem="kyP-gD-CXh" firstAttribute="top" secondItem="ZH0-Yw-XxU" secondAttribute="top" id="p2g-e8-NDl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZH0-Yw-XxU"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="E6b-n1-TUI" id="P6E-4K-dmo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOD-u2-00P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="842"/>
+        </scene>
     </scenes>
     <resources>
         <image name="berger" width="24" height="24"/>

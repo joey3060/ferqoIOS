@@ -41,6 +41,7 @@ class MainCoordinator: Coordinator {
         }
     }
     
+    // global sensor
     var sensorViewController: SensorViewController! {
         get {
             let viewController = storyboard.instantiateViewController(withIdentifier: "sensorView") as! SensorViewController
@@ -56,6 +57,14 @@ class MainCoordinator: Coordinator {
         let viewModel = SensorViewModel()
         viewModel.coordinationDelegate = self
         viewModel.sensorType = 1
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    var interphoneViewController: InterphoneViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "interphoneView") as! InterphoneViewController
+        let viewModel = InterPhoneModel()
+        viewModel.coordinationDelegate = self
         viewController.viewModel = viewModel
         return viewController
     }
@@ -89,5 +98,9 @@ extension MainCoordinator {
     
     func goToSensorDetectView() {
         mainViewController.present(sensorDetectViewController, animated: true)
+    }
+    
+    func goToInterPhoneView() {
+        mainViewController.present(interphoneViewController, animated: true)
     }
 }

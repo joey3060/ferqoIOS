@@ -181,6 +181,10 @@ extension MainViewController: MenuDelegate {
         if data.icon == "filled" {
             viewModel.coordinationDelegate?.goToSensorDetectView()
         }
+        
+        if data.icon == "mic" {
+            viewModel.coordinationDelegate?.goToInterPhoneView()
+        }
     }
 }
 

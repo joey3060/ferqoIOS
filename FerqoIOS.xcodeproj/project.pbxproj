@@ -34,6 +34,11 @@
 		581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */; };
 		581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */; };
 		5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95321B94E12005EACB9 /* SensorViewDataType.swift */; };
+		5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95521BBB823005EACB9 /* InterphoneViewController.swift */; };
+		5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */; };
+		5846E95A21BBBCCB005EACB9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */; };
+		5846E95C21BBBE6C005EACB9 /* InterPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */; };
+		5846E95E21BBD559005EACB9 /* InterPhoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95D21BBD559005EACB9 /* InterPhoneType.swift */; };
 		58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */; };
 		58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7121B1CE97004596B1 /* LightDeviceController.swift */; };
 		58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */; };
@@ -120,6 +125,11 @@
 		581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewCell.swift; sourceTree = "<group>"; };
 		5846E95321B94E12005EACB9 /* SensorViewDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewDataType.swift; sourceTree = "<group>"; };
+		5846E95521BBB823005EACB9 /* InterphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterphoneViewController.swift; sourceTree = "<group>"; };
+		5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneCell.swift; sourceTree = "<group>"; };
+		5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneModel.swift; sourceTree = "<group>"; };
+		5846E95D21BBD559005EACB9 /* InterPhoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneType.swift; sourceTree = "<group>"; };
 		58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDeviceController.swift; sourceTree = "<group>"; };
 		58539D7121B1CE97004596B1 /* LightDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDeviceController.swift; sourceTree = "<group>"; };
 		58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirconditionDeviceController.swift; sourceTree = "<group>"; };
@@ -220,6 +230,7 @@
 				016E84DF21A3F843001E69A3 /* UITextField.swift */,
 				58F28A4921AF0DAF0034BA60 /* UIButton.swift */,
 				58F28A4F21B02CD70034BA60 /* UIImage.swift */,
+				5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -420,6 +431,7 @@
 				58970605219F2EAA005609E2 /* MenuTableViewController.swift */,
 				5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */,
 				581ACC0521B4B5F5000BA23E /* SensorViewController.swift */,
+				5846E95521BBB823005EACB9 /* InterphoneViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -431,6 +443,7 @@
 				5897060C219F5646005609E2 /* MenuTableViewModel.swift */,
 				5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */,
 				581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */,
+				5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -446,6 +459,7 @@
 				58F28A5121B042C40034BA60 /* ControlSlider.swift */,
 				58F28A5421B054220034BA60 /* ShaderView.swift */,
 				58F28A5621B059900034BA60 /* DeviceControllerViews.swift */,
+				5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -457,6 +471,7 @@
 				5897061121A0A23C005609E2 /* MainDataType.swift */,
 				581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */,
 				5846E95321B94E12005EACB9 /* SensorViewDataType.swift */,
+				5846E95D21BBD559005EACB9 /* InterPhoneType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -726,6 +741,7 @@
 				58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
 				58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */,
+				5846E95C21BBBE6C005EACB9 /* InterPhoneModel.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
 				58F28A5521B054220034BA60 /* ShaderView.swift in Sources */,
 				5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */,
@@ -750,15 +766,19 @@
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
+				5846E95A21BBBCCB005EACB9 /* UITableViewCell.swift in Sources */,
 				5897060B219F48C1005609E2 /* Nib.swift in Sources */,
 				58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */,
+				5846E95E21BBD559005EACB9 /* InterPhoneType.swift in Sources */,
 				589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */,
 				5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */,
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */,
 				58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */,
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
+				5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 				016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */,
 				581ACBFF21B4A48B000BA23E /* SituationButton.swift in Sources */,

@@ -23,7 +23,6 @@ class SensorViewCell: UITableViewCell {
         super.init(coder: aDecoder)
         layOut()
     }
-    public static var identifier: String { return String(describing: self) }
     
     override func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
