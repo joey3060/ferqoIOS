@@ -33,7 +33,7 @@
 		581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0521B4B5F5000BA23E /* SensorViewController.swift */; };
 		581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */; };
 		581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */; };
-		5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */; };
+		5833BFF521BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */; };
 		5833BFF721BCB777008AF3F1 /* CameraListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */; };
 		5833BFF921BCBDC2008AF3F1 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */; };
 		5833BFFB21BCC008008AF3F1 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */; };
@@ -132,7 +132,7 @@
 		581ACC0521B4B5F5000BA23E /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewCell.swift; sourceTree = "<group>"; };
-		5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControWithInterPhonelViewModel.swift; sourceTree = "<group>"; };
+		5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlWithInterPhoneViewModel.swift; sourceTree = "<group>"; };
 		5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListViewController.swift; sourceTree = "<group>"; };
 		5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
 		5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 				5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */,
 				581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */,
 				5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */,
-				5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */,
+				5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */,
 				5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */,
 			);
 			path = viewModel;
@@ -802,7 +802,7 @@
 				5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */,
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
-				5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */,
+				5833BFF521BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
 				5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */,
 				5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */,

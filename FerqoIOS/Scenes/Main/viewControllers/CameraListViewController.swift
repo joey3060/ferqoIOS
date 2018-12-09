@@ -17,14 +17,15 @@ class CameraListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(CameraCell.self, forCellWithReuseIdentifier: CameraCell.identifier)
         if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.itemSize = CGSize(width: 170, height: 152)
         }
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func back(_ sender: Any) {
+        viewModel.coordinationDelegate.back()
     }
 }
 
@@ -38,5 +39,28 @@ extension CameraListViewController: UICollectionViewDataSource {
         let data = viewModel.cameraList[indexPath.row]
         cell.title.text = data.name
         return cell
+    }
+}
+
+extension CameraListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.coordinationDelegate.goToCameraControlView()
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.3) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? CameraCell {
+                cell.contentView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1)
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.3) {
+            if let cell = collectionView.cellForItem(at: indexPath) as? CameraCell {
+                cell.contentView.backgroundColor = .clear
+            }
+        }
     }
 }
