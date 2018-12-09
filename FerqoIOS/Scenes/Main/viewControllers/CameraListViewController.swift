@@ -10,8 +10,9 @@ import UIKit
 import SnapKit
 
 class CameraListViewController: UIViewController {
-    var viewModel:Any!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var viewModel:CameraListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +30,13 @@ class CameraListViewController: UIViewController {
 
 extension CameraListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return viewModel.cameraList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CameraCell.identifier, for: indexPath) as! CameraCell
-        cell.title.text = "客廳"
+        let data = viewModel.cameraList[indexPath.row]
+        cell.title.text = data.name
         return cell
     }
-    
-    
 }
