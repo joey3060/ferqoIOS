@@ -84,10 +84,26 @@ class MainCoordinator: Coordinator {
         viewController.viewModel = viewModel
         return viewController
     }
+
+    var cameraListViewController: CameraListViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "cameraList") as! CameraListViewController
+        let viewModel = CameraListViewModel()
+        viewModel.coordinationDelegate = self
+        viewController.viewModel = viewModel
+        return viewController
+    }
     
     var alarmSettingViewController: AlarmSettingViewController! {
         let viewController = storyboard.instantiateViewController(withIdentifier: "alarmSettingView") as! AlarmSettingViewController
         let viewModel = AlarmSettingViewModel()
+        viewModel.coordinationDelegate = self
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    //CameraControlViewModel
+    var cameraControlViewController: CameraControlViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "cameraControl") as! CameraControlViewController
+        let viewModel = CameraControlWithInterPhoneViewModel()
         viewModel.coordinationDelegate = self
         viewController.viewModel = viewModel
         return viewController
@@ -147,5 +163,13 @@ extension MainCoordinator {
     
     func goToAlarmSettingView() {
         rootViewController.pushViewController(alarmSettingViewController, animated: true)
+    }
+    
+    func goToCameraListView() {
+        rootViewController.pushViewController(cameraListViewController, animated: true)
+    }
+    
+    func goToCameraControlView() {
+        rootViewController.pushViewController(cameraControlViewController, animated: true)
     }
 }

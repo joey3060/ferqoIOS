@@ -39,7 +39,12 @@
 		581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0521B4B5F5000BA23E /* SensorViewController.swift */; };
 		581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */; };
 		581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */; };
-		5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */; };
+		5833BFF521BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */; };
+		5833BFF721BCB777008AF3F1 /* CameraListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */; };
+		5833BFF921BCBDC2008AF3F1 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */; };
+		5833BFFB21BCC008008AF3F1 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */; };
+		5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */; };
+		5833BFFF21BD4212008AF3F1 /* CameraDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */; };
 		5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95321B94E12005EACB9 /* SensorViewDataType.swift */; };
 		5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95521BBB823005EACB9 /* InterphoneViewController.swift */; };
 		5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */; };
@@ -139,7 +144,12 @@
 		581ACC0521B4B5F5000BA23E /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
 		581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewCell.swift; sourceTree = "<group>"; };
-		5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControWithInterPhonelViewModel.swift; sourceTree = "<group>"; };
+		5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlWithInterPhoneViewModel.swift; sourceTree = "<group>"; };
+		5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListViewController.swift; sourceTree = "<group>"; };
+		5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListViewModel.swift; sourceTree = "<group>"; };
+		5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataType.swift; sourceTree = "<group>"; };
 		5846E95321B94E12005EACB9 /* SensorViewDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewDataType.swift; sourceTree = "<group>"; };
 		5846E95521BBB823005EACB9 /* InterphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterphoneViewController.swift; sourceTree = "<group>"; };
 		5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneCell.swift; sourceTree = "<group>"; };
@@ -250,6 +260,7 @@
 				58F28A4F21B02CD70034BA60 /* UIImage.swift */,
 				5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */,
 				01B8B7DF21C0B0FF007164A0 /* UIDevice.swift */,
+				5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -454,6 +465,7 @@
 				581ACC0521B4B5F5000BA23E /* SensorViewController.swift */,
 				5846E95521BBB823005EACB9 /* InterphoneViewController.swift */,
 				5846E95F21BC248C005EACB9 /* CameraControlViewController.swift */,
+				5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -469,6 +481,7 @@
 				5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */,
 				5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */,
 				0147F26321BD380100D535CE /* AlarmSettingViewModel.swift */,
+				5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -485,6 +498,7 @@
 				58F28A5421B054220034BA60 /* ShaderView.swift */,
 				58F28A5621B059900034BA60 /* DeviceControllerViews.swift */,
 				5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */,
+				5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */,
 				5846E96221BC265D005EACB9 /* CameraViews.swift */,
 			);
 			path = view;
@@ -499,6 +513,7 @@
 				581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */,
 				5846E95321B94E12005EACB9 /* SensorViewDataType.swift */,
 				5846E95D21BBD559005EACB9 /* InterPhoneType.swift */,
+				5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -778,6 +793,7 @@
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
 				0147F26021BD356D00D535CE /* AlarmViewController.swift in Sources */,
 				58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */,
+				5833BFF721BCB777008AF3F1 /* CameraListViewController.swift in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
 				58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */,
 				5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */,
@@ -790,6 +806,7 @@
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
 				58F28A4E21B025090034BA60 /* TVDeviceController.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
+				5833BFF921BCBDC2008AF3F1 /* CameraCell.swift in Sources */,
 				58F28A5721B059900034BA60 /* DeviceControllerViews.swift in Sources */,
 				581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
@@ -800,6 +817,7 @@
 				5897060B219F48C1005609E2 /* Nib.swift in Sources */,
 				58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */,
 				5846E95E21BBD559005EACB9 /* InterPhoneType.swift in Sources */,
+				5833BFFF21BD4212008AF3F1 /* CameraDataType.swift in Sources */,
 				589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */,
 				5846E96321BC265D005EACB9 /* CameraViews.swift in Sources */,
 				0147F25C21BD355800D535CE /* AlarmViewModel.swift in Sources */,
@@ -809,9 +827,11 @@
 				5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */,
 				0147F26221BD357D00D535CE /* AlarmSettingViewController.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */,
 				5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */,
 				58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */,
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
+				5833BFFB21BCC008008AF3F1 /* UICollectionViewCell.swift in Sources */,
 				5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
 				5846E96021BC248C005EACB9 /* CameraControlViewController.swift in Sources */,

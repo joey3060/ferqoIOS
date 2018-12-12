@@ -501,6 +501,64 @@
             </objects>
             <point key="canvasLocation" x="793" y="1581"/>
         </scene>
+        <!--Camera List View Controller-->
+        <scene sceneID="Cmi-WW-iBh">
+            <objects>
+                <viewController storyboardIdentifier="cameraList" id="zrQ-TC-2AD" customClass="CameraListViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNe-KV-Ejj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pk-bs-fSY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="對講機" id="zfI-H6-MDb">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" style="plain" id="Whx-zx-sAI">
+                                            <connections>
+                                                <action selector="back:" destination="zrQ-TC-2AD" id="VwV-tb-wca"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-kl-Klw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="MNm-Pd-602">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="40" maxX="16" maxY="40"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.56470588239999997" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXX-6k-tob" firstAttribute="trailing" secondItem="k0I-kl-Klw" secondAttribute="trailing" id="DGj-aw-cX5"/>
+                            <constraint firstItem="5Pk-bs-fSY" firstAttribute="trailing" secondItem="bXX-6k-tob" secondAttribute="trailing" id="K62-z2-EYE"/>
+                            <constraint firstItem="k0I-kl-Klw" firstAttribute="leading" secondItem="bXX-6k-tob" secondAttribute="leading" id="N4i-To-6Ig"/>
+                            <constraint firstItem="5Pk-bs-fSY" firstAttribute="top" secondItem="bXX-6k-tob" secondAttribute="top" id="OxQ-Vn-lpV"/>
+                            <constraint firstItem="5Pk-bs-fSY" firstAttribute="leading" secondItem="bXX-6k-tob" secondAttribute="leading" id="Ys4-U4-zx4"/>
+                            <constraint firstItem="bXX-6k-tob" firstAttribute="bottom" secondItem="k0I-kl-Klw" secondAttribute="bottom" id="iiP-7g-5Kp"/>
+                            <constraint firstItem="k0I-kl-Klw" firstAttribute="top" secondItem="5Pk-bs-fSY" secondAttribute="bottom" id="oz5-OG-gXx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXX-6k-tob"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="k0I-kl-Klw" id="yya-DM-low"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxZ-aG-VoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="2282"/>
+        </scene>
     </scenes>
     <resources>
         <image name="berger" width="24" height="24"/>

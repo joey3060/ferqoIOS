@@ -190,6 +190,9 @@ extension MainViewController: MenuDelegate {
             viewModel.coordinationDelegate?.goToAlarmView()
         }
 
+        if data.icon == "alarm" {
+            viewModel.coordinationDelegate?.goToCameraListView()
+        }
     }
 }
 
