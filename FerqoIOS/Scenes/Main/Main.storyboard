@@ -362,6 +362,93 @@
             </objects>
             <point key="canvasLocation" x="-12" y="1581"/>
         </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="Xfg-vL-VPb">
+            <objects>
+                <viewController storyboardIdentifier="alarmView" id="kg6-RN-K8D" customClass="AlarmViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOz-sX-RB9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3L-y9-4iJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.18670627470000001" green="0.56429457660000004" blue="0.73693472149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="警報" id="d1r-nG-ZMC">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" id="I7O-4E-cyC">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="BackButton:" destination="kg6-RN-K8D" id="F6U-7U-fHM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="filled" id="tzg-kk-478">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18670627470000001" green="0.56429457660000004" blue="0.73693472149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e3L-y9-4iJ" firstAttribute="trailing" secondItem="iCd-uD-0w2" secondAttribute="trailing" id="6cr-OL-ePr"/>
+                            <constraint firstItem="e3L-y9-4iJ" firstAttribute="leading" secondItem="iCd-uD-0w2" secondAttribute="leading" id="Ffh-s9-78f"/>
+                            <constraint firstItem="e3L-y9-4iJ" firstAttribute="top" secondItem="iCd-uD-0w2" secondAttribute="top" id="yjW-BF-zg6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iCd-uD-0w2"/>
+                    </view>
+                    <connections>
+                        <outlet property="Header" destination="e3L-y9-4iJ" id="UrF-fd-C5q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUS-Ln-yT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="2272"/>
+        </scene>
+        <!--Alarm Setting View Controller-->
+        <scene sceneID="b6q-1D-WhZ">
+            <objects>
+                <viewController storyboardIdentifier="alarmSettingView" id="ofL-LH-bgg" customClass="AlarmSettingViewController" customModule="FerqoIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nJD-N0-ey3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-jg-dtZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.18670627470000001" green="0.56429457660000004" blue="0.73693472149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="警報設定" id="9Zx-zm-eCQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="left" id="gST-4N-fhw">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="BackButton:" destination="ofL-LH-bgg" id="YeE-fV-LPt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18670627470000001" green="0.56429457660000004" blue="0.73693472149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yJN-jg-dtZ" firstAttribute="trailing" secondItem="BN0-Ca-enj" secondAttribute="trailing" id="4Zp-5T-ciI"/>
+                            <constraint firstItem="yJN-jg-dtZ" firstAttribute="top" secondItem="BN0-Ca-enj" secondAttribute="top" id="Pdo-Dy-b5O"/>
+                            <constraint firstItem="yJN-jg-dtZ" firstAttribute="leading" secondItem="BN0-Ca-enj" secondAttribute="leading" id="zif-Pd-ZSn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BN0-Ca-enj"/>
+                    </view>
+                    <connections>
+                        <outlet property="Header" destination="yJN-jg-dtZ" id="k3e-Ye-T46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XMr-54-kIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="2272"/>
+        </scene>
         <!--Camera Control View Controller-->
         <scene sceneID="PjW-ZM-5T6">
             <objects>
@@ -418,6 +505,7 @@
     <resources>
         <image name="berger" width="24" height="24"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="filled" width="24" height="24"/>
         <image name="left" width="24" height="24"/>
     </resources>
 </document>

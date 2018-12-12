@@ -185,6 +185,11 @@ extension MainViewController: MenuDelegate {
         if data.icon == "mic" {
             viewModel.coordinationDelegate?.goToInterPhoneView()
         }
+        
+        if data.icon == "alert2" {
+            viewModel.coordinationDelegate?.goToAlarmView()
+        }
+
     }
 }
 

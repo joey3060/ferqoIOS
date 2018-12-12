@@ -77,6 +77,22 @@ class MainCoordinator: Coordinator {
         return viewController
     }
     
+    var alarmViewController: AlarmViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "alarmView") as! AlarmViewController
+        let viewModel = AlarmViewModel()
+        viewModel.coordinationDelegate = self
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    var alarmSettingViewController: AlarmSettingViewController! {
+        let viewController = storyboard.instantiateViewController(withIdentifier: "alarmSettingView") as! AlarmSettingViewController
+        let viewModel = AlarmSettingViewModel()
+        viewModel.coordinationDelegate = self
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
     init(_ rootViewController: UINavigationController) {
         self.rootViewController = rootViewController
     }
@@ -123,5 +139,13 @@ extension MainCoordinator {
     
     func goToInterPhoneControlView() {
         rootViewController.pushViewController(interphoneControlViewController, animated: true)
+    }
+    
+    func goToAlarmView() {
+        rootViewController.pushViewController(alarmViewController, animated: true)
+    }
+    
+    func goToAlarmSettingView() {
+        rootViewController.pushViewController(alarmSettingViewController, animated: true)
     }
 }
