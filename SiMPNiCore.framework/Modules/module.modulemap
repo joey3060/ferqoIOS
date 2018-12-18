@@ -1,0 +1,6 @@
+framework module SiMPNiCore {
+  umbrella header "SiMPNiCore.h"
+
+  export *
+  module * { export * }
+}

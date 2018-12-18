@@ -10,6 +10,10 @@ def shared_pods
     pod 'RxCocoa', '~> 4.0'
     
     pod 'SnapKit', '~> 4.2.0'
+    
+    # SDK
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
 end
 
 target 'FerqoIOS' do

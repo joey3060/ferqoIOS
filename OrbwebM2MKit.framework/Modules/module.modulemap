@@ -1,0 +1,6 @@
+framework module OrbwebM2MKit {
+  umbrella header "OrbwebM2MKit.h"
+
+  export *
+  module * { export * }
+}

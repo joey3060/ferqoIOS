@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SiMPNiCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = AppCoordinator(window: window)
         appCoordinator.start()
         appCoordinator.coordinateToSplash()
+        print(SiMPNiCoreVersionNumber)
         return true
     }
 
