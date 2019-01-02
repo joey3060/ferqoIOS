@@ -28,7 +28,7 @@ class CardView: UITableViewCell {
     
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var title: UIButton!
     @IBOutlet weak var expandView: UIView!
     @IBOutlet weak var separateLine: UIView!
     @IBOutlet weak var expandBtn: UIButton!
@@ -75,7 +75,8 @@ class CardView: UITableViewCell {
     func setUp() {
         contentView.clipsToBounds = true
 //        separateLine.isHidden = true
-        title.text = viewModel.title
+        title.setTitle(viewModel.title, for: .normal)
+//        title.text = viewModel.title
         icon.image = UIImage(named: viewModel.icon)
         
         viewModel.expandController.view.translatesAutoresizingMaskIntoConstraints = false

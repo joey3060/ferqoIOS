@@ -87,7 +87,7 @@
                         <rect key="frame" x="16" y="119.5" width="311" height="0.0"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-Gd-hfJ">
-                        <rect key="frame" x="16" y="44" width="88" height="32"/>
+                        <rect key="frame" x="16" y="44" width="94" height="32"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aqY-5r-EPr">
                                 <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -96,19 +96,22 @@
                                     <constraint firstAttribute="width" constant="32" id="hHT-uH-24A"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjr-CM-SBI">
-                                <rect key="frame" x="40" y="0.0" width="48" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-ng-G2l">
+                                <rect key="frame" x="40" y="0.0" width="54" height="32"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickExpand:" destination="KcX-DQ-uwW" eventType="touchUpInside" id="ptp-Iu-6pw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="4mN-A7-pCa"/>
-                            <constraint firstAttribute="trailing" secondItem="Bjr-CM-SBI" secondAttribute="trailing" id="807-k1-7LO"/>
-                            <constraint firstItem="Bjr-CM-SBI" firstAttribute="top" secondItem="bTL-Gd-hfJ" secondAttribute="top" id="9Rh-p8-G3s"/>
-                            <constraint firstItem="Bjr-CM-SBI" firstAttribute="leading" secondItem="aqY-5r-EPr" secondAttribute="trailing" constant="8" id="frK-p5-K6c"/>
-                            <constraint firstAttribute="bottom" secondItem="Bjr-CM-SBI" secondAttribute="bottom" id="uZF-dx-YWB"/>
+                            <constraint firstItem="Z8G-ng-G2l" firstAttribute="top" secondItem="bTL-Gd-hfJ" secondAttribute="top" id="9bQ-OR-ZAs"/>
+                            <constraint firstAttribute="trailing" secondItem="Z8G-ng-G2l" secondAttribute="trailing" id="HqC-fU-vDh"/>
+                            <constraint firstItem="Z8G-ng-G2l" firstAttribute="leading" secondItem="aqY-5r-EPr" secondAttribute="trailing" constant="8" id="RL2-4J-hG3"/>
+                            <constraint firstAttribute="bottom" secondItem="Z8G-ng-G2l" secondAttribute="bottom" id="SYO-hW-J9M"/>
                         </constraints>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-PS-DZ2">
@@ -149,7 +152,7 @@
                 <outlet property="expandView" destination="5CN-AI-gjU" id="bip-J1-BfE"/>
                 <outlet property="icon" destination="aqY-5r-EPr" id="ojd-xt-9WW"/>
                 <outlet property="separateLine" destination="rdE-3l-ZDA" id="4qF-EB-5M9"/>
-                <outlet property="title" destination="Bjr-CM-SBI" id="bIb-JB-EaA"/>
+                <outlet property="title" destination="Z8G-ng-G2l" id="FR2-eO-YYr"/>
             </connections>
             <point key="canvasLocation" x="40.799999999999997" y="290.55472263868069"/>
         </tableViewCell>
