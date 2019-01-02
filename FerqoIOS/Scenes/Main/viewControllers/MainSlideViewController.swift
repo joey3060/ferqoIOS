@@ -32,6 +32,8 @@ class MainSlideViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension // UITableView.automaticDimension
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        tableView.isScrollEnabled = false
 //        tableView.estimatedRowHeight = 120
     }
 
@@ -124,6 +126,14 @@ extension MainSlideViewController: UITableViewDelegate {
             return CGFloat(120)
         }
         return UITableView.automaticDimension
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if (scrollView.contentOffset.y == 0) {
+            tableView.isScrollEnabled = false
+        } else {
+            tableView.isScrollEnabled = true
+        }
     }
 }
 

@@ -112,7 +112,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 //        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - topBar.frame.height - collectionTab.frame.height) // mainSection.frame.height - collectionTab.frame.height
         slideView.snp.makeConstraints {
             $0.width.equalTo(view).priority(1000)
-            $0.height.equalTo(view).offset(-(topBar.frame.height + collectionTab.frame.height + 20)).priority(1000)
+            $0.height.equalTo(view).offset(-(topBar.frame.height + collectionTab.frame.height)).priority(1000)
         }
         slideView.layoutIfNeeded()
         slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height - topBar.frame.height - collectionTab.frame.height)
@@ -170,6 +170,14 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
             make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
         }
     }
+    
+    func disableScrollView() {
+        viewModel.tabViewList[beforeIndex].viewController?.tableView.isScrollEnabled = false
+    }
+    
+    func enableScrollView() {
+        viewModel.tabViewList[beforeIndex].viewController?.tableView.isScrollEnabled = true
+    }
 }
 
 extension MainViewController: MenuDelegate {
@@ -202,6 +210,11 @@ extension MainViewController: UIScrollViewDelegate {
             let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
             let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
             headerTitle.textColor = UIColor(white: 1, alpha: opacity)
+            if (opacity < 0) {
+                enableScrollView()
+            } else {
+                disableScrollView()
+            }
         } else if(slideView == scrollView) {
             let beforeCell = collectionTab.cellForItem(at: IndexPath(item: beforeIndex, section: 0)) as! TabCollectionCell
             beforeCell.underLine.isHidden = true

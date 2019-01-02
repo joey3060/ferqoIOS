@@ -9,8 +9,8 @@
 import UIKit
 
 class TVDeviceController: UIViewController, DeviceController {
-    var viewHeight: Int = 1103
-    var expandHeight: Int = 1552
+    var viewHeight: Int = 1352
+    var expandHeight: Int = 1352
     
     private let lightBlue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.32)
     private let blue = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 1)

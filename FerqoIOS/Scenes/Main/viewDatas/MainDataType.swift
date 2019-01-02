@@ -13,5 +13,5 @@ protocol pageStruct {
 
 struct TabRoomType {
     var roomName: String = ""
-    var viewController: UIViewController?
+    var viewController: MainSlideViewController?
 }
