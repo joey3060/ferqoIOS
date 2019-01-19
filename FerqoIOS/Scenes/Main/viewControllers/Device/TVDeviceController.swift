@@ -113,8 +113,6 @@ extension TVDeviceController {
     
     func setUpVolumeView() -> UIView {
         let volumeView = UIView()
-        let label = UILabel()
-        label.text = "音量"
         let stackView: UIStackView = {
             let stackView = UIStackView(arrangedSubviews: [])
             stackView.axis = .horizontal
@@ -125,63 +123,9 @@ extension TVDeviceController {
             
             return stackView
         }()
-        let voiceImageLow: UIImageView = {
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-            imageView.image = UIImage(named: "voiceLow")
-            imageView.image = imageView.image!.withRenderingMode(.alwaysTemplate)
-            imageView.tintColor = lightBlue
-            imageView.backgroundColor = .clear
-            imageView.contentMode = .center
-            
-            return imageView
-        }()
-        let voiceImageHigh: UIImageView = {
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-            imageView.image = UIImage(named: "voiceHigh")
-            imageView.image = imageView.image!.withRenderingMode(.alwaysTemplate)
-            imageView.tintColor = blue
-            imageView.backgroundColor = .clear
-            imageView.contentMode = .center
-            
-            return imageView
-        }()
-        let slideBar: UIView = {
-            let wrapper = UIView()
-            let border = UIView()
-            let slider = ControlSlider()
-            slider.tintColor = blue
-            slider.maximumTrackTintColor = .clear
-            border.layer.borderWidth = 1
-            border.layer.borderColor = lightBlue.cgColor
-            border.layer.cornerRadius = 8
-            wrapper.addSubview(border)
-            wrapper.addSubview(slider)
-            wrapper.bringSubviewToFront(slider)
-            wrapper.snp.makeConstraints {
-                $0.height.equalTo(16)
-            }
-            border.snp.makeConstraints {
-                $0.top.bottom.left.right.equalTo(0)
-            }
-            slider.snp.makeConstraints {
-                $0.top.bottom.left.right.equalTo(0)
-            }
-            voiceImageLow.snp.makeConstraints {
-                $0.width.height.equalTo(48)
-            }
-            voiceImageHigh.snp.makeConstraints {
-                $0.width.height.equalTo(48)
-            }
-            return wrapper
-        }()
+        let slider = DeviceControllerViews.getSlider(name: "音量", icon: ["voiceLow", "voiceHigh"])
         
-        
-        volumeView.addSubview(label)
-        
-        stackView.addArrangedSubview(voiceImageLow)
-        stackView.addArrangedSubview(slideBar)
-        stackView.addArrangedSubview(voiceImageHigh)
-        
+        stackView.addArrangedSubview(slider)
         volumeView.addSubview(stackView)
         view.addSubview(volumeView)
         
@@ -190,13 +134,9 @@ extension TVDeviceController {
             $0.width.equalTo(view)
             $0.bottom.equalTo(stackView.snp.bottom)
         }
-        
-        label.snp.makeConstraints {
-            $0.top.equalTo(volumeView.snp.top).offset(16)
-        }
-        
+
         stackView.snp.makeConstraints {
-            $0.top.equalTo(label.snp.bottom).offset(16)
+            $0.top.equalTo(volumeView.snp.top).offset(16)
             $0.width.equalTo(volumeView)
             $0.height.equalTo(48)
         }
