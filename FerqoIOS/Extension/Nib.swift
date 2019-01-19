@@ -8,7 +8,14 @@
 import UIKit
 
 //@IBDesignable
-//class Nib: UIView {
+extension UIView {
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: String(describing: self), bundle: nil).instantiate(withOwner: nil, options: nil).first as! UIView
+    }
+    
+    class func loadNib() -> UINib {
+        return UINib(nibName: String(describing: self), bundle: nil)
+    }
 //
 ////    @IBOutlet var view: UIView!
 //    let cornerRadius: CGFloat = 6.0
@@ -38,4 +45,4 @@ import UIKit
 //    func layoutView() {
 //    }
 //
-//}
+}

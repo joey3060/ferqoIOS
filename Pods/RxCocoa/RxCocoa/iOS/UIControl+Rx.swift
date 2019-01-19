@@ -19,8 +19,8 @@ extension Reactive where Base: UIControl {
     
     /// Bindable sink for `enabled` property.
     public var isEnabled: Binder<Bool> {
-        return Binder(self.base) { control, value in
-            control.isEnabled = value
+        return Binder(self.base) { control, valueLabel in
+            control.isEnabled = valueLabel
         }
     }
 

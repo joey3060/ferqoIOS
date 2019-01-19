@@ -34,6 +34,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         super.viewDidLoad()
         addMenu()
         setMainViewStyle()
+        menu.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         scrollView.addGestureRecognizer(tap)
         scrollView.delegate = self
@@ -87,13 +88,16 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         
         mainSection.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(headerTitle.snp.bottom).offset(23)
+            make.left.right.equalToSuperview()
             if let window = UIApplication.shared.keyWindow {
                 let safeAreaBottom = window.safeAreaInsets.bottom
                 let safeAreaTop = window.safeAreaInsets.top
-                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height)
+                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height+5)
             }
         }
-        slideWrapper.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+        slideWrapper.snp.makeConstraints {
+            $0.width.equalTo(view).priority(1000)
+        }
     }
     
     func setupSlides() {
@@ -105,13 +109,18 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     }
     
     func setupSlideScrollView(slides : [TabRoomType]) {
-        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: mainSection.frame.height - collectionTab.frame.height
-        )
-        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: slideView.contentSize.height)
+//        slideView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - topBar.frame.height - collectionTab.frame.height) // mainSection.frame.height - collectionTab.frame.height
+        slideView.snp.makeConstraints {
+            $0.width.equalTo(view).priority(1000)
+            $0.height.equalTo(view).offset(-(topBar.frame.height + collectionTab.frame.height)).priority(1000)
+        }
+        slideView.layoutIfNeeded()
+        slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height - topBar.frame.height - collectionTab.frame.height)
         slideView.isPagingEnabled = true
         
         for i in 0 ..< slides.count {
             slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
+            slides[i].viewController!.view.roundCorners(corners: [.topLeft, .topRight], radius: 8)
             addChild(slides[i].viewController!)
             slideView.addSubview(slides[i].viewController!.view)
             slides[i].viewController!.didMove(toParent: self)
@@ -161,6 +170,38 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
             make.left.equalToSuperview().offset(menu.view.frame.size.width * -1)
         }
     }
+    
+    func disableScrollView() {
+        viewModel.tabViewList[beforeIndex].viewController?.tableView.isScrollEnabled = false
+    }
+    
+    func enableScrollView() {
+        viewModel.tabViewList[beforeIndex].viewController?.tableView.isScrollEnabled = true
+    }
+}
+
+extension MainViewController: MenuDelegate {
+    func selectOnMenu(data: MenuItemType) {
+        if data.icon == "sensor" {
+            viewModel.coordinationDelegate?.goToSensorView()
+        }
+        
+        if data.icon == "filled" {
+            viewModel.coordinationDelegate?.goToSensorDetectView()
+        }
+        
+        if data.icon == "mic" {
+            viewModel.coordinationDelegate?.goToInterPhoneView()
+        }
+        
+        if data.icon == "alert2" {
+            viewModel.coordinationDelegate?.goToAlarmView()
+        }
+
+        if data.icon == "alarm" {
+            viewModel.coordinationDelegate?.goToCameraListView()
+        }
+    }
 }
 
 extension MainViewController: UIScrollViewDelegate {
@@ -169,6 +210,11 @@ extension MainViewController: UIScrollViewDelegate {
             let mainTopOffset = scrollView.convert(mainSection.frame.origin, to: nil).y
             let opacity = (mainTopOffset - scrollView.contentOffset.y) / mainTopOffset
             headerTitle.textColor = UIColor(white: 1, alpha: opacity)
+            if (opacity < 0) {
+                enableScrollView()
+            } else {
+                disableScrollView()
+            }
         } else if(slideView == scrollView) {
             let beforeCell = collectionTab.cellForItem(at: IndexPath(item: beforeIndex, section: 0)) as! TabCollectionCell
             beforeCell.underLine.isHidden = true

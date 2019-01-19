@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "sensor.pdf",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "sensor.pdf"
     }
   ],
   "info" : {

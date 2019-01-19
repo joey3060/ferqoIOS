@@ -11,9 +11,15 @@
 		010F8AAC21A852B800D682F9 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010F8AAB21A852B800D682F9 /* Intro.storyboard */; };
 		010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F8AAE21A8531D00D682F9 /* IntroCoordinator.swift */; };
 		010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010F8AB121A8538600D682F9 /* IntroViewModel.swift */; };
+		0147F25C21BD355800D535CE /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147F25B21BD355800D535CE /* AlarmViewModel.swift */; };
+		0147F25E21BD356000D535CE /* AlarmViewDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147F25D21BD356000D535CE /* AlarmViewDataType.swift */; };
+		0147F26021BD356D00D535CE /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147F25F21BD356D00D535CE /* AlarmViewController.swift */; };
+		0147F26221BD357D00D535CE /* AlarmSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147F26121BD357D00D535CE /* AlarmSettingViewController.swift */; };
+		0147F26421BD380100D535CE /* AlarmSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147F26321BD380100D535CE /* AlarmSettingViewModel.swift */; };
 		016E84E021A3F844001E69A3 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84DF21A3F843001E69A3 /* UITextField.swift */; };
 		016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84E221A51104001E69A3 /* LoginCoordinator.swift */; };
 		016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E84E521A51277001E69A3 /* LoginViewModel.swift */; };
+		01B8B7E021C0B0FF007164A0 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8B7DF21C0B0FF007164A0 /* UIDevice.swift */; };
 		01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1121906E0600F0A63C /* AppDelegate.swift */; };
 		01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE1821906E0600F0A63C /* FerqoIOS.xcdatamodeld */; };
 		01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE1B21906E0700F0A63C /* Assets.xcassets */; };
@@ -28,6 +34,28 @@
 		5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */; };
 		5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */; };
 		5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CC21A5A58600883BE5 /* UIView.swift */; };
+		581ACBFB21B43E0F000BA23E /* MainSlideDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */; };
+		581ACBFF21B4A48B000BA23E /* SituationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACBFE21B4A48B000BA23E /* SituationButton.swift */; };
+		581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0521B4B5F5000BA23E /* SensorViewController.swift */; };
+		581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */; };
+		581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */; };
+		5833BFF521BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */; };
+		5833BFF721BCB777008AF3F1 /* CameraListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */; };
+		5833BFF921BCBDC2008AF3F1 /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */; };
+		5833BFFB21BCC008008AF3F1 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */; };
+		5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */; };
+		5833BFFF21BD4212008AF3F1 /* CameraDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */; };
+		5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95321B94E12005EACB9 /* SensorViewDataType.swift */; };
+		5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95521BBB823005EACB9 /* InterphoneViewController.swift */; };
+		5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */; };
+		5846E95A21BBBCCB005EACB9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */; };
+		5846E95C21BBBE6C005EACB9 /* InterPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */; };
+		5846E95E21BBD559005EACB9 /* InterPhoneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95D21BBD559005EACB9 /* InterPhoneType.swift */; };
+		5846E96021BC248C005EACB9 /* CameraControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E95F21BC248C005EACB9 /* CameraControlViewController.swift */; };
+		5846E96321BC265D005EACB9 /* CameraViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5846E96221BC265D005EACB9 /* CameraViews.swift */; };
+		58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */; };
+		58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7121B1CE97004596B1 /* LightDeviceController.swift */; };
+		58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */; };
 		589705E4219DB41A005609E2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E3219DB41A005609E2 /* Coordinator.swift */; };
 		589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E5219DB4A4005609E2 /* AppCoordinator.swift */; };
 		589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589705E8219DB718005609E2 /* SplashCoordinator.swift */; };
@@ -43,6 +71,16 @@
 		5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060C219F5646005609E2 /* MenuTableViewModel.swift */; };
 		58970610219F6491005609E2 /* MenuDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897060F219F6491005609E2 /* MenuDataType.swift */; };
 		5897061221A0A23C005609E2 /* MainDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5897061121A0A23C005609E2 /* MainDataType.swift */; };
+		58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58F28A3A21AD8C470034BA60 /* SectionViews.xib */; };
+		58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */; };
+		58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */; };
+		58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4921AF0DAF0034BA60 /* UIButton.swift */; };
+		58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */; };
+		58F28A4E21B025090034BA60 /* TVDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4D21B025090034BA60 /* TVDeviceController.swift */; };
+		58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A4F21B02CD70034BA60 /* UIImage.swift */; };
+		58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5121B042C40034BA60 /* ControlSlider.swift */; };
+		58F28A5521B054220034BA60 /* ShaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5421B054220034BA60 /* ShaderView.swift */; };
+		58F28A5721B059900034BA60 /* DeviceControllerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F28A5621B059900034BA60 /* DeviceControllerViews.swift */; };
 		C6AE8A1389028EC066213204 /* Pods_FerqoIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2954E74C92E7C9CA601B535 /* Pods_FerqoIOSUITests.framework */; };
 		E1B2BCCD826873E3A0A51128 /* Pods_FerqoIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */; };
 		EBCC395C06144A7046F7550A /* Pods_FerqoIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */; };
@@ -70,9 +108,15 @@
 		010F8AAB21A852B800D682F9 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
 		010F8AAE21A8531D00D682F9 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
 		010F8AB121A8538600D682F9 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		0147F25B21BD355800D535CE /* AlarmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
+		0147F25D21BD356000D535CE /* AlarmViewDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewDataType.swift; sourceTree = "<group>"; };
+		0147F25F21BD356D00D535CE /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		0147F26121BD357D00D535CE /* AlarmSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewController.swift; sourceTree = "<group>"; };
+		0147F26321BD380100D535CE /* AlarmSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingViewModel.swift; sourceTree = "<group>"; };
 		016E84DF21A3F843001E69A3 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		016E84E221A51104001E69A3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		016E84E521A51277001E69A3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		01B8B7DF21C0B0FF007164A0 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		01C8DE0E21906E0600F0A63C /* FerqoIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerqoIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C8DE1121906E0600F0A63C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01C8DE1921906E0600F0A63C /* FerqoIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FerqoIOS.xcdatamodel; sourceTree = "<group>"; };
@@ -95,6 +139,28 @@
 		5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewController.swift; sourceTree = "<group>"; };
 		5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideViewModel.swift; sourceTree = "<group>"; };
 		5808A2CC21A5A58600883BE5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSlideDataType.swift; sourceTree = "<group>"; };
+		581ACBFE21B4A48B000BA23E /* SituationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SituationButton.swift; sourceTree = "<group>"; };
+		581ACC0521B4B5F5000BA23E /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
+		581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewModel.swift; sourceTree = "<group>"; };
+		581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewCell.swift; sourceTree = "<group>"; };
+		5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlWithInterPhoneViewModel.swift; sourceTree = "<group>"; };
+		5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListViewController.swift; sourceTree = "<group>"; };
+		5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListViewModel.swift; sourceTree = "<group>"; };
+		5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDataType.swift; sourceTree = "<group>"; };
+		5846E95321B94E12005EACB9 /* SensorViewDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewDataType.swift; sourceTree = "<group>"; };
+		5846E95521BBB823005EACB9 /* InterphoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterphoneViewController.swift; sourceTree = "<group>"; };
+		5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneCell.swift; sourceTree = "<group>"; };
+		5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneModel.swift; sourceTree = "<group>"; };
+		5846E95D21BBD559005EACB9 /* InterPhoneType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPhoneType.swift; sourceTree = "<group>"; };
+		5846E95F21BC248C005EACB9 /* CameraControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlViewController.swift; sourceTree = "<group>"; };
+		5846E96221BC265D005EACB9 /* CameraViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViews.swift; sourceTree = "<group>"; };
+		58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurtainDeviceController.swift; sourceTree = "<group>"; };
+		58539D7121B1CE97004596B1 /* LightDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDeviceController.swift; sourceTree = "<group>"; };
+		58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirconditionDeviceController.swift; sourceTree = "<group>"; };
 		589705E3219DB41A005609E2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		589705E5219DB4A4005609E2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		589705E8219DB718005609E2 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
@@ -110,6 +176,16 @@
 		5897060C219F5646005609E2 /* MenuTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewModel.swift; sourceTree = "<group>"; };
 		5897060F219F6491005609E2 /* MenuDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataType.swift; sourceTree = "<group>"; };
 		5897061121A0A23C005609E2 /* MainDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataType.swift; sourceTree = "<group>"; };
+		58F28A3A21AD8C470034BA60 /* SectionViews.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViews.xib; sourceTree = "<group>"; };
+		58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViews.swift; sourceTree = "<group>"; };
+		58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectorDeviceController.swift; sourceTree = "<group>"; };
+		58F28A4921AF0DAF0034BA60 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowRectButton.swift; sourceTree = "<group>"; };
+		58F28A4D21B025090034BA60 /* TVDeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDeviceController.swift; sourceTree = "<group>"; };
+		58F28A4F21B02CD70034BA60 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		58F28A5121B042C40034BA60 /* ControlSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlSlider.swift; sourceTree = "<group>"; };
+		58F28A5421B054220034BA60 /* ShaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderView.swift; sourceTree = "<group>"; };
+		58F28A5621B059900034BA60 /* DeviceControllerViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControllerViews.swift; sourceTree = "<group>"; };
 		65CCA47944CA27532274EB65 /* Pods-FerqoIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOSTests/Pods-FerqoIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89CA15082ACDB3C6C7FDEBAB /* Pods_FerqoIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD622A6EEE818810F80E76A /* Pods_FerqoIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerqoIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,7 +253,14 @@
 		016E84DE21A3F821001E69A3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5897060A219F48C1005609E2 /* Nib.swift */,
+				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 				016E84DF21A3F843001E69A3 /* UITextField.swift */,
+				58F28A4921AF0DAF0034BA60 /* UIButton.swift */,
+				58F28A4F21B02CD70034BA60 /* UIImage.swift */,
+				5846E95921BBBCCB005EACB9 /* UITableViewCell.swift */,
+				01B8B7DF21C0B0FF007164A0 /* UIDevice.swift */,
+				5833BFFA21BCC008008AF3F1 /* UICollectionViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -265,8 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				01C8DE5421907A0900F0A63C /* Config.swift */,
-				5897060A219F48C1005609E2 /* Nib.swift */,
-				5808A2CC21A5A58600883BE5 /* UIView.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -335,6 +416,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		581ACC0921B4C603000BA23E /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				581ACC0A21B4C64C000BA23E /* SensorViewCell.swift */,
+			);
+			path = Sensor;
+			sourceTree = "<group>";
+		};
 		589705EA219DB868005609E2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,9 +456,16 @@
 		589705FB219F256C005609E2 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				58F28A4621AEB6B60034BA60 /* Device */,
+				0147F26121BD357D00D535CE /* AlarmSettingViewController.swift */,
+				0147F25F21BD356D00D535CE /* AlarmViewController.swift */,
 				589705FD219F25C0005609E2 /* MainViewController.swift */,
 				58970605219F2EAA005609E2 /* MenuTableViewController.swift */,
 				5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */,
+				581ACC0521B4B5F5000BA23E /* SensorViewController.swift */,
+				5846E95521BBB823005EACB9 /* InterphoneViewController.swift */,
+				5846E95F21BC248C005EACB9 /* CameraControlViewController.swift */,
+				5833BFF621BCB777008AF3F1 /* CameraListViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -377,9 +473,15 @@
 		589705FC219F2578005609E2 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0147F25B21BD355800D535CE /* AlarmViewModel.swift */,
 				589705FF219F2667005609E2 /* MainViewModel.swift */,
 				5897060C219F5646005609E2 /* MenuTableViewModel.swift */,
 				5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */,
+				581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */,
+				5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */,
+				5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */,
+				0147F26321BD380100D535CE /* AlarmSettingViewModel.swift */,
+				5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -387,8 +489,17 @@
 		58970601219F2D63005609E2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				581ACC0921B4C603000BA23E /* Sensor */,
+				58F28A4121AE3B3A0034BA60 /* CardCell */,
 				5808A2C621A457E900883BE5 /* TabViewCollection.swift */,
 				58970607219F382E005609E2 /* MenuItem.xib */,
+				58F28A4B21AF1B180034BA60 /* ShadowRectButton.swift */,
+				58F28A5121B042C40034BA60 /* ControlSlider.swift */,
+				58F28A5421B054220034BA60 /* ShaderView.swift */,
+				58F28A5621B059900034BA60 /* DeviceControllerViews.swift */,
+				5846E95721BBB9E1005EACB9 /* InterPhoneCell.swift */,
+				5833BFF821BCBDC2008AF3F1 /* CameraCell.swift */,
+				5846E96221BC265D005EACB9 /* CameraViews.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -396,10 +507,37 @@
 		5897060E219F646E005609E2 /* viewDatas */ = {
 			isa = PBXGroup;
 			children = (
+				0147F25D21BD356000D535CE /* AlarmViewDataType.swift */,
 				5897060F219F6491005609E2 /* MenuDataType.swift */,
 				5897061121A0A23C005609E2 /* MainDataType.swift */,
+				581ACBFA21B43E0F000BA23E /* MainSlideDataType.swift */,
+				5846E95321B94E12005EACB9 /* SensorViewDataType.swift */,
+				5846E95D21BBD559005EACB9 /* InterPhoneType.swift */,
+				5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */,
 			);
 			path = viewDatas;
+			sourceTree = "<group>";
+		};
+		58F28A4121AE3B3A0034BA60 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				58F28A3C21AD8E2B0034BA60 /* SectionViews.swift */,
+				58F28A3A21AD8C470034BA60 /* SectionViews.xib */,
+				581ACBFE21B4A48B000BA23E /* SituationButton.swift */,
+			);
+			path = CardCell;
+			sourceTree = "<group>";
+		};
+		58F28A4621AEB6B60034BA60 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				58F28A4721AEEB910034BA60 /* ProjectorDeviceController.swift */,
+				58F28A4D21B025090034BA60 /* TVDeviceController.swift */,
+				58539D6D21B1C119004596B1 /* CurtainDeviceController.swift */,
+				58539D7121B1CE97004596B1 /* LightDeviceController.swift */,
+				58539D7321B1D1C9004596B1 /* AirconditionDeviceController.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		D7406D021430173C65E3378F /* Frameworks */ = {
@@ -525,6 +663,7 @@
 			files = (
 				01C8DE1F21906E0700F0A63C /* LaunchScreen.storyboard in Resources */,
 				589705F6219DDCE3005609E2 /* Main.storyboard in Resources */,
+				58F28A3B21AD8C470034BA60 /* SectionViews.xib in Resources */,
 				58970608219F382E005609E2 /* MenuItem.xib in Resources */,
 				01C8DE4B2190795E00F0A63C /* Splash.storyboard in Resources */,
 				01C8DE1C21906E0700F0A63C /* Assets.xcassets in Resources */,
@@ -574,7 +713,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -589,7 +728,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A37C2BEE35A42A88E877F20C /* [CP] Check Pods Manifest.lock */ = {
@@ -636,32 +775,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				589705E4219DB41A005609E2 /* Coordinator.swift in Sources */,
+				58539D6E21B1C119004596B1 /* CurtainDeviceController.swift in Sources */,
 				589705FE219F25C0005609E2 /* MainViewController.swift in Sources */,
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
+				581ACBFB21B43E0F000BA23E /* MainSlideDataType.swift in Sources */,
+				0147F26421BD380100D535CE /* AlarmSettingViewModel.swift in Sources */,
 				010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */,
+				58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
+				58F28A4A21AF0DAF0034BA60 /* UIButton.swift in Sources */,
+				5846E95C21BBBE6C005EACB9 /* InterPhoneModel.swift in Sources */,
 				01C8DE1221906E0600F0A63C /* AppDelegate.swift in Sources */,
+				58F28A5521B054220034BA60 /* ShaderView.swift in Sources */,
 				5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */,
 				01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */,
 				5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */,
 				01C8DE1A21906E0600F0A63C /* FerqoIOS.xcdatamodeld in Sources */,
+				0147F26021BD356D00D535CE /* AlarmViewController.swift in Sources */,
+				58539D7221B1CE97004596B1 /* LightDeviceController.swift in Sources */,
+				5833BFF721BCB777008AF3F1 /* CameraListViewController.swift in Sources */,
 				016E84E021A3F844001E69A3 /* UITextField.swift in Sources */,
+				58F28A5021B02CD70034BA60 /* UIImage.swift in Sources */,
+				5846E95421B94E12005EACB9 /* SensorViewDataType.swift in Sources */,
+				58F28A4C21AF1B180034BA60 /* ShadowRectButton.swift in Sources */,
+				58F28A4821AEEB910034BA60 /* ProjectorDeviceController.swift in Sources */,
+				581ACC0621B4B5F5000BA23E /* SensorViewController.swift in Sources */,
+				581ACC0821B4BF5E000BA23E /* SensorViewModel.swift in Sources */,
 				016E84E621A51277001E69A3 /* LoginViewModel.swift in Sources */,
 				010F8AA721A845E500D682F9 /* IntroViewController.swift in Sources */,
 				589705E9219DB718005609E2 /* SplashCoordinator.swift in Sources */,
+				58F28A4E21B025090034BA60 /* TVDeviceController.swift in Sources */,
 				5808A2CD21A5A58600883BE5 /* UIView.swift in Sources */,
+				5833BFF921BCBDC2008AF3F1 /* CameraCell.swift in Sources */,
+				58F28A5721B059900034BA60 /* DeviceControllerViews.swift in Sources */,
+				581ACC0B21B4C64C000BA23E /* SensorViewCell.swift in Sources */,
 				01C8DE5521907A0900F0A63C /* Config.swift in Sources */,
 				010F8AB221A8538600D682F9 /* IntroViewModel.swift in Sources */,
+				0147F25E21BD356000D535CE /* AlarmViewDataType.swift in Sources */,
 				589705E6219DB4A4005609E2 /* AppCoordinator.swift in Sources */,
+				5846E95A21BBBCCB005EACB9 /* UITableViewCell.swift in Sources */,
 				5897060B219F48C1005609E2 /* Nib.swift in Sources */,
+				58539D7421B1D1C9004596B1 /* AirconditionDeviceController.swift in Sources */,
+				5846E95E21BBD559005EACB9 /* InterPhoneType.swift in Sources */,
+				5833BFFF21BD4212008AF3F1 /* CameraDataType.swift in Sources */,
 				589705F8219DDD4E005609E2 /* MainCoordinator.swift in Sources */,
+				5846E96321BC265D005EACB9 /* CameraViews.swift in Sources */,
+				0147F25C21BD355800D535CE /* AlarmViewModel.swift in Sources */,
 				5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */,
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
+				5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */,
+				0147F26221BD357D00D535CE /* AlarmSettingViewController.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */,
+				5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */,
+				58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */,
 				58970610219F6491005609E2 /* MenuDataType.swift in Sources */,
+				5833BFFB21BCC008008AF3F1 /* UICollectionViewCell.swift in Sources */,
+				5846E95821BBB9E1005EACB9 /* InterPhoneCell.swift in Sources */,
 				58970600219F2667005609E2 /* MainViewModel.swift in Sources */,
+				5846E96021BC248C005EACB9 /* CameraControlViewController.swift in Sources */,
+				01B8B7E021C0B0FF007164A0 /* UIDevice.swift in Sources */,
 				016E84E321A51104001E69A3 /* LoginCoordinator.swift in Sources */,
+				581ACBFF21B4A48B000BA23E /* SituationButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
