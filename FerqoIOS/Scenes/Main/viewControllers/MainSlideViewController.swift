@@ -32,8 +32,9 @@ class MainSlideViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension // UITableView.automaticDimension
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
         tableView.isScrollEnabled = false
+        view.roundCorners(corners: [.topLeft,.topRight], radius: 8)
 //        tableView.estimatedRowHeight = 120
     }
 

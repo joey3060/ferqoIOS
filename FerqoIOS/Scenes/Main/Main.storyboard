@@ -74,10 +74,11 @@
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                     <subviews>
                                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqv-AC-Kv3">
-                                                                                            <rect key="frame" x="9" y="8" width="46" height="16"/>
+                                                                                            <rect key="frame" x="6.5" y="8" width="51" height="16"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="16" id="p18-e1-eSv"/>
                                                                                             </constraints>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <state key="normal" title="Button">
                                                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             </state>
@@ -119,7 +120,6 @@
                                                                 <subviews>
                                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB4-OE-3GF" userLabel="slideVIew">
                                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </scrollView>
                                                                 </subviews>
                                                                 <constraints>
@@ -208,6 +208,7 @@
                         <outlet property="headerTitle" destination="cRF-80-ujg" id="UOm-wx-u9J"/>
                         <outlet property="mainSection" destination="JXH-v7-0sw" id="Gr0-0h-QRb"/>
                         <outlet property="scrollView" destination="CeM-b2-f7j" id="gOK-7y-5l6"/>
+                        <outlet property="slideContent" destination="MMD-fH-mwi" id="WEV-rV-4mO"/>
                         <outlet property="slideView" destination="KB4-OE-3GF" id="Dgu-AD-Bxw"/>
                         <outlet property="slideWrapper" destination="MMD-fH-mwi" id="96l-Wq-8R9"/>
                         <outlet property="topBar" destination="YrF-ea-T1S" id="ua3-dd-IXg"/>
