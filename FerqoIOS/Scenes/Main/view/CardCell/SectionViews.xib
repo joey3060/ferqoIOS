@@ -133,7 +133,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekc-Ok-MeF" userLabel="touchButton">
-                        <rect key="frame" x="16" y="11" width="130" height="98"/>
+                        <rect key="frame" x="16" y="11" width="130" height="107"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="130" id="SoO-q9-2eR"/>
                         </constraints>
@@ -147,7 +147,6 @@
                     <constraint firstItem="5CN-AI-gjU" firstAttribute="top" secondItem="rdE-3l-ZDA" secondAttribute="bottom" id="0It-vs-VwG"/>
                     <constraint firstItem="bTL-Gd-hfJ" firstAttribute="top" secondItem="F0P-XD-07T" secondAttribute="topMargin" constant="33" id="9GN-TQ-9we"/>
                     <constraint firstAttribute="trailing" secondItem="5CN-AI-gjU" secondAttribute="trailing" constant="16" id="Aob-TG-miA"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Ekc-Ok-MeF" secondAttribute="bottom" id="GU9-M2-mfX"/>
                     <constraint firstItem="5CN-AI-gjU" firstAttribute="leading" secondItem="F0P-XD-07T" secondAttribute="leading" constant="16" id="NJC-V1-bEP"/>
                     <constraint firstItem="Ekc-Ok-MeF" firstAttribute="top" secondItem="F0P-XD-07T" secondAttribute="topMargin" id="NZO-kf-lZa"/>
                     <constraint firstItem="9uB-PS-DZ2" firstAttribute="centerX" secondItem="F0P-XD-07T" secondAttribute="centerX" id="Rvk-qZ-VxY"/>
@@ -158,6 +157,7 @@
                     <constraint firstItem="9uB-PS-DZ2" firstAttribute="top" secondItem="F0P-XD-07T" secondAttribute="topMargin" constant="65" id="reT-pn-uzr"/>
                     <constraint firstItem="rdE-3l-ZDA" firstAttribute="leading" secondItem="F0P-XD-07T" secondAttribute="leading" constant="16" id="xJQ-bn-nRi"/>
                     <constraint firstAttribute="trailing" secondItem="rdE-3l-ZDA" secondAttribute="trailing" constant="16" id="yCn-gh-3Aw"/>
+                    <constraint firstItem="rdE-3l-ZDA" firstAttribute="top" secondItem="Ekc-Ok-MeF" secondAttribute="bottom" id="zF4-cP-LSx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

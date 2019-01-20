@@ -88,7 +88,7 @@ class CardView: UITableViewCell {
             viewModel.expandController.didMove(toParent: parentController.self)
             
             viewModel.expandController.view.snp.makeConstraints{
-                $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+                $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0))
             }
         }
         drawed = true
