@@ -97,7 +97,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
             if let window = UIApplication.shared.keyWindow {
                 let safeAreaBottom = window.safeAreaInsets.bottom
                 let safeAreaTop = window.safeAreaInsets.top
-                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height+5)
+                make.height.size.equalTo(guide.layoutFrame.size.height-safeAreaTop-safeAreaBottom-topBar.frame.height+20)
             }
         }
         slideWrapper.snp.makeConstraints {
@@ -123,13 +123,17 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         slideView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height - topBar.frame.height - collectionTab.frame.height)
         slideView.isPagingEnabled = true
         
-        for i in 0 ..< slides.count {
-            slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
-//            slides[i].viewController!.view.roundCorners(corners: [.topLeft, .topRight], radius: 8)
-            addChild(slides[i].viewController!)
-            slideView.addSubview(slides[i].viewController!.view)
-            slides[i].viewController!.didMove(toParent: self)
+        if let window = UIApplication.shared.keyWindow {
+            let safeAreaBottom = window.safeAreaInsets.bottom
+            for i in 0 ..< slides.count {
+                slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height - safeAreaBottom)
+                //            slides[i].viewController!.view.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+                addChild(slides[i].viewController!)
+                slideView.addSubview(slides[i].viewController!.view)
+                slides[i].viewController!.didMove(toParent: self)
+            }
         }
+       
     }
     
     func scrollSwipeView(_ index: Int) {
