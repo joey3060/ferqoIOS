@@ -22,15 +22,11 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         Header.topItem?.title = "警報"
         
-//        alarmRecordTitle()
-//        separator(height: 145.0)
-//        alarmRecordTable()
-//        monitorTitle()
-//        separator(height: 500)
-//        monitorHorizontalScrollView()
-//        toggleAlarmButton()
-        
         layout()
+    }
+    
+    @IBAction func GoToSettingButton(_ sender: UIBarButtonItem) {
+        viewModel.coordinationDelegate.goToAlarmSettingView()
     }
     
     @IBAction func BackButton(_ sender: UIBarButtonItem) {
@@ -38,32 +34,7 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func layout() {
-        
-//        let containerStack = UIStackView(axis: .vertical)
-//
-//
-//        let container = UIView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height))
-////        let AlarmRecordTitle: UIView = alarmRecordTitle()
-////        let Separator: UIView = separator(height: 145.0)
-////        let AlarmRecordTable: UIView = alarmRecordTable()
-//        let alarmRecordSection = UIView(frame: CGRect(x: 0, y: fullScreenSize.height * 0.023, width: fullScreenSize.width, height: fullScreenSize.height * 0.4))
-//
-//        alarmRecordSection.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
-//
-//        let monitorSection = UIView(frame: CGRect(x:0, y: fullScreenSize.height * 0.4023, width: fullScreenSize.width, height: fullScreenSize.height * 0.3))
-//
-//        monitorSection.backgroundColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
-//
-//        let alarmButtonSection = UIView(frame: CGRect(x:0 ,y: fullScreenSize.height * 0.76, width: fullScreenSize.width, height: fullScreenSize.height * 0.14))
-//
-//        alarmButtonSection.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
-//
-//        container.addSubview(alarmRecordSection)
-//        container.addSubview(monitorSection)
-//        container.addSubview(alarmButtonSection)
-//
-//        view.addSubview(container
-        
+    
         var containerHeight: CGFloat {
             if UIDevice.isX() {
                 return 88
@@ -179,7 +150,7 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
             width: fullScreenSize.width - 35,
             height: 219
             ),
-                                           style: .plain
+            style: .plain
         )
         // 註冊 cell
         alarmRecordTable.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")

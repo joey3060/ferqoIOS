@@ -62,13 +62,6 @@ extension SensorViewController: UITableViewDataSource {
         return cell
     }
     
-//    private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if viewModel.sensorType == 1 {
-//            return viewModel.sensorDetectData[section].roomName
-//        }
-//        return nil
-//    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         if viewModel.sensorType == 1 {
             return viewModel.sensorDetectData.count

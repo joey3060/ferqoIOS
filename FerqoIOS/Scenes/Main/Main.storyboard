@@ -386,6 +386,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="filled" id="tzg-kk-478">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="GoToSettingButton:" destination="kg6-RN-K8D" id="5W6-5Y-eyH"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -432,22 +435,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wbo-Kc-reB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.18670627470000001" green="0.56429457660000004" blue="0.73693472149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yJN-jg-dtZ" firstAttribute="trailing" secondItem="BN0-Ca-enj" secondAttribute="trailing" id="4Zp-5T-ciI"/>
+                            <constraint firstAttribute="bottom" secondItem="wbo-Kc-reB" secondAttribute="bottom" id="4pt-F6-Klh"/>
+                            <constraint firstItem="wbo-Kc-reB" firstAttribute="top" secondItem="yJN-jg-dtZ" secondAttribute="bottom" id="6FC-OH-csY"/>
+                            <constraint firstItem="wbo-Kc-reB" firstAttribute="leading" secondItem="BN0-Ca-enj" secondAttribute="leading" id="GeV-SD-WHF"/>
                             <constraint firstItem="yJN-jg-dtZ" firstAttribute="top" secondItem="BN0-Ca-enj" secondAttribute="top" id="Pdo-Dy-b5O"/>
+                            <constraint firstItem="wbo-Kc-reB" firstAttribute="trailing" secondItem="BN0-Ca-enj" secondAttribute="trailing" id="e7u-zP-Yx6"/>
                             <constraint firstItem="yJN-jg-dtZ" firstAttribute="leading" secondItem="BN0-Ca-enj" secondAttribute="leading" id="zif-Pd-ZSn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BN0-Ca-enj"/>
                     </view>
                     <connections>
                         <outlet property="Header" destination="yJN-jg-dtZ" id="k3e-Ye-T46"/>
+                        <outlet property="tableView" destination="wbo-Kc-reB" id="Zr5-WU-m8J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMr-54-kIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="2272"/>
+            <point key="canvasLocation" x="776.79999999999995" y="2271.8140929535234"/>
         </scene>
         <!--Camera Control View Controller-->
         <scene sceneID="PjW-ZM-5T6">
@@ -557,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxZ-aG-VoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="2282"/>
+            <point key="canvasLocation" x="-18" y="2966"/>
         </scene>
     </scenes>
     <resources>

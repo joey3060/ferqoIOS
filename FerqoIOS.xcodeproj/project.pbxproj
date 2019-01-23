@@ -30,6 +30,8 @@
 		01C8DE51219079CF00F0A63C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C8DE50219079CF00F0A63C /* Login.storyboard */; };
 		01C8DE53219079E000F0A63C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE52219079E000F0A63C /* LoginViewController.swift */; };
 		01C8DE5521907A0900F0A63C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C8DE5421907A0900F0A63C /* Config.swift */; };
+		01D2B2C121F35A0E00367D0A /* AlarmSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D2B2C021F35A0E00367D0A /* AlarmSettingCell.swift */; };
+		01D2B2C321F35B7800367D0A /* AlarmSettingDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D2B2C221F35B7800367D0A /* AlarmSettingDataType.swift */; };
 		5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C621A457E900883BE5 /* TabViewCollection.swift */; };
 		5808A2C921A4750E00883BE5 /* MainSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2C821A4750E00883BE5 /* MainSlideViewController.swift */; };
 		5808A2CB21A5A20900883BE5 /* MainSlideViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */; };
@@ -133,6 +135,8 @@
 		01C8DE50219079CF00F0A63C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		01C8DE52219079E000F0A63C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		01C8DE5421907A0900F0A63C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		01D2B2C021F35A0E00367D0A /* AlarmSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingCell.swift; sourceTree = "<group>"; };
+		01D2B2C221F35B7800367D0A /* AlarmSettingDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingDataType.swift; sourceTree = "<group>"; };
 		181FC9C93405E9F8BDC3CCCB /* Pods-FerqoIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		35BD7F6F2B22D321251106E3 /* Pods-FerqoIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerqoIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerqoIOS/Pods-FerqoIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5808A2C621A457E900883BE5 /* TabViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewCollection.swift; sourceTree = "<group>"; };
@@ -403,6 +407,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		01D2B2BF21F3598C00367D0A /* AlarmSetting */ = {
+			isa = PBXGroup;
+			children = (
+				01D2B2C021F35A0E00367D0A /* AlarmSettingCell.swift */,
+			);
+			path = AlarmSetting;
+			sourceTree = "<group>";
+		};
 		2BD8F6DB1EF3E91143BB9E73 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,7 +491,7 @@
 				5808A2CA21A5A20900883BE5 /* MainSlideViewModel.swift */,
 				581ACC0721B4BF5E000BA23E /* SensorViewModel.swift */,
 				5846E95B21BBBE6C005EACB9 /* InterPhoneModel.swift */,
-				5833BFF421BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift */,
+				5833BFF421BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift */,
 				0147F26321BD380100D535CE /* AlarmSettingViewModel.swift */,
 				5833BFFC21BD40F0008AF3F1 /* CameraListViewModel.swift */,
 			);
@@ -489,6 +501,7 @@
 		58970601219F2D63005609E2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				01D2B2BF21F3598C00367D0A /* AlarmSetting */,
 				581ACC0921B4C603000BA23E /* Sensor */,
 				58F28A4121AE3B3A0034BA60 /* CardCell */,
 				5808A2C621A457E900883BE5 /* TabViewCollection.swift */,
@@ -514,6 +527,7 @@
 				5846E95321B94E12005EACB9 /* SensorViewDataType.swift */,
 				5846E95D21BBD559005EACB9 /* InterPhoneType.swift */,
 				5833BFFE21BD4212008AF3F1 /* CameraDataType.swift */,
+				01D2B2C221F35B7800367D0A /* AlarmSettingDataType.swift */,
 			);
 			path = viewDatas;
 			sourceTree = "<group>";
@@ -780,6 +794,7 @@
 				58970606219F2EAA005609E2 /* MenuTableViewController.swift in Sources */,
 				581ACBFB21B43E0F000BA23E /* MainSlideDataType.swift in Sources */,
 				0147F26421BD380100D535CE /* AlarmSettingViewModel.swift in Sources */,
+				01D2B2C321F35B7800367D0A /* AlarmSettingDataType.swift in Sources */,
 				010F8AAF21A8531D00D682F9 /* IntroCoordinator.swift in Sources */,
 				58F28A5221B042C40034BA60 /* ControlSlider.swift in Sources */,
 				5897061221A0A23C005609E2 /* MainDataType.swift in Sources */,
@@ -824,9 +839,10 @@
 				5808A2C721A457E900883BE5 /* TabViewCollection.swift in Sources */,
 				589705EC219DB886005609E2 /* SplashViewController.swift in Sources */,
 				5897060D219F5646005609E2 /* MenuTableViewModel.swift in Sources */,
-				5833BFF521BC49A1008AF3F1 /* CameraControWithInterPhonelViewModel.swift in Sources */,
+				5833BFF521BC49A1008AF3F1 /* CameraControlWithInterPhoneViewModel.swift in Sources */,
 				0147F26221BD357D00D535CE /* AlarmSettingViewController.swift in Sources */,
 				589705FA219DEB51005609E2 /* SplashViewModel.swift in Sources */,
+				01D2B2C121F35A0E00367D0A /* AlarmSettingCell.swift in Sources */,
 				5833BFFD21BD40F0008AF3F1 /* CameraListViewModel.swift in Sources */,
 				5846E95621BBB823005EACB9 /* InterphoneViewController.swift in Sources */,
 				58F28A3D21AD8E2B0034BA60 /* SectionViews.swift in Sources */,
