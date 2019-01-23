@@ -32,6 +32,7 @@ class CardView: UITableViewCell {
     @IBOutlet weak var expandView: UIView!
     @IBOutlet weak var separateLine: UIView!
     @IBOutlet weak var expandBtn: UIButton!
+    @IBOutlet weak var touchSection: UIView!
     
     var drawed: Bool = false
     
@@ -65,6 +66,7 @@ class CardView: UITableViewCell {
         self.contentView.layer.borderColor = UIColor(red: 48/255, green: 144/255, blue: 188/255, alpha: 0.56).cgColor
         self.contentView.layer.borderWidth = 1
         self.contentView.layer.cornerRadius = 8
+        separateLine.roundCorners(corners: [.topRight, .topLeft, .bottomRight,.bottomLeft], radius: 1)
     }
     
     override func updateConstraints() {
@@ -86,7 +88,7 @@ class CardView: UITableViewCell {
             viewModel.expandController.didMove(toParent: parentController.self)
             
             viewModel.expandController.view.snp.makeConstraints{
-                $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+                $0.edges.equalTo(expandView).inset(UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0))
             }
         }
         drawed = true

@@ -13,6 +13,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var topBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var slideContent: UIView!
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var mainSection: UIView!
     @IBOutlet weak var collectionTab: UICollectionView!
@@ -79,6 +80,10 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     func setMainViewStyle() {
         let guide = view.safeAreaLayoutGuide
+        slideContent.layer.shadowOffset = CGSize(width: 0,height: -10)
+        slideContent.layer.shadowOpacity = 0.7
+        slideContent.layer.shadowRadius = 10
+        slideContent.layer.shadowColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
         topBar.backgroundColor = .clear
         topBar.setBackgroundImage(UIImage(), for: .default)
         topBar.shadowImage = UIImage()
@@ -120,7 +125,7 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout {
         
         for i in 0 ..< slides.count {
             slides[i].viewController!.view.frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: slideView.frame.height)
-            slides[i].viewController!.view.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+//            slides[i].viewController!.view.roundCorners(corners: [.topLeft, .topRight], radius: 8)
             addChild(slides[i].viewController!)
             slideView.addSubview(slides[i].viewController!.view)
             slides[i].viewController!.didMove(toParent: self)

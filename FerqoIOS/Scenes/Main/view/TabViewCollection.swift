@@ -41,6 +41,7 @@ class TabViewDataSource: NSObject, UICollectionViewDataSource {
         cell.textLabel.tag = indexPath.row
         cell.textLabel.addTarget(self, action: #selector(btnEvent), for: .touchUpInside)
         cell.textLabel.setTitle(String(tabItems[indexPath.row].roomName), for: .normal)
+        cell.underLine.roundCorners(corners: [.topRight, .topLeft, .bottomLeft, .bottomRight], radius: 1)
         return cell
     }
     
